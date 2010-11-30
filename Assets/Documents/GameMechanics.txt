@@ -1,0 +1,52 @@
+[HiddenRock]
+Hidden supporting/collidable rock, that makes itself visible by touch. Any object can activate it. Rock will remain visible for a few seconds and then disappear. After disappearing support/collision will disable for a few seconds. Can be activated by grapple, fire and other weapons. Grapple will become loose when support is disabled.
+
+[TouchRock]
+Visible supporting/collidable rock, that disappears after being touched by anything. After disappearing support/collision will disable. Can be activated by grapple, fire and other weapons. Grapple will become loose when support is disabled.
+
+[Hotspot]
+Trigger used to activate spirit, cinematics, enemies, etc.
+
+[Stunt]
+Stunt is one or a group of triggers that will spawn a surprise if you trigger all of them in the right order under the the provided time. This can be used over spikes or dangerous areas. Triggering the first trigger will activate the stunt and successive ordered pitched sounds will hint the player that he is doing it right. I'm creating a test scene so you can see how it works. And maybe you can come up with better uses. Something similar is Mario's red coins, which give you a 1up upon completion. Stunt also sends the OnStunt message for custom behaviors for example reveal a door, platform, etc.
+
+[Switch]
+Switches are used to activate all kinds of objects that can respond to OnSwitchUp and OnSwitchDown messages. Switches can also include an on screen message with a cinematic highlight.
+
+[Avalanche]
+Hanging object that when interacted with, will shake for a second and precipitate. After falling serves as a static platform for reaching higher grounds. Instantly kill while falling.
+
+[Platform]
+The moving platform works as an elevator, for long horizontal leaps, for hovering over dangerous areas, etc. Hotspots and switches activate/deactive them.
+
+[Gear]
+Multi-purpose game mechanic. Use as rolling and/or torque platform. And in some setups can gear other objects, like GearedStand.
+
+[Ledge]
+Used to aid in wall-to-wall jumps.
+
+*These are done, but not documented
+
+[Hinged Stands]
+
+....
+
+Hinged & Axis Aligned Gears
+
+....
+
+[Ball]
+
+....
+
+[Water]
+
+
+...
+
+[Lava]
+Switches turn lave into ice.
+
+...
+
+ 

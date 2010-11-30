@@ -1,0 +1,565 @@
+fileFormatVersion: 1
+guid: 147a36ab07ee90b46b786c48515b94ef
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.01
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 1
+    splitAnimations: 1
+    clips:
+      closeWhole:
+        firstFrame: 1
+        lastFrame: 75
+        loop: 0
+        wrapMode: 1
+      openHalf:
+        firstFrame: 90
+        lastFrame: 145
+        loop: 0
+        wrapMode: 1
+      closeHalf:
+        firstFrame: 160
+        lastFrame: 220
+        loop: 0
+        wrapMode: 1
+      openWhole:
+        firstFrame: 232
+        lastFrame: 305
+        loop: 0
+        wrapMode: 1
+  nodeInfo:
+    hexagon_47:
+    - 100000
+    - 400000
+    - 3300000
+    - 2300000
+    hexagon_53:
+    - 100002
+    - 400002
+    - 3300002
+    - 2300002
+    hexagon_49:
+    - 100004
+    - 400004
+    - 3300004
+    - 2300004
+    hexagon_54:
+    - 100006
+    - 400006
+    - 3300006
+    - 2300006
+    hexagon_46:
+    - 100008
+    - 400008
+    - 3300008
+    - 2300008
+    hexagon_51:
+    - 100010
+    - 400010
+    - 3300010
+    - 2300010
+    hexagon_50:
+    - 100012
+    - 400012
+    - 3300012
+    - 2300012
+    hexagon_48:
+    - 100014
+    - 400014
+    - 3300014
+    - 2300014
+    hexagon_52:
+    - 100016
+    - 400016
+    - 3300016
+    - 2300016
+    hexagon_45:
+    - 100018
+    - 400018
+    - 3300018
+    - 2300018
+    hexagon_10:
+    - 100020
+    - 400020
+    - 3300020
+    - 2300020
+    hexagon_56:
+    - 100022
+    - 400022
+    - 3300022
+    - 2300022
+    hexagon_09:
+    - 100024
+    - 400024
+    - 3300024
+    - 2300024
+    hexagon_55:
+    - 100026
+    - 400026
+    - 3300026
+    - 2300026
+    hexagon_29:
+    - 100028
+    - 400028
+    - 3300028
+    - 2300028
+    icon_start_01Player:
+    - 100030
+    - 400030
+    - 3300030
+    - 2300030
+    hexagon_44:
+    - 100032
+    - 400032
+    - 3300032
+    - 2300032
+    hexagon_43:
+    - 100034
+    - 400034
+    - 3300034
+    - 2300034
+    hexagon_42:
+    - 100036
+    - 400036
+    - 3300036
+    - 2300036
+    hexagon_41:
+    - 100038
+    - 400038
+    - 3300038
+    - 2300038
+    hexagon_40:
+    - 100040
+    - 400040
+    - 3300040
+    - 2300040
+    hexagon_39:
+    - 100042
+    - 400042
+    - 3300042
+    - 2300042
+    hexagon_38:
+    - 100044
+    - 400044
+    - 3300044
+    - 2300044
+    Object006:
+    - 100046
+    - 400046
+    - 3300046
+    - 2300046
+    hexagon_37:
+    - 100048
+    - 400048
+    - 3300048
+    - 2300048
+    Object008:
+    - 100050
+    - 400050
+    - 3300050
+    - 2300050
+    hexagon_36:
+    - 100052
+    - 400052
+    - 3300052
+    - 2300052
+    hexagon_35:
+    - 100054
+    - 400054
+    - 3300054
+    - 2300054
+    hexagon_34:
+    - 100056
+    - 400056
+    - 3300056
+    - 2300056
+    hexagon_33:
+    - 100058
+    - 400058
+    - 3300058
+    - 2300058
+    Object004:
+    - 100060
+    - 400060
+    - 3300060
+    - 2300060
+    hexagon_32:
+    - 100062
+    - 400062
+    - 3300062
+    - 2300062
+    hexagon_31:
+    - 100064
+    - 400064
+    - 3300064
+    - 2300064
+    hexagon_30:
+    - 100066
+    - 400066
+    - 3300066
+    - 2300066
+    hexagon_00:
+    - 100068
+    - 400068
+    - 3300068
+    - 2300068
+    hexagon_28:
+    - 100070
+    - 400070
+    - 3300070
+    - 2300070
+    Object007:
+    - 100072
+    - 400072
+    - 3300072
+    - 2300072
+    //RootNode:
+    - 100074
+    - 400074
+    - 11100000
+    hexagon_27:
+    - 100076
+    - 400076
+    - 3300074
+    - 2300074
+    hexagon_26:
+    - 100078
+    - 400078
+    - 3300076
+    - 2300076
+    hexagon_25:
+    - 100080
+    - 400080
+    - 3300078
+    - 2300078
+    hexagon_24:
+    - 100082
+    - 400082
+    - 3300080
+    - 2300080
+    Object003:
+    - 100084
+    - 400084
+    - 3300082
+    - 2300082
+    hexagon_23:
+    - 100086
+    - 400086
+    - 3300084
+    - 2300084
+    Object002:
+    - 100088
+    - 400088
+    - 3300086
+    - 2300086
+    hexagon_22:
+    - 100090
+    - 400090
+    - 3300088
+    - 2300088
+    hexagon_21:
+    - 100092
+    - 400092
+    - 3300090
+    - 2300090
+    hexagon_20:
+    - 100094
+    - 400094
+    - 3300092
+    - 2300092
+    hexagon_19:
+    - 100096
+    - 400096
+    - 3300094
+    - 2300094
+    hexagon_18:
+    - 100098
+    - 400098
+    - 3300096
+    - 2300096
+    hexagon_17:
+    - 100100
+    - 400100
+    - 3300098
+    - 2300098
+    hexagon_16:
+    - 100102
+    - 400102
+    - 3300100
+    - 2300100
+    Object005:
+    - 100104
+    - 400104
+    - 3300102
+    - 2300102
+    hexagon_15:
+    - 100106
+    - 400106
+    - 3300104
+    - 2300104
+    hexagon_14:
+    - 100108
+    - 400108
+    - 3300106
+    - 2300106
+    hexagon_13:
+    - 100110
+    - 400110
+    - 3300108
+    - 2300108
+    hexagon_12:
+    - 100112
+    - 400112
+    - 3300110
+    - 2300110
+    hexagon_11:
+    - 100114
+    - 400114
+    - 3300112
+    - 2300112
+    hexagon_59:
+    - 100116
+    - 400116
+    - 3300114
+    - 2300114
+    hexagon_57:
+    - 100118
+    - 400118
+    - 3300116
+    - 2300116
+    hexagon_08:
+    - 100120
+    - 400120
+    - 3300118
+    - 2300118
+    hexagon_07:
+    - 100122
+    - 400122
+    - 3300120
+    - 2300120
+    hexagon_06:
+    - 100124
+    - 400124
+    - 3300122
+    - 2300122
+    hexagon_05:
+    - 100126
+    - 400126
+    - 3300124
+    - 2300124
+    hexagon_04:
+    - 100128
+    - 400128
+    - 3300126
+    - 2300126
+    hexagon_03:
+    - 100130
+    - 400130
+    - 3300128
+    - 2300128
+    hexagon_02:
+    - 100132
+    - 400132
+    - 3300130
+    - 2300130
+    hexagon_01:
+    - 100134
+    - 400134
+    - 3300132
+    - 2300132
+    hexagon_58:
+    - 100136
+    - 400136
+    - 3300134
+    - 2300134
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Cylinder01
+    4300002: Cylinder02
+    4300004: Cylinder03
+    4300006: Cylinder04
+    4300008: Cylinder05
+    4300010: Cylinder06
+    4300012: Cylinder07
+    4300014: Cylinder08
+    4300016: Cylinder09
+    4300018: Cylinder10
+    4300020: Cylinder11
+    4300022: Cylinder12
+    4300024: Cylinder13
+    4300026: Cylinder14
+    4300028: Object001
+    4300030: Cylinder15
+    4300032: Cylinder16
+    4300034: Object005
+    4300036: Cylinder17
+    4300038: Cylinder18
+    4300040: Cylinder19
+    4300042: Cylinder20
+    4300044: Cylinder21
+    4300046: Cylinder22
+    4300048: Cylinder23
+    4300050: Object002
+    4300052: Cylinder24
+    4300054: Object003
+    4300056: Cylinder25
+    4300058: Cylinder26
+    4300060: Cylinder27
+    4300062: Cylinder28
+    4300064: Object007
+    4300066: Cylinder29
+    4300068: Cylinder30
+    4300070: Cylinder31
+    4300072: Cylinder32
+    4300074: Cylinder33
+    4300076: Object004
+    4300078: Cylinder34
+    4300080: Cylinder35
+    4300082: Cylinder36
+    4300084: Cylinder37
+    4300086: Object008
+    4300088: Cylinder38
+    4300090: Object006
+    4300092: Cylinder39
+    4300094: Cylinder40
+    4300096: Cylinder41
+    4300098: Cylinder42
+    4300100: Cylinder43
+    4300102: Cylinder44
+    4300104: Cylinder45
+    4300106: Cylinder46
+    4300108: Cylinder47
+    4300110: Cylinder48
+    4300112: Cylinder49
+    4300114: Cylinder50
+    4300116: Cylinder51
+    4300118: Cylinder52
+    4300120: Cylinder53
+    4300122: Cylinder54
+    4300124: Cylinder55
+    4300126: Cylinder56
+    4300128: Cylinder57
+    4300130: Cylinder58
+    4300132: Cylinder59
+    4300134: Cylinder60
+    4300136: Plane003
+    4300138: Plane004
+    4300140: Plane002
+    4300142: hexagon_58
+    4300144: hexagon_01
+    4300146: hexagon_02
+    4300148: hexagon_03
+    4300150: hexagon_04
+    4300152: hexagon_05
+    4300154: hexagon_06
+    4300156: hexagon_07
+    4300158: hexagon_08
+    4300160: hexagon_57
+    4300162: hexagon_59
+    4300164: hexagon_11
+    4300166: hexagon_12
+    4300168: hexagon_13
+    4300170: icon_start_01Player
+    4300172: hexagon_14
+    4300174: hexagon_15
+    4300176: hexagon_16
+    4300178: hexagon_17
+    4300180: hexagon_18
+    4300182: hexagon_19
+    4300184: hexagon_20
+    4300186: hexagon_21
+    4300188: hexagon_22
+    4300190: hexagon_23
+    4300192: hexagon_24
+    4300194: hexagon_25
+    4300196: hexagon_26
+    4300198: hexagon_27
+    4300200: hexagon_28
+    4300202: hexagon_00
+    4300204: hexagon_30
+    4300206: hexagon_31
+    4300208: hexagon_32
+    4300210: hexagon_33
+    4300212: hexagon_34
+    4300214: hexagon_35
+    4300216: hexagon_36
+    4300218: hexagon_37
+    4300220: hexagon_38
+    4300222: hexagon_39
+    4300224: hexagon_40
+    4300226: hexagon_41
+    4300228: hexagon_42
+    4300230: hexagon_43
+    4300232: hexagon_44
+    4300234: hexagon_45
+    4300236: hexagon_46
+    4300238: hexagon_47
+    4300240: hexagon_48
+    4300242: hexagon_49
+    4300244: hexagon_50
+    4300246: hexagon_51
+    4300248: hexagon_52
+    4300250: hexagon_53
+    4300252: hexagon_54
+    4300254: hexagon_55
+    4300256: hexagon_56
+    4300258: hexagon_10
+    4300260: hexagon_09
+    4300262: hexagon_29
+    4300264: vrLogo_part00
+    4300266: vrLogo_part13
+    4300268: vrLogo_part14
+    4300270: vrLogo_part03
+    4300272: vrLogo_part04
+    4300274: vrLogo_part05
+    4300276: vrLogo_part15
+    4300278: vrLogo_part07
+    4300280: vrLogo_part08
+    4300282: vrLogo_part09
+    4300284: vrLogo_part10
+    4300286: vrLogo_part11
+    4300288: vrLogo_part06
+    4300290: vrLogo_part02
+    4300292: vrLogo_part01
+    4300294: vrLogo_part12
+    4300296: Plane012
+    4300298: Plane013
+    4300300: vrGrid_part14
+    4300302: Plane008
+    4300304: vrGrid_part02
+    4300306: vrGrid_part00
+    4300308: vrGrid_part01
+    4300310: vrGrid_part06
+    4300312: vrGrid_part03
+    4300314: vrGrid_part04
+    4300316: vrGrid_part05
+    4300318: vrGrid_part09
+    4300320: vrGrid_part07
+    4300322: vrGrid_part08
+    4300324: vr_blinder02
+    4300326: vr_blinder03
+    4300328: vr_blinder00
+    4300330: vr_blinder01
+    7400000: Take 001 //// vrMenu_fbx
+    7400002: Close //// vrMenu_fbx
+    7400004: OpenHalff //// vrMenu_fbx
+    7400006: closeWhole //// vrMenu_fbx
+    7400008: openHalf //// vrMenu_fbx
+    7400010: closeHalf //// vrMenu_fbx
+    7400012: openWhole //// vrMenu_fbx

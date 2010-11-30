@@ -1,0 +1,86 @@
+
+conveyor belt
+glass tunnel
+pendulum
+breakable platform
+turrets
+covers (physics objects)
+checkpoints can be bad if you check way back
+underwater
+space
+metal structures
+floor that breaks on contact after a few seconds
+suits (water suit, fire suit, space suit)
+spikes
+huge wall of boulders with some barrels :) hidden treasure some where
+hit invulnerability time
+remember items collected
+spawnCount, spawnRate
+moving walls
+hinged platforms
+charge weapon
+double jump (roll, spin)
+stunts
+wall jump 
+
+
+Only 59% of the moon's surface is visible from earth.
+
+Dark side of the moon...
+secret defense installation...
+new tech may control lunar activity...
+biotechnology... extinct species... hidden ecosystems...
+you are part of the secret lunar defense system, gone mad...
+what would happen if one sole company controlled the moon...?
+the moon, the weapon, can it be destroyed...?
+what would happen if the moon disappeared...?
+
+ownership and mining rights of moon resources
+
+EnergyTanks
+HO
+HN
+BO
+CN
+MO
+FI
+KC
+MN
+
+Monsters
+Regolith - bedrock
+
+Antagonist
+Dr. Savain - crackpot physicist
+Seraphim - central energy production, storage and distribution system
+
+Moon filled with tombs of ancient civilizations.
+
+Seraph Energy Body
+- Red Wings
+- Blue Wings
+- Green Wings
+Drakones, the wing guards
+
+Turning the Seraph 90 degrees will transfer the energy from the body to the wings, launching our Moon out of the Solar System.
+
+Tibetan Plateau - Launch pad to the moon.
+
+genetically modified
+biosphere
+
+
+
+
+Refined Story
+
+In the biggest exodus ever undertaken, the last humans alive get onboard the Convenant Ark and head towards the Moon; leaving forever planet Earth.
+
+The moon is home to a massive experimental biosphere powered by energy sources of unknown origins. Pioneered by Dr. Savain, The Moon Biosphere Programme, is now their only hope for survival.
+
+But the biggest challenge is yet to come. Dr. Savain is missing and the artificial ecosystem is out of control. Harmless fauna and flora have mutated into powerful creatures. The network, satelites, weapons and all moon technology are failing.
+
+You play as LDU-1, a Lunar Defense Unit, designed by Dr. Savain to protect the moon. You form part of a now destroyed army, and as the last unit standing, it is your responsability to find Dr. Savain, bring back order to the biosphere and help the exiled land safely on the Moon. 
+
+Grok is the iconic action-adventure game missing on the iPhone, inspired by Metroid's dark explorations and Mega Man's  intense platforming. The developers of Grok bring to you pure oldschool love with a brilliant blend of modern gameplay mechanics and physics-based puzzles.
+

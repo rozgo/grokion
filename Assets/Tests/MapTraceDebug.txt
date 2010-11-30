@@ -1,0 +1,4 @@
+Door|ED|West2 failed to link back to Door|DD|East
+Door|ED|East5 failed to link back to Door|ED|West2
+Door|DD|East failed to link back to Door|ED|East5
+Door|KK|East can't find Door|LK|West

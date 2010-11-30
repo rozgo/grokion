@@ -1,0 +1,119 @@
+fileFormatVersion: 1
+guid: 9e5aadba5dfd44e1eaa473fce6fa15a7
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.01
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 0
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    Foot.R:
+    - 100000
+    - 400000
+    - 3300000
+    - 2300000
+    Hip.R:
+    - 100002
+    - 400002
+    - 3300002
+    - 2300002
+    Leg.R:
+    - 100004
+    - 400004
+    - 3300004
+    - 2300004
+    Forearm.R:
+    - 100006
+    - 400006
+    - 3300006
+    - 2300006
+    Forearm.L:
+    - 100008
+    - 400008
+    - 3300008
+    - 2300008
+    Root:
+    - 100010
+    - 400010
+    - 3300010
+    - 2300010
+    Shoulder.L:
+    - 100012
+    - 400012
+    //RootNode:
+    - 100014
+    - 400014
+    - 11100000
+    Head:
+    - 100016
+    - 400016
+    - 3300012
+    - 2300012
+    Spine:
+    - 100018
+    - 400018
+    Chest:
+    - 100020
+    - 400020
+    Shoulder.R:
+    - 100022
+    - 400022
+    Foot.L:
+    - 100024
+    - 400024
+    - 3300014
+    - 2300014
+    Arm.R:
+    - 100026
+    - 400026
+    - 3300016
+    - 2300016
+    Neck:
+    - 100028
+    - 400028
+    Arm.L:
+    - 100030
+    - 400030
+    - 3300018
+    - 2300018
+    Hip.L:
+    - 100032
+    - 400032
+    - 3300020
+    - 2300020
+    Leg.L:
+    - 100034
+    - 400034
+    - 3300022
+    - 2300022
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Root
+    4300002: Arm.L
+    4300004: Forearm.L
+    4300006: Arm.R
+    4300008: Forearm.R
+    4300010: Head
+    4300012: Hip.L
+    4300014: Leg.L
+    4300016: Foot.L
+    4300018: Hip.R
+    4300020: Leg.R
+    4300022: Foot.R
+    7400000: Take 001 //// newChar@JUMP

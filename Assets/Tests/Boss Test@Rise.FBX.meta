@@ -1,0 +1,193 @@
+fileFormatVersion: 1
+guid: 380479cfa4bd24edf989d2b88d74020c
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.01
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    //RootNode:
+    - 100000
+    - 400000
+    - 11100000
+    BossRigRArmDigit31:
+    - 100002
+    - 400002
+    - 3300000
+    - 2300000
+    BossRigRArmDigit22:
+    - 100004
+    - 400004
+    - 3300002
+    - 2300002
+    BossRigRArmDigit32:
+    - 100006
+    - 400006
+    - 3300004
+    - 2300004
+    BossRigRArmDigit12:
+    - 100008
+    - 400008
+    - 3300006
+    - 2300006
+    BossRigRArmDigit11:
+    - 100010
+    - 400010
+    - 3300008
+    - 2300008
+    BossRigRArmDigit21:
+    - 100012
+    - 400012
+    - 3300010
+    - 2300010
+    BossRigRArm2:
+    - 100014
+    - 400014
+    - 3300012
+    - 2300012
+    BossRigRArm1:
+    - 100016
+    - 400016
+    - 3300014
+    - 2300014
+    BossRigRArmPalm:
+    - 100018
+    - 400018
+    - 3300016
+    - 2300016
+    BossRigLArmDigit32:
+    - 100020
+    - 400020
+    - 3300018
+    - 2300018
+    BossRigLArmDigit31:
+    - 100022
+    - 400022
+    - 3300020
+    - 2300020
+    BossRigRArmCollarbone:
+    - 100024
+    - 400024
+    - 3300022
+    - 2300022
+    BossRigLArmDigit21:
+    - 100026
+    - 400026
+    - 3300024
+    - 2300024
+    BossRigLArmDigit12:
+    - 100028
+    - 400028
+    - 3300026
+    - 2300026
+    BossRigLArmDigit22:
+    - 100030
+    - 400030
+    - 3300028
+    - 2300028
+    BossRigLArmPalm:
+    - 100032
+    - 400032
+    - 3300030
+    - 2300030
+    BossRigLArm2:
+    - 100034
+    - 400034
+    - 3300032
+    - 2300032
+    BossRigLArmDigit11:
+    - 100036
+    - 400036
+    - 3300034
+    - 2300034
+    BossRigJaw:
+    - 100038
+    - 400038
+    - 3300036
+    - 2300036
+    BossRigLArm1:
+    - 100040
+    - 400040
+    - 3300038
+    - 2300038
+    BossRigHead:
+    - 100042
+    - 400042
+    - 3300040
+    - 2300040
+    BossRigLArmCollarbone:
+    - 100044
+    - 400044
+    - 3300042
+    - 2300042
+    BossRigChest:
+    - 100046
+    - 400046
+    - 3300044
+    - 2300044
+    BossRigSpine:
+    - 100048
+    - 400048
+    - 3300046
+    - 2300046
+    BossRigNeck:
+    - 100050
+    - 400050
+    - 3300048
+    - 2300048
+    LowPoly:
+    - 100052
+    - 400052
+    - 13700000
+    BossRigPelvis:
+    - 100054
+    - 400054
+    - 3300050
+    - 2300050
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: LowPoly
+    4300002: BossRigPelvis
+    4300004: BossRigSpine
+    4300006: BossRigChest
+    4300008: BossRigNeck
+    4300010: BossRigHead
+    4300012: BossRigJaw
+    4300014: BossRigLArmCollarbone
+    4300016: BossRigLArm1
+    4300018: BossRigLArm2
+    4300020: BossRigLArmPalm
+    4300022: BossRigLArmDigit11
+    4300024: BossRigLArmDigit12
+    4300026: BossRigLArmDigit21
+    4300028: BossRigLArmDigit22
+    4300030: BossRigLArmDigit31
+    4300032: BossRigLArmDigit32
+    4300034: BossRigRArmCollarbone
+    4300036: BossRigRArm1
+    4300038: BossRigRArm2
+    4300040: BossRigRArmPalm
+    4300042: BossRigRArmDigit11
+    4300044: BossRigRArmDigit12
+    4300046: BossRigRArmDigit21
+    4300048: BossRigRArmDigit22
+    4300050: BossRigRArmDigit31
+    4300052: BossRigRArmDigit32
+    7400000: Take 001 //// Boss Test@Rise

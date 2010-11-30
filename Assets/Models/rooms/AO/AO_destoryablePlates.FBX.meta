@@ -1,0 +1,73 @@
+fileFormatVersion: 1
+guid: afe55d1a56b0e4e5e92de92230c219eb
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.01
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 1
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    destoryablePlates 4:
+    - 100000
+    - 400000
+    - 3300000
+    - 2300000
+    - 6400008
+    destoryablePlates:
+    - 100002
+    - 400002
+    - 3300002
+    - 2300002
+    - 6400000
+    destoryablePlates 3:
+    - 100004
+    - 400004
+    - 3300004
+    - 2300004
+    - 6400006
+    destoryablePlates 2:
+    - 100006
+    - 400006
+    - 3300006
+    - 2300006
+    - 6400004
+    destoryablePlates 1:
+    - 100008
+    - 400008
+    - 3300008
+    - 2300008
+    - 6400002
+    destoryablePlates 5:
+    - 100010
+    - 400010
+    - 3300010
+    - 2300010
+    - 6400010
+    //RootNode:
+    - 100012
+    - 400012
+    - 11100000
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: destoryablePlates
+    4300002: destoryablePlates
+    4300004: destoryablePlates
+    4300006: destoryablePlates
+    4300008: destoryablePlates
+    4300010: destoryablePlates

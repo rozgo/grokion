@@ -1,0 +1,37 @@
+fileFormatVersion: 1
+guid: 9ce7e9aa2cbbe4e6886e0e41745c86f3
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 0
+  animations:
+    generation: 0
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    Platform:
+    - 100000
+    - 400000
+    - 3300000
+    - 2300000
+    //RootNode:
+    - 100002
+    - 400002
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Cube
+    4300002: Platform

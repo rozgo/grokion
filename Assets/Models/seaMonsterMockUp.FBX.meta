@@ -1,0 +1,57 @@
+fileFormatVersion: 1
+guid: a7b08d7cdb7cb4ec69f3d2a60387e166
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.01
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+    clips:
+      START:
+        firstFrame: 1
+        lastFrame: 50
+        loop: 0
+        wrapMode: 0
+  nodeInfo:
+    //RootNode:
+    - 100000
+    - 400000
+    - 11100000
+    creature01:
+    - 100002
+    - 400002
+    - 3300000
+    - 2300000
+    creature:
+    - 100004
+    - 400004
+    - 3300002
+    - 2300002
+    creature03:
+    - 100006
+    - 400006
+    - 3300004
+    - 2300004
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: creature
+    4300002: creature01
+    4300004: creature03
+    7400000: Take 001 //// seaMonsterMockUp
+    7400002: START //// seaMonsterMockUp

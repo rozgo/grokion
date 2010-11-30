@@ -1,0 +1,193 @@
+fileFormatVersion: 1
+guid: 54e1b33c2677d2d43bc107ee21598775
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.01
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 1
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    CATRigHub03:
+    - 100000
+    - 400000
+    CATRigRLegAnkle:
+    - 100002
+    - 400002
+    CATRigRLeg2:
+    - 100004
+    - 400004
+    CATRigRLeg1:
+    - 100006
+    - 400006
+    //RootNode:
+    - 100008
+    - 400008
+    - 11100000
+    CATRigSpine:
+    - 100010
+    - 400010
+    CATRigLLegAnkle:
+    - 100012
+    - 400012
+    CATRigLLeg2:
+    - 100014
+    - 400014
+    CATRigLLeg1:
+    - 100016
+    - 400016
+    CATRigHub01:
+    - 100018
+    - 400018
+    CATRigRArmPalm:
+    - 100020
+    - 400020
+    CATRigRArm22:
+    - 100022
+    - 400022
+    CATRigRArm21:
+    - 100024
+    - 400024
+    CATRigRArm12:
+    - 100026
+    - 400026
+    CATRigRArm11:
+    - 100028
+    - 400028
+    CATRigLArmPalm:
+    - 100030
+    - 400030
+    CATRigLArm22:
+    - 100032
+    - 400032
+    CATRigLArm21:
+    - 100034
+    - 400034
+    CATRigLArm12:
+    - 100036
+    - 400036
+    CATRigLArm11:
+    - 100038
+    - 400038
+    CATRigHub02:
+    - 100040
+    - 400040
+    CATRigSpine3:
+    - 100042
+    - 400042
+    CATRigSpine2:
+    - 100044
+    - 400044
+    CATRigLArmDigit42:
+    - 100046
+    - 400046
+    CATRigRArmDigit22:
+    - 100048
+    - 400048
+    CATRigLLegDigit11:
+    - 100050
+    - 400050
+    CATRigRArmCollarbone:
+    - 100052
+    - 400052
+    CATRigRArmDigit32:
+    - 100054
+    - 400054
+    CATRigRArmDigit42:
+    - 100056
+    - 400056
+    CATRigLArmDigit11:
+    - 100058
+    - 400058
+    CATRigRLegDigit12:
+    - 100060
+    - 400060
+    CATRigLArmDigit31:
+    - 100062
+    - 400062
+    CATRigRArmDigit11:
+    - 100064
+    - 400064
+    CATRigSpineCATRigSpine1:
+    - 100066
+    - 400066
+    CATRigRArmDigit21:
+    - 100068
+    - 400068
+    CATRigLArmDigit32:
+    - 100070
+    - 400070
+    CATRigLLegDigit12:
+    - 100072
+    - 400072
+    CATRigLArmDigit52:
+    - 100074
+    - 400074
+    CATRigRArmDigit12:
+    - 100076
+    - 400076
+    CATRigLArmDigit21:
+    - 100078
+    - 400078
+    CATRigLArmDigit41:
+    - 100080
+    - 400080
+    CATRigLArmDigit22:
+    - 100082
+    - 400082
+    CATRigRLegDigit11:
+    - 100084
+    - 400084
+    CATRigHub03Bone01:
+    - 100086
+    - 400086
+    CATRigRArmDigit13:
+    - 100088
+    - 400088
+    CATRigLArmDigit51:
+    - 100090
+    - 400090
+    CATRigLArmCollarbone:
+    - 100092
+    - 400092
+    CATRigRArmDigit31:
+    - 100094
+    - 400094
+    CATRigLArmDigit12:
+    - 100096
+    - 400096
+    CATRigRArmDigit41:
+    - 100098
+    - 400098
+    CATRigRArmDigit51:
+    - 100100
+    - 400100
+    CATRigLArmDigit13:
+    - 100102
+    - 400102
+    RetopoSurface002:
+    - 100104
+    - 400104
+    - 13700000
+    CATRigRArmDigit52:
+    - 100106
+    - 400106
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: RetopoSurface002
+    7400000: Take 001 //// TestCharacter

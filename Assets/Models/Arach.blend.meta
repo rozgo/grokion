@@ -1,0 +1,77 @@
+fileFormatVersion: 1
+guid: 2e9b4efd8525c4e8c8b240f08f174932
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    //RootNode:
+    - 100000
+    - 400000
+    - 11100000
+    Model:
+    - 100002
+    - 400002
+    - 13700000
+    Arm.L:
+    - 100004
+    - 400004
+    Arm.R:
+    - 100006
+    - 400006
+    Armature:
+    - 100008
+    - 400008
+    ForeArm.L:
+    - 100010
+    - 400010
+    ForeArm.R:
+    - 100012
+    - 400012
+    Leg.L:
+    - 100014
+    - 400014
+    Leg.R:
+    - 100016
+    - 400016
+    LowerJaw:
+    - 100018
+    - 400018
+    Root:
+    - 100020
+    - 400020
+    Thigh.L:
+    - 100022
+    - 400022
+    Thigh.R:
+    - 100024
+    - 400024
+    UpperJaw:
+    - 100026
+    - 400026
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Plane
+    4300002: Arach
+    4300004: Model
+    7400000: IDLE //// Arach
+    7400002: HIT //// Arach
+    7400004: ATTACK //// Arach

@@ -1,0 +1,38 @@
+fileFormatVersion: 1
+guid: 0c2be62c4b7964a56a955540e2f0290a
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.01
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 1
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 2
+    splitAnimations: 1
+  nodeInfo:
+    //RootNode:
+    - 100000
+    - 400000
+    - 11100000
+    flyingObject:
+    - 100002
+    - 400002
+    - 3300000
+    - 2300000
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: flyingObject
+    7400000: Take 001 //// enemy_flyingObject

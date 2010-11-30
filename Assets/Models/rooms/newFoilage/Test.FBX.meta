@@ -1,0 +1,54 @@
+fileFormatVersion: 1
+guid: ea488048c74044a808100b8e02e3ebf7
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.01
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 1
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    //RootNode:
+    - 100012
+    - 400012
+    - 3300000
+    - 2300000
+    - 6400000
+    - 11100000
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Box02
+    4300002: Plane01
+    4300004: Cylinder01
+    4300006: Plane02
+    4300008: Sphere01
+    4300010: Object01
+    4300012: Root
+    4300014: Arm.L
+    4300016: Forearm.L
+    4300018: Arm.R
+    4300020: Forearm.R
+    4300022: Head
+    4300024: Hip.L
+    4300026: Leg.L
+    4300028: Foot.L
+    4300030: Hip.R
+    4300032: Leg.R
+    4300034: Foot.R
+    4300036: pipeLow
+    4300038: Box03

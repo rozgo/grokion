@@ -1,0 +1,118 @@
+fileFormatVersion: 1
+guid: e596a358e6c40409b9183e59d0f0a0f7
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.01
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    BossRigPelvis:
+    - 100000
+    - 400000
+    BossRigNeck:
+    - 100002
+    - 400002
+    LowPoly:
+    - 100004
+    - 400004
+    - 13700000
+    BossRigSpine:
+    - 100006
+    - 400006
+    BossRig:
+    - 100008
+    - 400008
+    BossRigLArmDigit22:
+    - 100010
+    - 400010
+    BossRigLArm2:
+    - 100012
+    - 400012
+    BossRigLArmDigit12:
+    - 100014
+    - 400014
+    BossRigJaw:
+    - 100016
+    - 400016
+    BossRigLArmPalm:
+    - 100018
+    - 400018
+    BossRigHead:
+    - 100020
+    - 400020
+    BossRigLArm1:
+    - 100022
+    - 400022
+    BossRigChest:
+    - 100024
+    - 400024
+    BossRigLArmCollarbone:
+    - 100026
+    - 400026
+    //RootNode:
+    - 100028
+    - 400028
+    - 11100000
+    BossRigRArmPalm:
+    - 100030
+    - 400030
+    BossRigRArmDigit31:
+    - 100032
+    - 400032
+    BossRigRArmDigit32:
+    - 100034
+    - 400034
+    BossRigRArmDigit12:
+    - 100036
+    - 400036
+    BossRigRArmDigit11:
+    - 100038
+    - 400038
+    BossRigRArmDigit22:
+    - 100040
+    - 400040
+    BossRigRArmDigit21:
+    - 100042
+    - 400042
+    BossRigLArmDigit32:
+    - 100044
+    - 400044
+    BossRigRArm1:
+    - 100046
+    - 400046
+    BossRigRArm2:
+    - 100048
+    - 400048
+    BossRigLArmDigit21:
+    - 100050
+    - 400050
+    BossRigRArmCollarbone:
+    - 100052
+    - 400052
+    BossRigLArmDigit11:
+    - 100054
+    - 400054
+    BossRigLArmDigit31:
+    - 100056
+    - 400056
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: LowPoly
+    7400000: Take 001 //// Boss Test@Stance2

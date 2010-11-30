@@ -1,0 +1,115 @@
+fileFormatVersion: 1
+guid: 88eb3bb9b62134665ac6133b87ffd74d
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.01
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    BossRigRArmCollarbone:
+    - 100000
+    - 400000
+    BossRigRArm2:
+    - 100002
+    - 400002
+    BossRigRArmDigit22:
+    - 100004
+    - 400004
+    BossRigRArmDigit32:
+    - 100006
+    - 400006
+    BossRigRArmDigit31:
+    - 100008
+    - 400008
+    BossRigRArmDigit11:
+    - 100010
+    - 400010
+    BossRigRArmDigit21:
+    - 100012
+    - 400012
+    BossRigRArmDigit12:
+    - 100014
+    - 400014
+    BossRigLArm1:
+    - 100016
+    - 400016
+    BossRigChest:
+    - 100018
+    - 400018
+    BossRigJaw:
+    - 100020
+    - 400020
+    BossRigPelvis:
+    - 100022
+    - 400022
+    BossRigNeck:
+    - 100024
+    - 400024
+    BossRigSpine:
+    - 100026
+    - 400026
+    LowPoly:
+    - 100028
+    - 400028
+    - 13700000
+    BossRigHead:
+    - 100030
+    - 400030
+    BossRigLArmCollarbone:
+    - 100032
+    - 400032
+    BossRigRArmPalm:
+    - 100034
+    - 400034
+    BossRigLArmDigit31:
+    - 100036
+    - 400036
+    BossRigRArm1:
+    - 100038
+    - 400038
+    BossRigLArmDigit12:
+    - 100040
+    - 400040
+    BossRigLArmDigit32:
+    - 100042
+    - 400042
+    BossRigLArm2:
+    - 100044
+    - 400044
+    BossRigLArmDigit22:
+    - 100046
+    - 400046
+    BossRigLArmDigit11:
+    - 100048
+    - 400048
+    BossRigLArmPalm:
+    - 100050
+    - 400050
+    BossRigLArmDigit21:
+    - 100052
+    - 400052
+    //RootNode:
+    - 100054
+    - 400054
+    - 11100000
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: LowPoly
+    7400000: Take 001 //// BossMesh@RIGHT_ATTACKHIGH

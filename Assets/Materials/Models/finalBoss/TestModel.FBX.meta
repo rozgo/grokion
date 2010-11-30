@@ -1,0 +1,93 @@
+fileFormatVersion: 1
+guid: 425d6347c04af40a5a6c9cff6c08483d
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.01
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    Plane01:
+    - 100002
+    - 400002
+    - 3300002
+    - 2300002
+    //RootNode:
+    - 100006
+    - 400006
+    - 11100000
+    Object01:
+    - 100008
+    - 400008
+    - 3300006
+    - 2300006
+    Cylinder01:
+    - 100010
+    - 400010
+    - 3300008
+    - 2300008
+    meatPiece02:
+    - 100012
+    - 400012
+    - 3300010
+    - 2300010
+    meatPiece01:
+    - 100014
+    - 400014
+    - 3300012
+    - 2300012
+    meatPiece03:
+    - 100016
+    - 400016
+    - 3300014
+    - 2300014
+    meatPiece04:
+    - 100018
+    - 400018
+    - 3300016
+    - 2300016
+    Plane03:
+    - 100020
+    - 400020
+    - 3300018
+    - 2300018
+    Plane02:
+    - 100022
+    - 400022
+    - 3300020
+    - 2300020
+    Plane04:
+    - 100024
+    - 400024
+    - 3300022
+    - 2300022
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: lowPoly05
+    4300002: lowPoly06
+    4300004: Plane01
+    4300006: Object01
+    4300008: Cylinder01
+    4300010: meatPiece01
+    4300012: meatPiece02
+    4300014: meatPiece03
+    4300016: meatPiece04
+    4300018: Plane02
+    4300020: Plane03
+    4300022: Plane04

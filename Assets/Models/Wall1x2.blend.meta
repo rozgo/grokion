@@ -1,0 +1,43 @@
+fileFormatVersion: 1
+guid: 248e306971444451197655de3fd788ca
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 0
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    //RootNode:
+    - 100000
+    - 400000
+    Collision:
+    - 100002
+    - 400002
+    - 3300000
+    - 2300000
+    - 6400000
+    LevelGeometry:
+    - 100004
+    - 400004
+    - 3300002
+    - 2300002
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: level_geometry
+    4300002: LevelGeometry

@@ -1,0 +1,106 @@
+fileFormatVersion: 1
+guid: f13ded624bba94c5089305af785426f3
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.5
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 0
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 0
+    clips:
+      IDLE:
+        firstFrame: 1
+        lastFrame: 8
+        loop: 0
+        wrapMode: 0
+  nodeInfo:
+    //RootNode:
+    - 100000
+    - 400000
+    - 11100000
+    Armature:
+    - 100002
+    - 400002
+    Arm.L:
+    - 100004
+    - 400004
+    Arm.R:
+    - 100006
+    - 400006
+    Foot.L:
+    - 100008
+    - 400008
+    Foot.R:
+    - 100010
+    - 400010
+    Forearm.L:
+    - 100012
+    - 400012
+    Forearm.R:
+    - 100014
+    - 400014
+    Head:
+    - 100016
+    - 400016
+    Hip.L:
+    - 100018
+    - 400018
+    Hip.R:
+    - 100020
+    - 400020
+    Leg.L:
+    - 100022
+    - 400022
+    Leg.R:
+    - 100024
+    - 400024
+    Neck:
+    - 100026
+    - 400026
+    Root:
+    - 100028
+    - 400028
+    Shoulder.L:
+    - 100030
+    - 400030
+    Shoulder.R:
+    - 100032
+    - 400032
+    Spine:
+    - 100034
+    - 400034
+    Model:
+    - 100038
+    - 400038
+    - 13700000
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Plane.001
+    4300002: Plane
+    4300004: Model
+    7400000: IDLE //// Character
+    7400002: IDLE //// Character
+    7400004: RUN //// Character
+    7400006: FALL //// Character
+    7400008: JUMP //// Character
+    7400010: SHOOT //// Character
+    7400012: HIT //// Character
+    7400014: SWIM //// Character
+    7400016: SWIM_UP //// Character
+    7400018: SHOOT_DOWN //// Character
+    7400020: SHOOT_UP //// Character

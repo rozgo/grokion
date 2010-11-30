@@ -1,0 +1,55 @@
+fileFormatVersion: 1
+guid: 6d3e424e984624bf3adc7bd088f0a724
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    //RootNode:
+    - 100000
+    - 400000
+    - 11100000
+    Model:
+    - 100002
+    - 400002
+    Armature:
+    - 100004
+    - 400004
+    Body:
+    - 100006
+    - 400006
+    - 13700000
+    Head:
+    - 100008
+    - 400008
+    Tail:
+    - 100010
+    - 400010
+    Wings:
+    - 100012
+    - 400012
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Wasp
+    4300002: Model
+    7400000: IDLE //// Wasp
+    7400002: ATTACK //// Wasp
+    7400004: HIT //// Wasp

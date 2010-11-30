@@ -1,0 +1,52 @@
+fileFormatVersion: 1
+guid: a78cc9660dad54b27a2beffcd583f056
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 180
+    splitTangents: 0
+  materials:
+    generation: 0
+  animations:
+    generation: 0
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    Field:
+    - 100000
+    - 400000
+    - 3300000
+    - 2300000
+    Frame:
+    - 100002
+    - 400002
+    - 3300002
+    - 2300002
+    //RootNode:
+    - 100004
+    - 400004
+    DoorBase:
+    - 100006
+    - 400006
+    - 3300004
+    - 2300004
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Cube.001
+    4300002: Cube
+    4300004: Field
+    4300006: Frame
+    4300008: Cylinder
+    4300010: Frame.001
+    4300012: DoorBase

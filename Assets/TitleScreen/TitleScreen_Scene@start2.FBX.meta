@@ -1,0 +1,167 @@
+fileFormatVersion: 1
+guid: c91219b9f01624709a526681155b82dd
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 1
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    teamLogo:
+    - 100000
+    - 400000
+    - 3300000
+    - 2300000
+    grokionLogo:
+    - 100002
+    - 400002
+    - 3300002
+    - 2300002
+    button_NewGame:
+    - 100004
+    - 400004
+    - 3300004
+    - 2300004
+    button_Options:
+    - 100006
+    - 400006
+    - 3300006
+    - 2300006
+    button_Credits:
+    - 100008
+    - 400008
+    - 3300008
+    - 2300008
+    monitor_Reset:
+    - 100010
+    - 400010
+    - 3300010
+    - 2300010
+    monitor_Credits:
+    - 100012
+    - 400012
+    - 3300012
+    - 2300012
+    monitor_options:
+    - 100014
+    - 400014
+    - 3300014
+    - 2300014
+    //RootNode:
+    - 100016
+    - 400016
+    - 11100000
+    text_Options:
+    - 100018
+    - 400018
+    - 3300016
+    - 2300016
+    Sphere01:
+    - 100020
+    - 400020
+    button_Reset:
+    - 100022
+    - 400022
+    - 3300018
+    - 2300018
+    CameraTarget:
+    - 100024
+    - 400024
+    text_resetArrows:
+    - 100026
+    - 400026
+    - 3300020
+    - 2300020
+    CameraLocation.Target:
+    - 100028
+    - 400028
+    text_creditsArrows:
+    - 100030
+    - 400030
+    - 3300022
+    - 2300022
+    text_credits:
+    - 100032
+    - 400032
+    - 3300024
+    - 2300024
+    text_reset:
+    - 100034
+    - 400034
+    - 3300026
+    - 2300026
+    text_runGameArrows:
+    - 100036
+    - 400036
+    - 3300028
+    - 2300028
+    text_runGame:
+    - 100038
+    - 400038
+    - 3300030
+    - 2300030
+    text_OptionsArrows:
+    - 100040
+    - 400040
+    - 3300032
+    - 2300032
+    EarthMesh:
+    - 100042
+    - 400042
+    - 3300034
+    - 2300034
+    CameraLocation:
+    - 100044
+    - 400044
+    MoonMesh:
+    - 100046
+    - 400046
+    - 3300036
+    - 2300036
+    TitleDramaBox:
+    - 100048
+    - 400048
+    - 3300038
+    - 2300038
+    SceneRotator:
+    - 100050
+    - 400050
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: MoonMesh
+    4300002: TitleDramaBox
+    4300004: teamLogo
+    4300006: grokionLogo
+    4300008: EarthMesh
+    4300010: button_NewGame
+    4300012: text_runGame
+    4300014: text_runGameArrows
+    4300016: text_Options
+    4300018: text_OptionsArrows
+    4300020: text_credits
+    4300022: text_creditsArrows
+    4300024: text_reset
+    4300026: text_resetArrows
+    4300028: button_Options
+    4300030: button_Credits
+    4300032: button_Reset
+    4300034: monitor_Reset
+    4300036: monitor_Credits
+    4300038: monitor_options
+    7400000: Take 001 //// TitleScreen_Scene@start2

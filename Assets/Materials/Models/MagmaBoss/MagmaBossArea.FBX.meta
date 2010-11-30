@@ -1,0 +1,299 @@
+fileFormatVersion: 1
+guid: 58956996fa1044ceeb81526a15c6630d
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.01
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    TL_magmaArea_mesh_16:
+    - 100000
+    - 400000
+    - 3300000
+    - 2300000
+    TL_magmaArea_mesh_21:
+    - 100002
+    - 400002
+    - 3300002
+    - 2300002
+    AvalancheLowpoly:
+    - 100004
+    - 400004
+    - 3300004
+    - 2300004
+    TL_magmaArea_mesh_17:
+    - 100006
+    - 400006
+    - 3300006
+    - 2300006
+    TL_magmaArea_mesh_18:
+    - 100008
+    - 400008
+    - 3300008
+    - 2300008
+    TL_magmaArea_mesh_11:
+    - 100010
+    - 400010
+    - 3300010
+    - 2300010
+    TL_magmaArea_mesh_13:
+    - 100012
+    - 400012
+    - 3300012
+    - 2300012
+    TL_magmaArea_mesh_35:
+    - 100014
+    - 400014
+    - 3300014
+    - 2300014
+    TL_magmaArea_mesh_12:
+    - 100016
+    - 400016
+    - 3300016
+    - 2300016
+    TL_magmaArea_mesh_10:
+    - 100018
+    - 400018
+    - 3300018
+    - 2300018
+    //RootNode:
+    - 100022
+    - 400022
+    - 11100000
+    TL_magmaArea_mesh_25:
+    - 100024
+    - 400024
+    - 3300022
+    - 2300022
+    TL_magmaArea_mesh_06:
+    - 100026
+    - 400026
+    - 3300024
+    - 2300024
+    TL_magmaArea_mesh_28:
+    - 100032
+    - 400032
+    - 3300030
+    - 2300030
+    TL_magmaArea_mesh_29:
+    - 100034
+    - 400034
+    - 3300032
+    - 2300032
+    TL_magmaArea_mesh_08:
+    - 100036
+    - 400036
+    - 3300034
+    - 2300034
+    TL_magmaArea_mesh_03:
+    - 100038
+    - 400038
+    - 3300036
+    - 2300036
+    TL_magmaArea_mesh_20:
+    - 100040
+    - 400040
+    - 3300038
+    - 2300038
+    TL_magmaArea_mesh_14:
+    - 100042
+    - 400042
+    - 3300040
+    - 2300040
+    TL_magmaArea_mesh_15:
+    - 100044
+    - 400044
+    - 3300042
+    - 2300042
+    TL_magmaArea_mesh_34:
+    - 100046
+    - 400046
+    - 3300044
+    - 2300044
+    TL_magmaArea_mesh_09:
+    - 100048
+    - 400048
+    - 3300046
+    - 2300046
+    TL_magmaArea_mesh_19:
+    - 100050
+    - 400050
+    - 3300048
+    - 2300048
+    TL_magmaArea_mesh_00:
+    - 100052
+    - 400052
+    - 3300050
+    - 2300050
+    TL_magmaArea_mesh_01:
+    - 100054
+    - 400054
+    - 3300052
+    - 2300052
+    TL_magmaArea_mesh_02:
+    - 100056
+    - 400056
+    - 3300054
+    - 2300054
+    TL_magmaArea_mesh_27:
+    - 100058
+    - 400058
+    - 3300056
+    - 2300056
+    TL_magmaArea_mesh_31:
+    - 100060
+    - 400060
+    - 3300058
+    - 2300058
+    TL_magmaArea_mesh_07:
+    - 100062
+    - 400062
+    - 3300060
+    - 2300060
+    TL_magmaArea_mesh_30:
+    - 100064
+    - 400064
+    - 3300062
+    - 2300062
+    TL_magmaArea_mesh_22:
+    - 100066
+    - 400066
+    - 3300064
+    - 2300064
+    TL_magmaArea_mesh_26:
+    - 100068
+    - 400068
+    - 3300066
+    - 2300066
+    TL_magmaArea_mesh_33:
+    - 100070
+    - 400070
+    - 3300068
+    - 2300068
+    TL_magmaArea_mesh_32:
+    - 100072
+    - 400072
+    - 3300070
+    - 2300070
+    TL_magmaArea_mesh_36:
+    - 100074
+    - 400074
+    - 3300072
+    - 2300072
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: MagmaFloor
+    4300002: MagmaFloor01
+    4300004: MagmaFloor02
+    4300006: MagmaFloor03
+    4300008: WallUVed
+    4300010: WallUVed01
+    4300012: WallUVed03
+    4300014: WallUVed04
+    4300016: WallUVed05
+    4300018: WallUVed06
+    4300020: WallUVed08
+    4300022: WallUVed09
+    4300024: WallUVed10
+    4300026: gunExport
+    4300028: gunExport01
+    4300030: LowPolyForUVs-uvlayout
+    4300032: LowPolyForUVs-uvlayout01
+    4300034: Object01
+    4300036: LowPolyForUVs-uvlayout02
+    4300038: Box01
+    4300040: Box02
+    4300042: Box03
+    4300044: Box04
+    4300046: Box05
+    4300048: Box06
+    4300050: Object02
+    4300052: Object03
+    4300054: Object04
+    4300056: Object05
+    4300058: Object06
+    4300060: Object07
+    4300062: Object08
+    4300064: Object09
+    4300066: Object10
+    4300068: Object11
+    4300070: Object12
+    4300072: Object13
+    4300074: Object14
+    4300076: Object15
+    4300078: Object16
+    4300080: Object17
+    4300082: Object18
+    4300084: Object19
+    4300086: Object20
+    4300088: Object21
+    4300090: Object22
+    4300092: Object23
+    4300094: Object24
+    4300096: Object25
+    4300098: Object26
+    4300100: Object27
+    4300102: Object28
+    4300104: Object29
+    4300106: Object30
+    4300108: Object31
+    4300110: Object32
+    4300112: Object33
+    4300114: Object34
+    4300116: Object35
+    4300118: Object36
+    4300120: TL_magmaArea_mesh_00
+    4300122: TL_magmaArea_mesh_01
+    4300124: TL_magmaArea_mesh_02
+    4300126: TL_magmaArea_mesh_03
+    4300128: TL_magmaArea_mesh_04
+    4300130: TL_magmaArea_mesh_05
+    4300132: TL_magmaArea_mesh_06
+    4300134: TL_magmaArea_mesh_07
+    4300136: TL_magmaArea_mesh_08
+    4300138: TL_magmaArea_mesh_09
+    4300140: TL_magmaArea_mesh_10
+    4300142: TL_magmaArea_mesh_11
+    4300144: TL_magmaArea_mesh_12
+    4300146: TL_magmaArea_mesh_13
+    4300148: TL_magmaArea_mesh_14
+    4300150: TL_magmaArea_mesh_15
+    4300152: TL_magmaArea_mesh_16
+    4300154: TL_magmaArea_mesh_17
+    4300156: TL_magmaArea_mesh_18
+    4300158: TL_magmaArea_mesh_19
+    4300160: TL_magmaArea_mesh_20
+    4300162: TL_magmaArea_mesh_21
+    4300164: TL_magmaArea_mesh_22
+    4300166: TL_magmaArea_mesh_23
+    4300168: TL_magmaArea_mesh_24
+    4300170: TL_magmaArea_mesh_25
+    4300172: TL_magmaArea_mesh_26
+    4300174: TL_magmaArea_mesh_27
+    4300176: TL_magmaArea_mesh_28
+    4300178: TL_magmaArea_mesh_29
+    4300180: TL_magmaArea_mesh_30
+    4300182: TL_magmaArea_mesh_31
+    4300184: TL_magmaArea_mesh_32
+    4300186: TL_magmaArea_mesh_33
+    4300188: TL_magmaArea_mesh_34
+    4300190: TL_magmaArea_mesh_35
+    4300192: TL_magmaArea_mesh_36
+    4300194: AvalancheLowpoly

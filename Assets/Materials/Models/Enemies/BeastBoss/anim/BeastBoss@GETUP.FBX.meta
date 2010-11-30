@@ -1,0 +1,113 @@
+fileFormatVersion: 1
+guid: b3c277cc6f16741f2aaf9ddadb508e69
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.01
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    root:
+    - 100000
+    - 400000
+    beastLLeg3:
+    - 100002
+    - 400002
+    beastLLegDigit11:
+    - 100004
+    - 400004
+    beastneck:
+    - 100006
+    - 400006
+    game:
+    - 100008
+    - 400008
+    beasthead:
+    - 100010
+    - 400010
+    //RootNode:
+    - 100012
+    - 400012
+    - 11100000
+    beastRLeg2:
+    - 100014
+    - 400014
+    beastRLegAnkle 1:
+    - 100016
+    - 400016
+    beastRLeg1:
+    - 100018
+    - 400018
+    beastRLegDigit12:
+    - 100020
+    - 400020
+    beastRLegDigit11:
+    - 100022
+    - 400022
+    beastRLeg3:
+    - 100024
+    - 400024
+    beastLLeg1 1:
+    - 100026
+    - 400026
+    beastRLeg2 1:
+    - 100028
+    - 400028
+    beastRLeg1 1:
+    - 100030
+    - 400030
+    beastLLegAnkle:
+    - 100032
+    - 400032
+    beastLLegDigit12:
+    - 100034
+    - 400034
+    beastLLeg2:
+    - 100036
+    - 400036
+    beastPelvis:
+    - 100038
+    - 400038
+    - 13700000
+    beastRLegAnkle:
+    - 100040
+    - 400040
+    beastLLegAnkle 1:
+    - 100042
+    - 400042
+    beastSpine2:
+    - 100044
+    - 400044
+    beastSpineCATRigSpine1:
+    - 100046
+    - 400046
+    beastLLeg2 1:
+    - 100048
+    - 400048
+    beastLLeg1:
+    - 100050
+    - 400050
+    beastchest:
+    - 100052
+    - 400052
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: ingameUVs-uvlayout
+    4300002: game
+    7400000: Take 001 //// BeastBoss@GETUP

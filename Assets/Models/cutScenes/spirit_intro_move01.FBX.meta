@@ -1,0 +1,54 @@
+fileFormatVersion: 1
+guid: 521839db91497496e86e4cba83189338
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.01
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+    clips:
+      RUN:
+        firstFrame: 1
+        lastFrame: 120
+        loop: 0
+        wrapMode: 0
+      WAKE:
+        firstFrame: 121
+        lastFrame: 150
+        loop: 0
+        wrapMode: 0
+      END:
+        firstFrame: 151
+        lastFrame: 170
+        loop: 0
+        wrapMode: 0
+  nodeInfo:
+    Spirit:
+    - 100000
+    - 400000
+    //RootNode:
+    - 100002
+    - 400002
+    - 11100000
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    7400000: Take 001 //// spirit_intro_move01
+    7400002: RUN //// spirit_intro_move01
+    7400004: WAKE //// spirit_intro_move01
+    7400006: END //// spirit_intro_move01

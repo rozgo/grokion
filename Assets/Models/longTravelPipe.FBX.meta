@@ -1,0 +1,59 @@
+fileFormatVersion: 1
+guid: 9db8b515617b2482a942409ed522c6b2
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.01
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 1
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    Object03:
+    - 100000
+    - 400000
+    - 3300000
+    - 2300000
+    - 6400000
+    Object01:
+    - 100002
+    - 400002
+    - 3300002
+    - 2300002
+    - 6400006
+    Object02:
+    - 100004
+    - 400004
+    - 3300004
+    - 2300004
+    - 6400002
+    pipeLow02:
+    - 100006
+    - 400006
+    - 3300006
+    - 2300006
+    - 6400004
+    //RootNode:
+    - 100008
+    - 400008
+    - 11100000
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: pipeLow02
+    4300002: Object01
+    4300004: Object02
+    4300006: Object03

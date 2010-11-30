@@ -1,0 +1,101 @@
+fileFormatVersion: 1
+guid: 3d209485222a64560902d4fc2cc46d8f
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 0
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    Body:
+    - 100000
+    - 400000
+    - 13700000
+    //RootNode:
+    - 100002
+    - 400002
+    - 11100000
+    Beak.D:
+    - 100004
+    - 400004
+    Beak.U:
+    - 100006
+    - 400006
+    Wings:
+    - 100008
+    - 400008
+    - 13700002
+    Armature:
+    - 100010
+    - 400010
+    Head:
+    - 100012
+    - 400012
+    Neck:
+    - 100014
+    - 400014
+    Root:
+    - 100016
+    - 400016
+    Spine:
+    - 100018
+    - 400018
+    Tail1:
+    - 100020
+    - 400020
+    Tail2:
+    - 100022
+    - 400022
+    Wing1.L:
+    - 100024
+    - 400024
+    Wing1.R:
+    - 100026
+    - 400026
+    Wing2.L:
+    - 100028
+    - 400028
+    Wing2.R:
+    - 100030
+    - 400030
+    Wing3.L:
+    - 100032
+    - 400032
+    Wing3.R:
+    - 100034
+    - 400034
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Energy
+    4300002: Projectile
+    4300004: Swimsuit
+    4300006: Armor
+    4300008: Model.003
+    4300010: Model.002
+    4300012: Model.001
+    4300014: Model
+    4300016: Circle
+    4300018: Plane
+    4300020: Plane.001
+    4300022: Wings
+    4300024: Feathers
+    4300026: Body
+    4300028: Head
+    7400000: IDLE //// Seraph
+    7400002: CHARGE //// Seraph

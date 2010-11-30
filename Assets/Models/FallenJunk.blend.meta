@@ -1,0 +1,122 @@
+fileFormatVersion: 1
+guid: 069c21462b8404c5aa9b22e67d96f19a
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.5
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 0
+  animations:
+    generation: 0
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 0
+    clips:
+      IDLE:
+        firstFrame: 1
+        lastFrame: 8
+        loop: 0
+        wrapMode: 0
+  nodeInfo:
+    //RootNode:
+    - 100000
+    - 400000
+    Leg:
+    - 100002
+    - 400002
+    - 3300000
+    - 2300000
+    Body:
+    - 100004
+    - 400004
+    - 3300002
+    - 2300002
+    Arm:
+    - 100006
+    - 400006
+    - 3300006
+    - 2300006
+    Shoe:
+    - 100008
+    - 400008
+    - 3300008
+    - 2300008
+    Canon:
+    - 100010
+    - 400010
+    - 3300010
+    - 2300010
+    Head:
+    - 100016
+    - 400016
+    - 3300004
+    - 2300004
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Plane.001
+    4300002: Plane
+    4300004: Model
+    4300006: Shoe
+    4300008: Leg
+    4300010: Canon
+    4300012: Arm
+    4300014: Body
+    4300016: Head
+    7400000: IDLE //// Character
+    7400002: IDLE //// Character
+    7400004: RUN //// Character
+    7400006: FALL //// Character
+    7400008: JUMP //// Character
+    7400010: SHOOT //// Character
+    7400012: HIT //// Character
+    7400014: SWIM //// Character
+    7400016: SWIM_UP //// Character
+    7400018: SHOOT_DOWN //// Character
+    7400020: SHOOT_UP //// Character
+    7400022: FALL //// Character 1
+    7400024: HIT //// Character 1
+    7400026: IDLE //// Character 1
+    7400028: JUMP //// Character 1
+    7400030: RUN //// Character 1
+    7400032: SHOOT //// Character 1
+    7400034: SHOOT_DOWN //// Character 1
+    7400036: SHOOT_UP //// Character 1
+    7400038: SWIM //// Character 1
+    7400040: SWIM_UP //// Character 1
+    7400042: FALL //// Fallen
+    7400044: FALLEN //// Fallen
+    7400046: HIT //// Fallen
+    7400048: IDLE //// Fallen
+    7400050: JUMP //// Fallen
+    7400052: RUN //// Fallen
+    7400054: SHOOT //// Fallen
+    7400056: SHOOT_DOWN //// Fallen
+    7400058: SHOOT_UP //// Fallen
+    7400060: SWIM //// Fallen
+    7400062: SWIM_UP //// Fallen
+    7400064: FALLEN2 //// Fallen
+    7400066: FALLEN3 //// Fallen
+    7400068: FALL //// Fallen 1
+    7400070: FALLEN //// Fallen 1
+    7400072: FALLEN2 //// Fallen 1
+    7400074: FALLEN3 //// Fallen 1
+    7400076: HIT //// Fallen 1
+    7400078: IDLE //// Fallen 1
+    7400080: JUMP //// Fallen 1
+    7400082: RUN //// Fallen 1
+    7400084: SHOOT //// Fallen 1
+    7400086: SHOOT_DOWN //// Fallen 1
+    7400088: SHOOT_UP //// Fallen 1
+    7400090: SWIM //// Fallen 1
+    7400092: SWIM_UP //// Fallen 1

@@ -1,0 +1,98 @@
+fileFormatVersion: 1
+guid: c1854398804f64b48b15d1ed41b5cc49
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.01
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 1
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    //RootNode:
+    - 100000
+    - 400000
+    - 11100000
+    wallTrigger:
+    - 100002
+    - 400002
+    - 3300000
+    - 2300000
+    OuterWall10:
+    - 100004
+    - 400004
+    - 3300002
+    - 2300002
+    OuterWall03:
+    - 100006
+    - 400006
+    - 3300004
+    - 2300004
+    OuterWall06:
+    - 100008
+    - 400008
+    - 3300006
+    - 2300006
+    OuterWall02:
+    - 100010
+    - 400010
+    - 3300008
+    - 2300008
+    OuterWall04:
+    - 100012
+    - 400012
+    - 3300010
+    - 2300010
+    OuterWall07:
+    - 100014
+    - 400014
+    - 3300012
+    - 2300012
+    OuterWall08:
+    - 100016
+    - 400016
+    - 3300014
+    - 2300014
+    OuterWall09:
+    - 100018
+    - 400018
+    - 3300016
+    - 2300016
+    OuterWall05:
+    - 100020
+    - 400020
+    - 3300018
+    - 2300018
+    OuterWall01:
+    - 100022
+    - 400022
+    - 3300020
+    - 2300020
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Object03
+    4300002: OuterWall04
+    4300004: wallTrigger
+    4300006: OuterWall02
+    4300008: OuterWall03
+    4300010: OuterWall06
+    4300012: OuterWall10
+    4300014: OuterWall07
+    4300016: OuterWall08
+    4300018: OuterWall09
+    4300020: OuterWall05
+    4300022: OuterWall01

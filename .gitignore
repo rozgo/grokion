@@ -1,0 +1,25 @@
+AssetServerCacheV3
+assetservercachev3
+FailedAssetImports.txt
+ScriptAssemblies
+ScriptMapper
+Temp
+assetDatabase3
+cache
+guidmapper
+metadata
+unity default resources
+unity editor resources
+AssetVersioning.db
+ProjectUsesCompressTexturesOnImport
+expandedItems
+BuildMac.app
+Builds/iPhone
+AssetImportState
+previews
+*.md.pc
+*.pidb
+*.userprefs
+*.usertasks
+Builds
+.DS_Store

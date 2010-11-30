@@ -1,0 +1,231 @@
+
+--------------------------------------------------
+
+[Objective|1]
+Enter the Biosphere
+>BO
+
+[Objective|2]
+Gather energy orbs and
+equipment
+>CNBO
+
+[Objective|3]
+Locate Dr. Savain
+>JN
+
+[Objective|4]
+Make way to the civil
+elevator
+>MN
+
+[Objective|5]
+Seek an alternate route
+through the Biosphere
+>BO
+
+
+[Vignette|AO|1]
+{avatarSpirit} Arise, LDU-1...
+
+[Vignette|AO|2]
+{avatarSpirit}The Biosphere is in great peril.
+{avatarSpirit}you alone stand as guardian and savior.
+{avatarSpirit}look to my guiding light-
+{avatarSpirit}in these darkest hours.
+
+[Hotspot|AO|8]
+{avatarSpirit}Something works against us...
+{avatarSpirit}It knows you have been reactivated.
+{avatarSpirit}Make haste with measured steps, LDU-1.
+{avatarSpirit}you are unarmed and vulnerable to damage.
+
+[Hotspot|BO|1]
+{avatarSpirit}The Biosphere is in ruin...
+{avatarSpirit}all is left silent and still by the chaos.
+{avatarSpirit}be ever alert as you advance, LDU-1.
+{avatarSpirit}let us find you some much needed equipment.
+(A new Objective has been added!)
+
+[Hotspot|BO|2]
+{avatarSpirit|SpiritAlert}inoperative units may contain- 
+{avatarSpirit}valuable information and equipment. 
+{avatarSpirit}let us examine this one...
+{avatarFallenLDU|RobotVoice2}Seriphum Energy reserves critically low.
+{avatarSpirit|SpiritAlert}Your Energy levels must be maintained, LDU-1.
+{avatarSpirit}collect fragmented orbs to replenish them.
+{avatarSpirit}I sense there is some just ahead...
+
+[Hotspot|BO|3]
+{avatarFallenLDU|RobotVoice2}Seriphum Energy Tank detected nearby
+{avatarSpirit|SpiritAlert}Seriphum...
+{avatarSpirit}a unique source of energy harvested by the doctor.
+{avatarSpirit}it is the lifeblood of most things here.
+{avatarSpirit}come... let us move on.
+
+[Hotspot|BO|4]
+{avatarSpirit|SpiritAlert}Be resourceful, LDU-1.
+{avatarSpirit}boxes can be pushed to open obstructed paths-
+{avatarSpirit}and may open access to new areas.
+
+[Hotspot|BO|5]
+{avatarSpirit|SpiritAlert}Here is the energy tank, LDU-1.
+{avatarSpirit}this would further empower you,
+{avatarSpirit}allowing you to store more seriphum.
+
+[Fallen|BO|6]
+{avatarFallenLDU|RobotVoice2}Portals sealed per lockdown protocol
+{avatarFallenLDU|RobotVoice2}target, fire and advance to enter.
+{avatarSchematic|LDUEquip}Salvaging technology...
+(Projectiles acquired - LDU-1 armed)
+
+[EnergyTank]
+(Energy Tank acquired - capacity increased)
+
+[Fallen|CM|1]
+{avatarSchematic|LDUEquip}Data recovery initiated...
+(Biosphere map acquired)
+
+[Hotspot|CNBO|1]
+{avatarSpirit}Be wary of the many traps...
+{avatarSpirit}move quickly, LDU-1!
+{avatarSpirit}follow me along the ascending path.
+
+[Hotspot|CNBO|10]
+{avatarSpirit|SpiritAlert}A most agile and timely escape, LDU-1...
+
+[Hotspot|CN|1]
+{avatarFallenLDU|RobotVoice2}Null positioning coordinates for Dr. Savain.
+{avatarFallenLDU|RobotVoice1}search and recovery terminated...
+{avatarSpirit|SpiritAlert}Savain created the Biosphere and is key
+{avatarSpirit}to restabilizing it - he must be located!
+(A new Objective has been added!)
+
+[Hotspot|CO1|1]
+{avatar144k|144k}Vessel 144K reporting - launch successful -
+{avatar144k}landing coordinates set for Lunar Biosphere...
+{avatarSpirit|SpiritAlert}Vessel 144K carries the elite of mankind.
+{avatarSpirit}the most evolved of the species, in fact.
+{avatarSpirit|}all sure to meet their end if the Biosphere
+{avatarSpirit}is not stabilized before they arrive.
+
+[Hotspot|CO1|2]
+{avatarDoctor}LDU-1, is that you??
+{avatarDoctor}How can this be?
+{avatarDoctor}All lunar defence units have perished.
+{avatarDoctor}It is me, your creator...
+{avatarDoctor}Doctor Savain.
+{avatarDoctor}LDU-1, We need to save the Biosphere!
+{avatarDoctor}It has somehow turned against itself.
+{avatarDoctor}a virus now contaminates the system.
+{avatarDoctor}Where did it all go wrong...? 
+{avatarDoctor}you must get to my laboratory at once!
+{avatarDoctor}when the chaos erupted, I locked myself in.
+{avatarDoctor}You are the only one who can free me now.
+{avatarDoctor}quickly, go to the civil elevator!
+{avatarDoctor}it is on the far side of this floor.
+{avatarDoctor}But beware of the high security bot...
+{avatarDoctor}It roams the area beyond this room.
+{avatarDoctor}it will likely view you as a threat.
+{avatarDoctor}Good luck, LDU-1!
+(A new Objective has been added!)
+
+[Hotspot|CO2|2]
+{avatarDoctor}LDU-1, you have returned!
+{avatarDoctor}There is so much you need to know...
+{avatarDoctor}But this is not time or place!
+{avatarDoctor}With the civil elevator destroyed,
+{avatarDoctor}we have only one choice...
+{avatarDoctor}You must traverse the inner chambers.
+{avatarDoctor}into the core of the Biosphere.
+{avatarDoctor}I see you've equipped a surge blaster...
+{avatarDoctor}you can use it to power the orange portals.
+{avatarDoctor}Below this level is an alternate route.
+{avatarDoctor}I have uploaded the location into your cpu.
+{avatarDoctor}I believe we-
+{|alarm} ... ... ...
+{|alarm} "WARNING - contaminant detected"
+{|alarm} "isolation sequence activated"
+{avatarDoctor}That is the isolation alarm!
+{avatarDoctor}you must hurry, LDU-1 - go now!!!
+(A new Objective has been added!)
+
+[Hotspot|CO2|3]
+{avatar144k|144k}144K to Lunar Biosphere Base
+{avatar144k}requesting transmission confirmation
+{avatar144k|144k} Lunar Biosphere, do you copy...?!? - over
+{avatarSpirit|SpiritAlert}The humans draw closer, LDU-1
+{avatarSpirit}until Doctor Savain is reached,
+{avatarSpirit}we will be unable to warn them.
+
+[Hotspot|C03|1]
+{avatarDoctor}LDU-1, you made it!
+{avatarDoctor}as soon as I saw that beast, I...
+{avatarDoctor}Thanks to you, hope clings to the Biosphere.
+{avatarDoctor}But I fear your greatest challenge awaits.
+{avatarDoctor}Beyond this chamber lies the Vivarium experiment.
+{avatarDoctor}It is- "was" a place of great beauty.
+{avatarDoctor}The virus... it has twisted all life within it.
+{avatarDoctor}But I know you will prevail.
+{avatarDoctor}You were the first, and are now the last.
+{avatarDoctor}You have made me proud, LDU-1.
+{avatarDoctor}Go now... and defend the Biosphere!
+
+[Hotspot|FN|Lava]
+{avatarSpirit}Beware these scarlet channels, LDU-1 -
+{avatarSpirit}the molten rock will surely liquefy armament...
+
+[Hotspot|FN|Suit]
+{avatarSpirit}Wait, LDU-1...
+{avatarSpirit}This suit will protect your frame
+{avatarSpirit}you must find a way to it.
+
+[Fallen|FN|1]
+{avatarSchematic|LDUEquip}Salvaging Technology...
+{avatarSpirit|SpiritAlert}You are now fully suited and armed, LDU-1.
+{avatarSpirit}let us venture deeper into the Biosphere.
+(Armored shell acquired)
+
+[Hotspot|FOEN|1]
+{avatarSpirit} A moment, LDU-1.
+{avatarSpirit} It may be safer to avoid these depths.
+{avatarSpirit} Perhaps another way is open above us...
+
+[Fallen|MN|Charger]
+{avatarSchematic|LDUEquip}Salvaging Technology...
+{avatarSpirit|SpiritAlert}Surge blasts deplete energy stores, LDU-1. 
+{avatarSpirit}Use them sparingly.
+(hold down button to activate)
+(Surge blast acquired)
+
+[Hotspot|NN|1]
+{avatarSpirit}a most unfortunate fate...
+{avatarSpirit}The civil elevator is inoperable.
+{avatarSpirit}it has suffered irreparable damage.
+{avatarSpirit}... ... ...
+{avatarSpirit}Let us retrace out steps and find-
+{avatarSpirit}an alternate route, LDU-1.
+
+[Hotspot|HK|Water]  
+{avatarSpirit}These waterways can be crossed by walking through
+{avatarSpirit}or wading atop, but a hydrosuit is needed to 
+{avatarSpirit}venture below surface...
+
+[Hotspot|IM|1]
+{avatarSpirit}These grounds contain earthen elements much needed
+{avatarSpirit}to foster and sustain human life...
+
+[Fallen|JJ|1]
+(Hydrosuit acquired)
+{avatarSpirit|SpiritAlert}You can submerge fully and explore
+{avatarSpirit}underwater when clad in this
+{avatarSpirit}Hydrosuit, LDU-1...
+
+[Vignette|GM|1]
+{avatarSpirit}Localized terraforming - a human euphoria.
+{avatarSpirit}I sense you perceive this beauty...
+{avatarSpirit}perhaps The spark of life has touched you.
+{avatarSpirit}are you something more than parts and commands?
+{avatarSpirit}That, we shall see...
+{avatarSpirit}This place is unknown to me, LDU-1.
+{avatarSpirit}I must survey the path ahead.

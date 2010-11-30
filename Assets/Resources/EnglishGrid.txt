@@ -1,0 +1,2 @@
+[Hotspot|P1|1]
+{avatarSpirit} OK this is a test!
