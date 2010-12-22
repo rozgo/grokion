@@ -11,6 +11,7 @@ public class Box : MonoBehaviour {
 	public AudioClip hitClip;
     public bool isIce = false;
 	public bool sleepOnStart = true;
+	public bool releaseEnergyOrbs = true;
 
     Health health;
 	ParticleEmitter flames;
@@ -37,7 +38,9 @@ public class Box : MonoBehaviour {
             lastBreak = Time.time;
 		}
 		int orbs = Game.casual ? Random.Range(0,4) : Random.Range(0,2);
-		Game.fx.ReleaseEnergy(orbs, collider.bounds.center);
+		if (releaseEnergyOrbs) {
+			Game.fx.ReleaseEnergy(orbs, collider.bounds.center);
+		}
         yield return 0;
         Spawner spawner = (Spawner)GetComponent(typeof(Spawner));
 		if (spawner != null) {
