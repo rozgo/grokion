@@ -34,7 +34,7 @@ public class Pivot : MonoBehaviour {
 			}
 			transform.localPosition = localPosition;
 		}
-		else if (enableKeys && Application.isEditor) {
+		else if (enableKeys) {
 			
 			Vector3 localPosition = transform.localPosition;
 			

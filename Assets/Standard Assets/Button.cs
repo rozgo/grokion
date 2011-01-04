@@ -15,7 +15,6 @@ public class Button : MonoBehaviour {
         }
     }
     
-#if UNITY_STANDALONE_OSX || UNITY_STANDALONE_WIN || UNITY_EDITOR
     void Update () {
     	if (key.Length > 0) {
 			if (Input.GetKeyDown(key)) {
@@ -34,7 +33,6 @@ public class Button : MonoBehaviour {
 			}
     	}
     }
-#endif
     
     void OnMouseDown () {
         OnFingerBegin();
