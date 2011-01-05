@@ -159,8 +159,11 @@ public class Game : StateMachine {
 			hud.EnableControls(false);
 		}
 
-		Instantiate(Resources.Load("Director"));
 		director = (Director)FindObjectOfType(typeof(Director));
+		if (director == null) {
+			Instantiate(Resources.Load("Director"));
+			director = (Director)FindObjectOfType(typeof(Director));
+		}
 		director.transform.rotation = Quaternion.identity;
 		fx = (FX)FindObjectOfType(typeof(FX));
 		checkpoints = (Checkpoint[])FindObjectsOfType(typeof(Checkpoint));
