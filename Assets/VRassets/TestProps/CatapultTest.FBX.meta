@@ -1,0 +1,56 @@
+fileFormatVersion: 1
+guid: ddaa71ed06f35b74b93284c644378239
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.01
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 1
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 1
+    splitAnimations: 1
+  nodeInfo:
+    //RootNode:
+    - 100000
+    - 400000
+    - 11100000
+    Box001:
+    - 100002
+    - 400002
+    - 3300000
+    - 2300000
+    Box004:
+    - 100004
+    - 400004
+    - 3300002
+    - 2300002
+    Box002:
+    - 100006
+    - 400006
+    - 3300004
+    - 2300004
+    Box003:
+    - 100008
+    - 400008
+    - 3300006
+    - 2300006
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Box001
+    4300002: Box002
+    4300004: Box003
+    4300006: Box004
+    7400000: Take 001 //// CatapultTest
