@@ -26,3 +26,7 @@ TextureImporter:
     anisoLevel: -1
     mipmapBias: -1
     wrapMode: -1
+  buildTargetSettings:
+    Web:
+      maxTextureSize: 256
+      textureFormat: -1

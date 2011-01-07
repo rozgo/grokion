@@ -39,7 +39,7 @@ public class Credits : MonoBehaviour {
 
 	IEnumerator ExitTask () {
 		yield return new WaitForSeconds(1);
-		Application.LoadLevel("Loader");
+		Application.LoadLevel("StoryLoader");
 	}
 
 	IEnumerator TwitterTask () {
@@ -49,7 +49,7 @@ public class Credits : MonoBehaviour {
 
 	IEnumerator GrokionTask () {
 		yield return new WaitForSeconds(1);
-		Application.OpenURL("http://grokion.com");
+		Application.OpenURL("http://dododomination.com");
 	}
 	
 	void DisableButtons () {

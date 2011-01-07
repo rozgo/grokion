@@ -5,7 +5,7 @@ public class MenuHelp : MonoBehaviour {
 	
 	void Start () {
 		renderer.enabled = false;
-		renderer.material.mainTexture = null;
+		//renderer.material.mainTexture = null;
 		foreach (Transform child in transform) {
 			child.gameObject.active = false;
 		}
@@ -16,7 +16,7 @@ public class MenuHelp : MonoBehaviour {
 		if (dist < 20) {
 			if (!renderer.enabled) {
 				renderer.enabled = true;
-				renderer.material.mainTexture = (Texture2D)Resources.Load(name, typeof(Texture2D));
+				//renderer.material.mainTexture = (Texture2D)Resources.Load(name, typeof(Texture2D));
 				foreach (Transform child in transform) {
 					child.gameObject.active = true;
 				}
@@ -25,7 +25,7 @@ public class MenuHelp : MonoBehaviour {
 		else {
 			if (renderer.enabled) {
 				renderer.enabled = false;
-				renderer.material.mainTexture = null;
+				//renderer.material.mainTexture = null;
 				foreach (Transform child in transform) {
 					child.gameObject.active = false;
 				}
