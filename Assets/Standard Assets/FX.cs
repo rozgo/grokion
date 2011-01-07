@@ -275,13 +275,21 @@ public class FX : MonoBehaviour {
 		deathObject.transform.position = transform.position + transform.forward * 2;
 		deathObject.transform.parent = transform;
 	}
-	
+
+	IEnumerator ReinforceMusicPlay (AudioClip music) {
+		while (musicAudio.clip == music && !musicAudio.isPlaying) {
+			musicAudio.Play();
+			yield return new WaitForSeconds(2);
+		}
+	}
+  
 	public void PlayMusic (AudioClip music) {
 		currentMusic = music;
 		musicAudio.volume = musicVolume;
 		musicAudio.clip = music;
 		musicAudio.loop = true;
 		musicAudio.Play();
+		StartCoroutine(ReinforceMusicPlay(music));
 	}
 	
 	public void PlayMusicEvent (AudioClip music) {
