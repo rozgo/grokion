@@ -24,9 +24,13 @@ public class Loader : MonoBehaviour {
     public GameObject resetScreen;
     public SimpleRotate backdrop;
     public GameObject animatedMenu;
-	
+
+    public string whichLevelLoad; //added by Jonny
+
 	void Awake () {
 		//Game.debug = false;
+        string[] currentCheckPoint = PlayerPrefs.GetString("Checkpoint").Split('|'); // Added by Jonny to make sure the spawnpoint level is loaded if they come back to the game
+        whichLevelLoad = currentCheckPoint[1]; // Added by Jonny to make sure the spawnpoint level is loaded if they come back to the game
 	}
 
     IEnumerator LoadGame (bool reset) {
@@ -38,9 +42,11 @@ public class Loader : MonoBehaviour {
         if (checkpointInfo.Length == 3 && checkpointInfo[0] == "Door") {
             Game.door = PlayerPrefs.GetString("Checkpoint");
             Application.LoadLevel(checkpointInfo[1]);
+            whichLevelLoad = checkpointInfo[1]; // Added by Jonny to make sure the spawnpoint level is loaded if they come back to the game
         }
         else if (checkpointInfo.Length == 2) {
             Application.LoadLevel(checkpointInfo[1]);
+            whichLevelLoad = checkpointInfo[1]; // Added by Jonny to make sure the spawnpoint level is loaded if they come back to the game
         }
         else {
             Application.LoadLevel(scene);
@@ -54,7 +60,8 @@ public class Loader : MonoBehaviour {
 
     void OnButtonUp (Button button) {
         sound.Play();
-        if (button == startGame) {
+        if (button == startGame && Application.GetStreamProgressForLevel(whichLevelLoad) == 1) //changed by Jonny
+        {   
         	options.gameObject.SetActiveRecursively(false);
         	optionsExit.gameObject.SetActiveRecursively(false);
         	credits.gameObject.SetActiveRecursively(false);

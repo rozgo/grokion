@@ -7,7 +7,7 @@ public class CustomUVAnim : MonoBehaviour {
 	
 	void Update () {
 		float offset = Game.realTime * scrollSpeed;
-    	renderer.material.SetTextureOffset("_Rotation", new Vector2(offset,0));
+    	renderer.material.SetTextureOffset("_MainTex", new Vector2(offset,offset));
 	}
 	
 }
