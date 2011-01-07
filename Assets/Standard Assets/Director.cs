@@ -4,8 +4,8 @@ using System.Collections;
 public class Director : MonoBehaviour {
 	
 	public static float zoom = 0;
-	public static float minZoom = -3;
-	public static float maxZoom = 6;
+	public static float minZoom = -2;
+	public static float maxZoom = 4;
 	
 	float zoomAccel = 0;
 	

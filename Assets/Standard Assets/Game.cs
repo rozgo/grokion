@@ -146,17 +146,20 @@ public class Game : StateMachine {
 		}
 		cache = new GameObject("Cache");
 		
-		if (grid == null) {
-			GameObject hudObject = (GameObject)Instantiate(Resources.Load("Hud"));
-			hud = (Hud)hudObject.GetComponent(typeof(Hud));
-			hud.EnableControls(false);
-		}
-		else {
-			GameObject hudObject = (GameObject)Instantiate(Resources.Load("GridHud"));
-			hud = (Hud)hudObject.GetComponent(typeof(Hud));
-			hud.sharedMaterial.mainTexture = (Texture2D)Resources.Load("GridHud", typeof(Texture2D));
-			hud.sharedActiveMaterial.mainTexture = (Texture2D)Resources.Load("GridHud", typeof(Texture2D));
-			hud.EnableControls(false);
+		hud =  (Hud)FindObjectOfType(typeof(Hud));
+		if (hud == null) {
+			if (grid == null) {
+				GameObject hudObject = (GameObject)Instantiate(Resources.Load("Hud"));
+				hud = (Hud)hudObject.GetComponent(typeof(Hud));
+				hud.EnableControls(false);
+			}
+			else {
+				GameObject hudObject = (GameObject)Instantiate(Resources.Load("GridHud"));
+				hud = (Hud)hudObject.GetComponent(typeof(Hud));
+				hud.sharedMaterial.mainTexture = (Texture2D)Resources.Load("GridHud", typeof(Texture2D));
+				hud.sharedActiveMaterial.mainTexture = (Texture2D)Resources.Load("GridHud", typeof(Texture2D));
+				hud.EnableControls(false);
+			}
 		}
 
 		director = (Director)FindObjectOfType(typeof(Director));
@@ -236,10 +239,19 @@ public class Game : StateMachine {
 		character.Rest();
 	}
 	
+	float screenLockTime = 0;
 	void Update () {
 		realDeltaTime = Time.realtimeSinceStartup - realTime;
 		realTime = Time.realtimeSinceStartup;
 		state.OnUpdate();
+
+		screenLockTime += Time.deltaTime;
+		if (Screen.lockCursor) {
+			screenLockTime = 0;
+		}
+		else if (screenLockTime > 1) {
+			Screen.lockCursor = true;
+		}
 	}
 	
 	IEnumerator WaitForRealSeconds(float time) {
@@ -279,8 +291,9 @@ public class Game : StateMachine {
 		}
 		Game.fx.avatarCard.SetActiveRecursively(false);
 		yield return 0;
-		Game.fx.PlaySound(ctrlClip);
-		yield return 0;
 		GarbageCollect();
+		Screen.lockCursor = true;
+		yield return 0;
+		Game.fx.PlaySound(ctrlClip);
 	}
 }

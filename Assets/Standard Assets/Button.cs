@@ -4,6 +4,7 @@ using System.Collections;
 public class Button : MonoBehaviour {
     
     public string key;
+	public string button;
     public GameObject receiver;
     public Material sharedMaterialNormal;
     public Material sharedMaterialActive;
@@ -25,6 +26,22 @@ public class Button : MonoBehaviour {
 			    receiver.SendMessage("OnButtonDown", this, SendMessageOptions.DontRequireReceiver);
 			}
 			else if (Input.GetKeyUp(key)) {
+			    down = false;
+			    if (sharedMaterialNormal != null) {
+			        renderer.material = sharedMaterialNormal;
+			    }
+			    receiver.SendMessage("OnButtonUp", this, SendMessageOptions.DontRequireReceiver);
+			}
+    	}
+    	if (button.Length > 0) {
+			if (Input.GetButtonDown(button)) {
+			    down = true;
+			    if (sharedMaterialActive != null) {
+			        renderer.material = sharedMaterialActive;
+			    }
+			    receiver.SendMessage("OnButtonDown", this, SendMessageOptions.DontRequireReceiver);
+			}
+			else if (Input.GetButtonUp(button)) {
 			    down = false;
 			    if (sharedMaterialNormal != null) {
 			        renderer.material = sharedMaterialNormal;

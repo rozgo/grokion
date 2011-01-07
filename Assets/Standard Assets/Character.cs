@@ -1071,13 +1071,6 @@ public class Character : StateMachine {
     IEnumerator ShootCoroutine () {
         shooting = true;
         recoil = 0.3f;
-        if (pivot.transform.localPosition.sqrMagnitude > 0.1f) {
-            float angle = Mathf.Atan2(pivot.transform.localPosition.x,pivot.transform.localPosition.y) * Mathf.Rad2Deg;
-            rightArm.rotation = Quaternion.AngleAxis(angle-90, Vector3.forward);
-        }
-        else if (shooting) {
-            rightArm.rotation = transform.rotation * Quaternion.AngleAxis(180,transform.forward);
-        }
         if (pivot.transform.localPosition.y < -0.8f) {
             animation[animNameShootDown].speed = 6;
             animation.Blend(animNameShootDown);
@@ -1661,22 +1654,20 @@ public class Character : StateMachine {
             rightArm.rotation = Quaternion.AngleAxis(angle-90, Vector3.forward);
             rightForearm.localRotation = Quaternion.identity;
         }
-        else if (!marionette && pivot.transform.localPosition.sqrMagnitude > 0.1f && weapon != Weapon.None) {
-            float angle = 
-                Mathf.Atan2(pivot.transform.localPosition.x, pivot.transform.localPosition.y) * Mathf.Rad2Deg;
-            rightArm.rotation = Quaternion.AngleAxis(angle-90, Vector3.forward);
-            rightForearm.localRotation = Quaternion.identity;
-        }
-        else if (recoil > 0 || shooting || flame.emit == true || grappling || chargeTime > 0) {
-            float angle = 0;
-            if (transform.right.z > 0) {
-                angle = 0;
-            }
-            else {
-                angle = 180;
-            }
-            rightArm.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            rightArm.localRotation *= Quaternion.Euler(0, 20, 0);
+        else {
+			Vector3 dir = pivot.crosshair.normalized;
+			dir.Normalize();
+			float angle = Vector3.Angle(dir, Vector3.up);
+			if (dir.x < 0) {
+				rightArm.rotation = Quaternion.AngleAxis(angle - 90, Vector3.Cross(Vector3.up, dir));
+			}
+			else {
+				rightArm.rotation = Quaternion.AngleAxis(angle + 90, Vector3.Cross(Vector3.up, dir));
+			}
+			// hack to make arm not go through armor (visual tweak)
+			if (transform.right.x < 0) {
+				rightArm.position += Vector3.forward * 0.05f;
+			}
             rightForearm.localRotation = Quaternion.identity;
         }
         if (recoil > 0) {

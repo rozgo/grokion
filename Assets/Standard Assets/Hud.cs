@@ -239,7 +239,6 @@ public class Hud : MonoBehaviour {
 	}
 	
 	void OnButtonUp (Button button) {
-		Debug.Log("Hud button pressed:" + button.ToString());
 		if (controlsEnabled) {
 			if (button == menuButton) {
 				Game.game.ShowControlPanel();
