@@ -351,12 +351,17 @@ public class Character : StateMachine {
                 runAnim.speed *= 0.2f;
                 speed = Mathf.Clamp(speed, -1, 1);
             }
+			float prevLookX = Mathf.Sign(character.transform.right.x);
             if (speed > 0.1f) {
                 character.transform.rotation = Quaternion.AngleAxis(180,Vector3.up);
             }
             else if (speed < -0.1f) {
                 character.transform.rotation = Quaternion.AngleAxis(0,Vector3.up);
             }
+			float newLookX = Mathf.Sign(character.transform.right.x);
+			if (prevLookX != newLookX && Mathf.Sign(character.pivot.crosshair.x) != newLookX) {
+				character.pivot.crosshair.x *= -1;
+			}
             Vector3 origin = character.transform.position + character.collider.center;
             RaycastHit hit;
             Vector3 snapPoint = origin - Vector3.up * character.collider.height * 0.5f;
@@ -1588,8 +1593,9 @@ public class Character : StateMachine {
    			skin.enabled = true;
    		}
    	}
-       
+
     void FixedUpdate () {
+		
         state.OnUpdate();
     }
     
@@ -1666,7 +1672,7 @@ public class Character : StateMachine {
 			}
 			// hack to make arm not go through armor (visual tweak)
 			if (transform.right.x < 0) {
-				rightArm.position += Vector3.forward * 0.05f;
+				//rightArm.position += Vector3.forward * 0.05f;
 			}
             rightForearm.localRotation = Quaternion.identity;
         }
