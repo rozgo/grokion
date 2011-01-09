@@ -158,6 +158,8 @@ public class Loader : MonoBehaviour {
 		sound.volume = PlayerPrefs.GetFloat("SoundVolume", 1.0f);
 		music.volume = PlayerPrefs.GetFloat("MusicVolume", 1.0f);
 		music.Play();
+
+		Application.LoadLevelAdditive("Kongregate");
 	}
 	
 	void Update () {

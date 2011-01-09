@@ -44,7 +44,6 @@ public class Kongregate : MonoBehaviour {
 								 "kongregateUnitySupport.initAPI('Kongregate', 'OnKongregateAPILoaded');};");
 
 		yield return new WaitForSeconds(1);
-		Application.LoadLevel("StoryLoader");
 	}
 
 	void RemoveWarnings () {
