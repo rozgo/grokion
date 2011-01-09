@@ -46,4 +46,10 @@ public class Kongregate : MonoBehaviour {
 		yield return new WaitForSeconds(1);
 		Application.LoadLevel("StoryLoader");
 	}
+
+	void RemoveWarnings () {
+		if (isKongregate && userId != 0 && username.Length > 0 && gameAuthToken.Length > 0) {
+			return;
+		}
+	}
 }
