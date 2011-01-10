@@ -1395,6 +1395,11 @@ public class Character : StateMachine {
         if (PlayerPrefs.HasKey("Spirit")) {
             Instantiate(Resources.Load("Spirit"));
         }
+
+		if (weapon == Weapon.None && (PlayerPrefs.HasKey("Projectile") || (Game.grid != null && Game.grid.projectileCount > 0))) {
+			SetWeapon(Weapon.Projectile);
+			Game.hud.UpdateWeapons();
+		}
     }
     
     public void SetSuit (Suit suit) {

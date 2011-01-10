@@ -18,18 +18,15 @@ public class LevelLoadingBar : MonoBehaviour
     float nextLoadSet;
     int currentLine = 2;
 
-	// Use this for initialization
 	void Start () {
         nextLoadSet = 0.3F;
         tutorialEnd = (TutorialEnd)endPortal.transform.GetComponent("TutorialEnd");
 	}
 	
-	// Update is called once per frame
 	void Update () {
         transform.localScale = new Vector3(Application.GetStreamProgressForLevel(levelToLoad), 1, 1);
 
-        if (Application.GetStreamProgressForLevel(levelToLoad) > nextLoadSet)
-        {
+        if (Application.GetStreamProgressForLevel(levelToLoad) > nextLoadSet) {
             statusLine01.text = progressLines[currentLine - 2];
             statusLine02.text = progressLines[currentLine - 1];
             statusLine03.text = progressLines[currentLine];
@@ -37,10 +34,8 @@ public class LevelLoadingBar : MonoBehaviour
             currentLine++;
         }
 
-        if (Application.GetStreamProgressForLevel(levelToLoad) == 1.0f && tutorialEnd.on == false)
-        {
+        if (Application.GetStreamProgressForLevel(levelToLoad) == 1.0f && tutorialEnd.on == false) {
             tutorialEnd.TurnOn(true);
         }
-
 	}
 }
