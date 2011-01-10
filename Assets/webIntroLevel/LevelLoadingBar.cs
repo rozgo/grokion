@@ -4,7 +4,8 @@ using System.Collections;
 public class LevelLoadingBar : MonoBehaviour
 {
 
-    public int levelToLoad;
+	public string levelToLoad;
+
     public string[] progressLines;
 
     public TextMesh statusLine01;
@@ -14,7 +15,6 @@ public class LevelLoadingBar : MonoBehaviour
     public GameObject endPortal;
     TutorialEnd tutorialEnd;
     
-
     float nextLoadSet;
     int currentLine = 2;
 
@@ -24,6 +24,7 @@ public class LevelLoadingBar : MonoBehaviour
 	}
 	
 	void Update () {
+
         transform.localScale = new Vector3(Application.GetStreamProgressForLevel(levelToLoad), 1, 1);
 
         if (Application.GetStreamProgressForLevel(levelToLoad) > nextLoadSet) {

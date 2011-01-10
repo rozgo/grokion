@@ -32,6 +32,7 @@ public class Loader : MonoBehaviour {
 
 	string DetermineLevelToLoad () {
 		string[] checkpointInfo = PlayerPrefs.GetString("Checkpoint").Split('|');
+		Debug.Log(checkpointInfo);
 		if (checkpointInfo.Length == 3 && checkpointInfo[0] == "Door") {
             return checkpointInfo[1];
         }
