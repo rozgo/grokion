@@ -5,7 +5,7 @@ AudioImporter:
   format: -1
   quality: 0.5
   3d: 1
-  forceToMono: 0
+  forceToMono: 1
   stream: 0
   bitrate: 156000
-  useHardware: 1
+  useHardware: 0
