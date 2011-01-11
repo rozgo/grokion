@@ -15,6 +15,10 @@ public class Loader : MonoBehaviour {
     public Button casualButton;
     public Button hardcoreButton;
     public Button helpButton;
+	public Button appStoreButton;
+	public Button websiteButton;
+	public Button twitterButton;
+	public Button facebookButton;
     public GameObject casualCheck;
     public GameObject hardcoreCheck;
     public MenuMove sceneRotator;
@@ -142,6 +146,18 @@ public class Loader : MonoBehaviour {
         	sceneRotator.distance = 15;
         	sceneRotator.Move();
         }
+		else if (button == appStoreButton){
+			Application.OpenURL("http://itunes.apple.com/app/grokion/id375585053?mt=8");
+		}
+		else if (button == websiteButton){
+			Application.OpenURL("http://dododomination.com/");
+		}
+		else if (button == twitterButton){
+			Application.OpenURL("http://twitter.com/dododomination/");
+		}
+		else if (button == facebookButton	){
+			Application.OpenURL("http://facebook.com/grokion/");
+		}
     }       
     
     void UpdateDifficulty () {
