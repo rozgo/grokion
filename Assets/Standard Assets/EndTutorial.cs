@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class TutorialEnd : MonoBehaviour {
+public class EndTutorial : MonoBehaviour {
 
     public bool on = true;
     public Renderer[] renderers;

@@ -1,8 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class LevelLoadingBar : MonoBehaviour
-{
+public class BarLevelLoading : MonoBehaviour {
 
 	public string levelToLoad;
 
@@ -13,14 +12,14 @@ public class LevelLoadingBar : MonoBehaviour
     public TextMesh statusLine03;
 
     public GameObject endPortal;
-    TutorialEnd tutorialEnd;
+    EndTutorial tutorialEnd;
     
     float nextLoadSet;
     int currentLine = 2;
 
 	void Start () {
         nextLoadSet = 0.3F;
-        tutorialEnd = (TutorialEnd)endPortal.transform.GetComponent("TutorialEnd");
+        tutorialEnd = (EndTutorial)endPortal.transform.GetComponent(typeof(EndTutorial));
 	}
 	
 	void Update () {
