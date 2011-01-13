@@ -148,15 +148,19 @@ public class Loader : MonoBehaviour {
         }
 		else if (button == appStoreButton){
 			Application.OpenURL("http://itunes.apple.com/app/grokion/id375585053?mt=8");
+			//Application.ExternalEval("window.open('http://itunes.apple.com/app/grokion/id375585053?mt=8','_newtab');");
 		}
 		else if (button == websiteButton){
-			Application.OpenURL("http://dododomination.com/");
+			Application.OpenURL("http://dododomination.com");
+			//Application.ExternalEval("window.open('http://dododomination.com','_newtab');");
 		}
 		else if (button == twitterButton){
-			Application.OpenURL("http://twitter.com/dododomination/");
+			Application.OpenURL("http://twitter.com/dododomination");
+			//Application.ExternalEval("window.open('http://twitter.com/dododomination','_newtab');");
 		}
 		else if (button == facebookButton	){
-			Application.OpenURL("http://facebook.com/grokion/");
+			Application.OpenURL("http://facebook.com/grokion");
+			//Application.ExternalEval("window.open('http://facebook.com/grokion','_newtab');");
 		}
     }       
     
