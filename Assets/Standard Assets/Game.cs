@@ -231,6 +231,9 @@ public class Game : StateMachine {
 		}
 		Game.door = null;
 		GarbageCollect();
+	   
+		//Game.hud.gameObject.SetActiveRecursively(true);
+        //Game.hud.UpdateWeapons();
 	}
 	
 	IEnumerator CharacterInLevel () {
