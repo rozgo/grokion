@@ -1652,7 +1652,8 @@ public class Character : StateMachine {
             flame.worldVelocity = -rightForearm.right * Random.Range(2.0f, 3.0f) + rigidbody.velocity;
         }
     }
-            
+    
+	LineRenderer lineRenderer;
     void LateUpdate () {
         if (pushing && !grappling && !shooting) {
         }
@@ -1688,5 +1689,14 @@ public class Character : StateMachine {
             }
             recoil -= Time.deltaTime;
         }
+		if (lineRenderer == null) {
+			lineRenderer = gameObject.AddComponent<LineRenderer>();
+			lineRenderer.material = new Material(Shader.Find("Particles/Additive"));
+			lineRenderer.SetColors(new Color(1,1,1,0.1f),new Color(1,1,1,0.0f));
+			lineRenderer.SetWidth(0.2f, 0.05f);
+			lineRenderer.SetVertexCount(2);
+		}
+		lineRenderer.SetPosition(0, rightForearm.position);
+		lineRenderer.SetPosition(1, rightForearm.position - rightForearm.right * 5);
     }
 }
