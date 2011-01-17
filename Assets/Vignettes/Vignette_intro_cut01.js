@@ -38,9 +38,6 @@ function Start () {
 	spirit.animation["RUN"].speed = 0;
 	spirit.animation.Play("RUN");
 	
-	chunks.gameObject.active = false;
-	lightningFX.gameObject.active = false;
-	
 	spirit.animation["RUN"].speed = 1;
 	vignette.MoveTo(Game.director.gameObject, guides[1], 5);
 	
@@ -60,12 +57,12 @@ function Start () {
 	
 	avatar.animation["CUT_INTRO01"].speed = 1;
 	
-	chunks.gameObject.active = true;
+	chunks.emit = true;
 	Game.fx.PlaySound(chunksSFX);
 	
 	yield WaitForSeconds(0.5);
 	
-	lightningFX.gameObject.active = true;
+	lightningFX.emit = true;
 	Game.fx.PlaySound(lightningSFX);
 	
 	yield WaitForSeconds(avatar.animation["CUT_INTRO01"].length);
