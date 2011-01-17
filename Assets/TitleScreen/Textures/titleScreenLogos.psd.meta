@@ -28,5 +28,5 @@ TextureImporter:
     wrapMode: 0
   buildTargetSettings:
     Web:
-      maxTextureSize: 1024
+      maxTextureSize: 512
       textureFormat: 12
