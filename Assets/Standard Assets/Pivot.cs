@@ -12,6 +12,8 @@ public class Pivot : MonoBehaviour {
 	}
 	
 	void Start () {
+		mousePosition.x = Screen.width / 2;
+		mousePosition.y = Screen.height / 2;
 	}
 
 	void Update () {
