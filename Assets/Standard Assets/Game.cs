@@ -107,6 +107,7 @@ public class Game : StateMachine {
 	}
 
 	void Awake () {
+		ControlSettings.Setup();
 		realTime = 0;
 		grid = gameObject.GetComponent<Grid>();
 		if (PlayerPrefs.HasKey("Casual")) {
@@ -242,19 +243,10 @@ public class Game : StateMachine {
 		character.Rest();
 	}
 	
-	float screenLockTime = 0;
 	void Update () {
 		realDeltaTime = Time.realtimeSinceStartup - realTime;
 		realTime = Time.realtimeSinceStartup;
 		state.OnUpdate();
-
-		screenLockTime += Time.deltaTime;
-		if (Screen.lockCursor) {
-			screenLockTime = 0;
-		}
-		else if (screenLockTime > 1) {
-			Screen.lockCursor = true;
-		}
 	}
 	
 	IEnumerator WaitForRealSeconds(float time) {
@@ -295,7 +287,6 @@ public class Game : StateMachine {
 		Game.fx.avatarCard.SetActiveRecursively(false);
 		yield return 0;
 		GarbageCollect();
-		Screen.lockCursor = true;
 		yield return 0;
 		Game.fx.PlaySound(ctrlClip);
 	}

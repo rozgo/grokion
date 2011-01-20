@@ -112,16 +112,11 @@ public class Door : MonoBehaviour {
 			characterObject.transform.position =
 				transform.position + transform.right * 0.5f + new Vector3(0, -1.1f, 0);
 
-			float prevLookX = Mathf.Sign(character.transform.right.x);
 			if (transform.right.x < 0) {
 				characterObject.transform.rotation = Quaternion.AngleAxis(180, Vector3.up);
 			}
 			else {
 				characterObject.transform.rotation = Quaternion.AngleAxis(0, Vector3.up);
-			}
-			float newLookX = Mathf.Sign(character.transform.right.x);
-			if (prevLookX != newLookX && Mathf.Sign(Game.hud.pivot.crosshair.x) != newLookX) {
-				Game.hud.pivot.crosshair.x *= -1;
 			}
 			character.Run();
 		}	

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Pivot : MonoBehaviour {
 	
-	public Vector3 crosshair = Vector3.right;
+	public Vector3 mousePosition = Vector3.zero;
 	
 	new Transform transform;
 
@@ -15,19 +15,36 @@ public class Pivot : MonoBehaviour {
 	}
 
 	void Update () {
-		crosshair.z = 0;
-		crosshair.x -= Input.GetAxis("Mouse X");
-		crosshair.y += Input.GetAxis("Mouse Y");
-		if (crosshair.magnitude > 1) {
-			crosshair.Normalize();
+
+		if (ControlSettings.showCursor && (Screen.lockCursor || Game.hud.crosshair.renderer.enabled)) {
+			Screen.lockCursor = false;
+			Game.hud.crosshair.renderer.enabled = false;
 		}
-		else if (crosshair.magnitude < 0.1f) {
-			crosshair = crosshair.normalized / 10;
+		else if (!ControlSettings.showCursor && (!Screen.lockCursor || !Game.hud.crosshair.renderer.enabled)) {
+			Screen.lockCursor = true;
+			Game.hud.crosshair.renderer.enabled = true;
 		}
 
+		if (Screen.lockCursor) {
+			mousePosition.z = 0;
+			mousePosition.x += Input.GetAxis("Mouse X") * ControlSettings.mouseSensitivity/100.0f;
+			mousePosition.y += Input.GetAxis("Mouse Y") * ControlSettings.mouseSensitivity/100.0f;
+			mousePosition.x = Mathf.Clamp(mousePosition.x, 0, Screen.width);
+			mousePosition.y = Mathf.Clamp(mousePosition.y, 0, Screen.height);
+		}
+		else {
+			mousePosition = Input.mousePosition;
+		}
+
+		Vector3 crosshairPosition = Camera.main.ScreenToWorldPoint(
+            new Vector3(mousePosition.x, mousePosition.y, Camera.main.transform.position.z));
+		crosshairPosition.z = 0;
+		Game.hud.crosshair.transform.position = crosshairPosition;
+
+		InputProxy input = InputProxy.Get();
 		Vector3 localPosition = transform.localPosition;
-		localPosition.x = Input.GetAxis("Horizontal");
-		localPosition.y = Input.GetAxis("Vertical");			
+		localPosition.x = input.GetValue("Horizontal");
+		localPosition.y = input.GetValue("Vertical");			
 		if (localPosition.sqrMagnitude > 1) {
 			localPosition = localPosition.normalized;
 		}
@@ -37,7 +54,7 @@ public class Pivot : MonoBehaviour {
 	void OnDrawGizmos () {
 		if (Game.character != null) {
 			Gizmos.color = Color.green;
-			Gizmos.DrawSphere(Game.character.transform.position + new Vector3(0,1,0) + crosshair, 0.1f);			
+			Gizmos.DrawSphere(Game.hud.crosshair.transform.position, 0.1f);
 		}
 	}
 }

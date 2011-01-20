@@ -40,6 +40,7 @@ public class Hud : MonoBehaviour {
     public Mesh tokenOnMesh;
     public Mesh tokenOffMesh;
     public GameObject[] tokenSlots;
+	public GameObject crosshair;
     
 	bool skipMessage = false;
 	bool controlsEnabled = false;
