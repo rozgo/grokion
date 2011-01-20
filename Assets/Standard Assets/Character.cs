@@ -1662,7 +1662,7 @@ public class Character : StateMachine {
             rightForearm.localRotation = Quaternion.identity;
         }
         else if (Game.hud != null) {
-			Vector3 dir = Game.hud.crosshair.transform.position - rightForearm.position;
+			Vector3 dir = (Game.hud.crosshair.transform.position - new Vector3(0, 0.5f, 0)) - rightForearm.position;
 			dir.z = 0;
 			dir.Normalize();
 			float angle = Vector3.Angle(dir, Vector3.up);
@@ -1671,10 +1671,6 @@ public class Character : StateMachine {
 			}
 			else {
 				rightArm.rotation = Quaternion.AngleAxis(angle + 90, Vector3.Cross(Vector3.up, dir));
-			}
-			// hack to make arm not go through armor (visual tweak)
-			if (transform.right.x < 0) {
-				//rightArm.position += Vector3.forward * 0.05f;
 			}
             rightForearm.localRotation = Quaternion.identity;
         }
