@@ -181,6 +181,10 @@ public class Loader : MonoBehaviour {
 		music.Play();
 
 		Application.LoadLevelAdditive("Kongregate");
+
+		if (Application.GetStreamProgressForLevel("Credits") < 1) {
+			//credits.gameObject.SetActiveRecursively(false);
+		}
 	}
 	
 	void Update () {
