@@ -1478,7 +1478,7 @@ public class Character : StateMachine {
         }
         else if (suit == Suit.GridSuit) {
             this.suit = suit;
-            PlayerPrefs.SetInt("Suit", (int)suit);
+            //PlayerPrefs.SetInt("Suit", (int)suit);
             if (gridSuitMaterial == null) {
                 gridSuitMaterial = (Material)Resources.Load("AvatarGridSuit", typeof(Material));
             }
