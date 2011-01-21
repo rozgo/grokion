@@ -15,7 +15,7 @@ public class EndTutorial : MonoBehaviour {
 
     void OnTriggerEnter (Collider collider) {
         if (on && collider.gameObject.layer == Game.characterLayer) {
-            PlayerPrefs.DeleteAll();
+            //PlayerPrefs.DeleteAll();
             Application.LoadLevel("AO");
         }
     }

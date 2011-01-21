@@ -1662,7 +1662,7 @@ public class Character : StateMachine {
             rightForearm.localRotation = Quaternion.identity;
         }
         else if (Game.hud != null) {
-			Vector3 dir = (Game.hud.crosshair.transform.position - new Vector3(0, 0.5f, 0)) - rightForearm.position;
+			Vector3 dir = (Game.hud.crosshair.transform.position - new Vector3(0, 0.4f, 0)) - rightForearm.position;
 			dir.z = 0;
 			dir.Normalize();
 			float angle = Vector3.Angle(dir, Vector3.up);
