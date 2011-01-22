@@ -43,7 +43,7 @@ public class Hud : MonoBehaviour {
 	public GameObject crosshair;
     
 	bool skipMessage = false;
-	bool controlsEnabled = false;
+	public bool controlsEnabled = false;
 	int hudLayer;
 	GameObject[] emptyEnergyTanks;
 	GameObject[] fullEnergyTanks;
@@ -101,6 +101,8 @@ public class Hud : MonoBehaviour {
 		pivotBase.gameObject.layer = Game.hiddenLayer;
 		buttonA.gameObject.layer = Game.hiddenLayer;
 		buttonB.gameObject.layer = Game.hiddenLayer;
+
+		crosshair.renderer.enabled = false;
 	}
 
 	IEnumerator WaitForRealSeconds(float time) {

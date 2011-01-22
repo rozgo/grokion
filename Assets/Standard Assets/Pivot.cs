@@ -18,7 +18,10 @@ public class Pivot : MonoBehaviour {
 
 	void Update () {
 
-		if (ControlSettings.showCursor && (Screen.lockCursor || Game.hud.crosshair.renderer.enabled)) {
+		if (!Game.hud.gameObject.active || !Game.hud.controlsEnabled || Game.character == null) {
+			Game.hud.crosshair.renderer.enabled = false;
+		}
+		else if (ControlSettings.showCursor && (Screen.lockCursor || Game.hud.crosshair.renderer.enabled)) {
 			Screen.lockCursor = false;
 			Game.hud.crosshair.renderer.enabled = false;
 		}

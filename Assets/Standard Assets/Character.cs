@@ -1406,7 +1406,9 @@ public class Character : StateMachine {
         if (suit == Suit.None) {
             fallenFX = new ArrayList();
             this.suit = suit;
-            PlayerPrefs.SetInt("Suit", (int)suit);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Suit", (int)suit);
+			}
             if (fallenMaterial == null) {
                 fallenMaterial = (Material)Resources.Load("AvatarBrokenSuit", typeof(Material));
             }
@@ -1436,7 +1438,9 @@ public class Character : StateMachine {
         }
         else if (suit == Suit.Armor) {
             this.suit = suit;
-            PlayerPrefs.SetInt("Suit", (int)suit);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Suit", (int)suit);
+			}
             if (suitMaterial == null) {
                 suitMaterial = (Material)Resources.Load("AvatarSuit", typeof(Material));
             }
@@ -1457,7 +1461,9 @@ public class Character : StateMachine {
         }
         else if (suit == Suit.Swimsuit) {
             this.suit = suit;
-            PlayerPrefs.SetInt("Suit", (int)suit);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Suit", (int)suit);
+			}
             if (swimsuitMaterial == null) {
                 swimsuitMaterial = (Material)Resources.Load("AvatarSwimsuit", typeof(Material));
             }
@@ -1478,7 +1484,9 @@ public class Character : StateMachine {
         }
         else if (suit == Suit.GridSuit) {
             this.suit = suit;
-            //PlayerPrefs.SetInt("Suit", (int)suit);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Suit", (int)suit);				
+			}
             if (gridSuitMaterial == null) {
                 gridSuitMaterial = (Material)Resources.Load("AvatarGridSuit", typeof(Material));
             }
@@ -1502,11 +1510,15 @@ public class Character : StateMachine {
     public void SetBoots (Boots boots) {
         if (boots == Boots.Normal) {
             this.boots = boots;
-            PlayerPrefs.SetInt("Boots", (int)boots);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Boots", (int)boots);
+			}
         }
         else if (boots == Boots.Gravity) {
             this.boots = boots;
-            PlayerPrefs.SetInt("Boots", (int)boots);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Boots", (int)boots);
+			}
         }
     }
     
@@ -1514,30 +1526,42 @@ public class Character : StateMachine {
         if (weapon == Weapon.None) {
             flameTip.active = false;
             this.weapon = Weapon.None;
-            PlayerPrefs.SetInt("Weapon", (int)weapon);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Weapon", (int)weapon);	
+			}
         }
         else if (weapon == Weapon.Projectile) {
             flameTip.active = false;
             this.weapon = Weapon.Projectile;
-            PlayerPrefs.SetInt("Weapon", (int)weapon);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Weapon", (int)weapon);
+			}
         }
         else if (weapon == Weapon.Missile) {
             flameTip.active = false;
             this.weapon = Weapon.Missile;
-            PlayerPrefs.SetInt("Weapon", (int)weapon);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Weapon", (int)weapon);
+			}
         }
         else if (weapon == Weapon.FlameThrower) {
             flameTip.active = true;
             this.weapon = Weapon.FlameThrower;
-            PlayerPrefs.SetInt("Weapon", (int)weapon);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Weapon", (int)weapon);
+			}
         }
         else if (weapon == Weapon.Grenade) {
             this.weapon = Weapon.Grenade;
-            PlayerPrefs.SetInt("Weapon", (int)weapon);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Weapon", (int)weapon);
+			}
         }
         else if (weapon == Weapon.Grapple) {
             this.weapon = Weapon.Grapple;
-            PlayerPrefs.SetInt("Weapon", (int)weapon);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Weapon", (int)weapon);
+			}
         }
     }
     
