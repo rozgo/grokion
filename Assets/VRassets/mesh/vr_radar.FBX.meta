@@ -1,0 +1,44 @@
+fileFormatVersion: 1
+guid: eafa8871df4a3fe4abbd6d045cd1fca9
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.01
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 1
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    //RootNode:
+    - 100000
+    - 400000
+    - 11100000
+    Sphere001:
+    - 100002
+    - 400002
+    - 3300000
+    - 2300000
+    vars:
+    - 100004
+    - 400004
+    - 3300002
+    - 2300002
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Sphere001
+    4300002: vars
+    7400000: Take 001 //// vr_radar
