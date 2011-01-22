@@ -20,48 +20,46 @@ elevator
 >MN
 
 [Objective|5]
+Return to the safe room
+>LN
+
+[Objective|6]
 Seek an alternate route
 through the Biosphere
 >BO
-
 
 [Vignette|AO|1]
 {avatarSpirit} Arise, LDU-1...
 
 [Vignette|AO|2]
-{avatarSpirit}The Biosphere is in great peril.
-{avatarSpirit}you alone stand as guardian and savior.
-{avatarSpirit}look to my guiding light-
-{avatarSpirit}in these darkest hours.
+{avatarSpirit}The Biosphere is in great peril
+{avatarSpirit}and you stand alone in defense.
+{avatarSpirit}Look to my guiding light 
+{avatarSpirit}in these darkest hours...
 
 [Hotspot|AO|8]
-{avatarSpirit}Something works against us...
-{avatarSpirit}It knows you have been reactivated.
 {avatarSpirit}Make haste with measured steps, LDU-1.
 {avatarSpirit}you are unarmed and vulnerable to damage.
 
 [Hotspot|BO|1]
-{avatarSpirit}The Biosphere is in ruin...
-{avatarSpirit}all is left silent and still by the chaos.
-{avatarSpirit}be ever alert as you advance, LDU-1.
-{avatarSpirit}let us find you some much needed equipment.
+{avatarSpirit}The Biosphere is in ruin with allied units
+{avatarSpirit}destroyed - be alert as you advance and  
+{avatarSpirit}gather equipment and energy quickly.
 (A new Objective has been added!)
 
 [Hotspot|BO|2]
-{avatarSpirit|SpiritAlert}inoperative units may contain- 
-{avatarSpirit}valuable information and equipment. 
-{avatarSpirit}let us examine this one...
-{avatarFallenLDU|RobotVoice2}Seriphum Energy reserves critically low.
-{avatarSpirit|SpiritAlert}Your Energy levels must be maintained, LDU-1.
-{avatarSpirit}collect fragmented orbs to replenish them.
-{avatarSpirit}I sense there is some just ahead...
+{avatarSpirit}Inoperative units can be a source 
+{avatarSpirit}of valuable information and equipment,
+{avatarSpirit}so examine them when found... 
+{avatarFallenLDU|RobotVoice2}Scanning allied defense unit...
+{avatarFallenLDU|RobotVoice2}Energy reserves critically low...
+{avatarSpirit|SpiritAlert}Energy level must be maintained, LDU-1 -
+{avatarSpirit}collect orbs to replenish...
 
 [Hotspot|BO|3]
-{avatarFallenLDU|RobotVoice2}Seriphum Energy Tank detected nearby
-{avatarSpirit|SpiritAlert}Seriphum...
-{avatarSpirit}a unique source of energy harvested by the doctor.
-{avatarSpirit}it is the lifeblood of most things here.
-{avatarSpirit}come... let us move on.
+{avatarFallenLDU|RobotVoice2}Energy Tank detected nearby.
+{avatarSpirit}Energy tanks increase storage capacity and
+{avatarSpirit}should be collected whenever possible...
 
 [Hotspot|BO|4]
 {avatarSpirit|SpiritAlert}Be resourceful, LDU-1.
@@ -69,13 +67,14 @@ through the Biosphere
 {avatarSpirit}and may open access to new areas.
 
 [Hotspot|BO|5]
-{avatarSpirit|SpiritAlert}Here is the energy tank, LDU-1.
-{avatarSpirit}this would further empower you,
-{avatarSpirit}allowing you to store more seriphum.
+{avatarSpirit|SpiritAlert}Here is the energy tank, LDU-1...
 
-[Fallen|BO|6]
+[Hotspot|BO|7]
 {avatarFallenLDU|RobotVoice2}Portals sealed per lockdown protocol
 {avatarFallenLDU|RobotVoice2}target, fire and advance to enter.
+
+[Fallen|BO|6]
+{avatarSpirit|SpiritAlert}This is a gun!
 {avatarSchematic|LDUEquip}Salvaging technology...
 (Projectiles acquired - LDU-1 armed)
 
@@ -101,13 +100,14 @@ through the Biosphere
 {avatarSpirit}to restabilizing it - he must be located!
 (A new Objective has been added!)
 
+
 [Hotspot|CO1|1]
 {avatar144k|144k}Vessel 144K reporting - launch successful -
 {avatar144k}landing coordinates set for Lunar Biosphere...
-{avatarSpirit|SpiritAlert}Vessel 144K carries the elite of mankind.
-{avatarSpirit}the most evolved of the species, in fact.
+{avatarSpirit|SpiritAlert}Vessel 144K carries the remainder of mankind
+{avatarSpirit}and the most evolved and elite of the species -
 {avatarSpirit|}all sure to meet their end if the Biosphere
-{avatarSpirit}is not stabilized before they arrive.
+{avatarSpirit}isn't  stabilized before they arrive.
 
 [Hotspot|CO1|2]
 {avatarDoctor}LDU-1, is that you??
@@ -154,9 +154,9 @@ through the Biosphere
 {avatar144k|144k}144K to Lunar Biosphere Base
 {avatar144k}requesting transmission confirmation
 {avatar144k|144k} Lunar Biosphere, do you copy...?!? - over
-{avatarSpirit|SpiritAlert}The humans draw closer, LDU-1
-{avatarSpirit}until Doctor Savain is reached,
-{avatarSpirit}we will be unable to warn them.
+{avatarSpirit|SpiritAlert}Confirmation isn’t possible, LDU-1 - 
+{avatarSpirit}we must quicken pace and locate 
+{avatarSpirit}Dr. Savain to lend aid!
 
 [Hotspot|C03|1]
 {avatarDoctor}LDU-1, you made it!
@@ -205,6 +205,11 @@ through the Biosphere
 {avatarSpirit}... ... ...
 {avatarSpirit}Let us retrace out steps and find-
 {avatarSpirit}an alternate route, LDU-1.
+(A new Objective has been added!)
+
+[Hotspot|MO|2]
+{avatarspirit}There is nothing more for us here, LDU-1.
+{avatarSpirit}Let us return to the level above.
 
 [Hotspot|HK|Water]  
 {avatarSpirit}These waterways can be crossed by walking through
