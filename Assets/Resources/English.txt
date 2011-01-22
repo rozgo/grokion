@@ -74,7 +74,7 @@ through the Biosphere
 {avatarFallenLDU|RobotVoice2}target, fire and advance to enter.
 
 [Fallen|BO|6]
-{avatarSpirit|SpiritAlert}This is a gun!
+{avatarSpirit|SpiritAlert}Arm yourself with this projectile, LDU-1.
 {avatarSchematic|LDUEquip}Salvaging technology...
 (Projectiles acquired - LDU-1 armed)
 
