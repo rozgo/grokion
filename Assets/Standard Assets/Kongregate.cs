@@ -3,10 +3,10 @@ using System.Collections;
 
 public class Kongregate : MonoBehaviour {
 
-	bool isKongregate = false;
-	int userId = 0;
-	string username = "Guest";
-	string gameAuthToken = "";
+	public bool isKongregate = false;
+	public int userId = 0;
+	public string username = "Guest";
+	public string gameAuthToken = "";
 	
 	void Awake () {
 		DontDestroyOnLoad(gameObject);

@@ -105,6 +105,41 @@ public class Game : StateMachine {
 			lastForcedGC = Time.time;
 		}
 	}
+	
+	IEnumerator KongregatePublish () {
+		
+		yield return new WaitForSeconds(1);
+		
+        string objectiveID = "";
+        for (int i=1; i<=10; ++i) {
+            objectiveID = "Objective|" + i.ToString();
+            if (PlayerPrefs.HasKey(objectiveID)) {
+                Application.ExternalCall("kongregate.stats.submit", "Reached Objective", i);
+            }
+        }
+		
+		yield return new WaitForSeconds(1);
+		
+		if (PlayerPrefs.HasKey("Trail|DO")) {
+			Application.ExternalCall("kongregate.stats.submit", "GameComplete 1", 1);
+		}
+		
+		yield return new WaitForSeconds(1);
+		
+		if (PlayerPrefs.GetInt("Armor", 0) == (int)Character.Suit.Armor) {
+			Application.ExternalCall("kongregate.stats.submit", "Armored", 1);
+		}
+		
+		yield return new WaitForSeconds(1);
+		
+		if (PlayerPrefs.GetInt("Weapon", 0) == (int)Character.Weapon.Projectile) {
+			Application.ExternalCall("kongregate.stats.submit", "Armed", 1);
+		}
+		
+		yield return new WaitForSeconds(1);
+		
+		Application.ExternalCall("kongregate.stats.submit", "EnergyTankCount", PlayerPrefs.GetInt("EnergyTankCount", 0));
+	}
 
 	void Awake () {
 		ControlSettings.Setup();
@@ -235,6 +270,8 @@ public class Game : StateMachine {
 	   
 		//Game.hud.gameObject.SetActiveRecursively(true);
         //Game.hud.UpdateWeapons();
+		
+		StartCoroutine(KongregatePublish());
 	}
 	
 	IEnumerator CharacterInLevel () {
