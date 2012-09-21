@@ -4,82 +4,61 @@ using System.Collections;
 public class Director : MonoBehaviour {
 	
 	public static float zoom = 0;
-	public static float minZoom = -3;
-	public static float maxZoom = 6;
+	public static float minZoom = -2;
+	public static float maxZoom = 4;
 	
 	float zoomAccel = 0;
+
+	MonoBehaviour bloom;
+	MonoBehaviour color;
+
+	bool bloomEnabled;
+	bool colorEnabled;
 	
 	void Awake () {
 		if (FindObjectsOfType(GetType()).Length > 1) {
 			Debug.LogError("Multiple singletons of type: "+GetType());
 		}
+
+		bloom = (MonoBehaviour)GetComponent("BloomAndFlares");
+		bloomEnabled = bloom.enabled;
+		color = (MonoBehaviour)GetComponent("ColorCorrectionEffect");
+		colorEnabled = color.enabled;
 	}
 	
 	void Update () {
-		if (Input.GetKey(KeyCode.UpArrow)) {
+		InputProxy input = InputProxy.Get();
+		float zoomValue = input.GetValue("Zoom");
+		if (zoomValue > 0) {
 			zoomAccel -= Time.deltaTime * 30;
 		}
-		else if (Input.GetKey(KeyCode.DownArrow)) {
+		else if (zoomValue < 0) {
 			zoomAccel += Time.deltaTime * 30;
 		}
 		zoom += zoomAccel * Time.deltaTime;
 		zoom = Mathf.Clamp(zoom, minZoom, maxZoom);
 		zoomAccel *= (1 - Mathf.Clamp(Time.deltaTime*10, 0.0f, 1.0f));
 	}
-	
-//#if UNITY_IPHONE
-	void FixedUpdate() {
-		
-		if (Input.deviceOrientation == DeviceOrientation.LandscapeLeft) {
-			
-			if (iPhoneSettings.screenOrientation != iPhoneScreenOrientation.LandscapeLeft) { 
-				iPhoneSettings.screenOrientation = iPhoneScreenOrientation.LandscapeLeft;
+
+	void OnEnable () {
+		ControlSettings.Setup();
+		if (ControlSettings.visualEffects) {
+			if (bloomEnabled) {
+				bloom.enabled = true;
 			}
-			
-			camera.rect = new Rect(0,0,1,1);
-			if (iPhoneSettings.model == "iPad") {
-				camera.fov = 80;
-			}
-			else {
-				camera.fov = 60;
+			if (colorEnabled) {
+				color.enabled = true;
 			}
 		}
-		if (Input.deviceOrientation == DeviceOrientation.LandscapeRight) {
-			
-			if (iPhoneSettings.screenOrientation != iPhoneScreenOrientation.LandscapeRight) { 
-				iPhoneSettings.screenOrientation = iPhoneScreenOrientation.LandscapeRight;
+		else {
+			if (bloomEnabled) {
+				bloom.enabled = false;
 			}
-			
-			camera.rect = new Rect(0,0,1,1);
-			if (iPhoneSettings.model == "iPad") {
-				camera.fov = 80;
-			}
-			else {
-				camera.fov = 60;
+			if (colorEnabled) {
+				color.enabled = false;
 			}
 		}
-		
-		if (iPhoneSettings.model == "iPad") {
-			
-			if (Input.deviceOrientation == DeviceOrientation.Portrait) {
-				
-				if (iPhoneSettings.screenOrientation != iPhoneScreenOrientation.Portrait) { 
-					iPhoneSettings.screenOrientation = iPhoneScreenOrientation.Portrait;
-				}
-				
-				camera.rect = new Rect(0,0.5f,1,0.5f);
-				camera.fov = 80;
-			}
-			if (Input.deviceOrientation == DeviceOrientation.PortraitUpsideDown) {
-				
-				if (iPhoneSettings.screenOrientation != iPhoneScreenOrientation.PortraitUpsideDown) { 
-					iPhoneSettings.screenOrientation = iPhoneScreenOrientation.PortraitUpsideDown;
-				}
-				
-				camera.rect = new Rect(0,0.5f,1,0.5f);
-				camera.fov = 80;
-			}
-		}
+		//gameObject.SendMessage("EnableFX", ControlSettings.visualEffects, SendMessageOptions.DontRequireReceiver);
 	}
-//#endif
+	
 }

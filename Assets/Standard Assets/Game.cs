@@ -105,8 +105,44 @@ public class Game : StateMachine {
 			lastForcedGC = Time.time;
 		}
 	}
+	
+	IEnumerator KongregatePublish () {
+		
+		yield return new WaitForSeconds(1);
+		
+        string objectiveID = "";
+        for (int i=1; i<=10; ++i) {
+            objectiveID = "Objective|" + i.ToString();
+            if (PlayerPrefs.HasKey(objectiveID)) {
+                Application.ExternalCall("kongregate.stats.submit", "Reached Objective", i);
+            }
+        }
+		
+		yield return new WaitForSeconds(1);
+		
+		if (PlayerPrefs.HasKey("Trail|DO")) {
+			Application.ExternalCall("kongregate.stats.submit", "GameComplete 1", 1);
+		}
+		
+		yield return new WaitForSeconds(1);
+		
+		if (PlayerPrefs.GetInt("Armor", 0) == (int)Character.Suit.Armor) {
+			Application.ExternalCall("kongregate.stats.submit", "Armored", 1);
+		}
+		
+		yield return new WaitForSeconds(1);
+		
+		if (PlayerPrefs.GetInt("Weapon", 0) == (int)Character.Weapon.Projectile) {
+			Application.ExternalCall("kongregate.stats.submit", "Armed", 1);
+		}
+		
+		yield return new WaitForSeconds(1);
+		
+		Application.ExternalCall("kongregate.stats.submit", "EnergyTankCount", PlayerPrefs.GetInt("EnergyTankCount", 0));
+	}
 
 	void Awake () {
+		ControlSettings.Setup();
 		realTime = 0;
 		grid = gameObject.GetComponent<Grid>();
 		if (PlayerPrefs.HasKey("Casual")) {
@@ -146,21 +182,27 @@ public class Game : StateMachine {
 		}
 		cache = new GameObject("Cache");
 		
-		if (grid == null) {
-			GameObject hudObject = (GameObject)Instantiate(Resources.Load("Hud"));
-			hud = (Hud)hudObject.GetComponent(typeof(Hud));
-			hud.EnableControls(false);
-		}
-		else {
-			GameObject hudObject = (GameObject)Instantiate(Resources.Load("GridHud"));
-			hud = (Hud)hudObject.GetComponent(typeof(Hud));
-			hud.sharedMaterial.mainTexture = (Texture2D)Resources.Load("GridHud", typeof(Texture2D));
-			hud.sharedActiveMaterial.mainTexture = (Texture2D)Resources.Load("GridHud", typeof(Texture2D));
-			hud.EnableControls(false);
+		hud =  (Hud)FindObjectOfType(typeof(Hud));
+		if (hud == null) {
+			if (grid == null) {
+				GameObject hudObject = (GameObject)Instantiate(Resources.Load("Hud"));
+				hud = (Hud)hudObject.GetComponent(typeof(Hud));
+				hud.EnableControls(false);
+			}
+			else {
+				GameObject hudObject = (GameObject)Instantiate(Resources.Load("GridHud"));
+				hud = (Hud)hudObject.GetComponent(typeof(Hud));
+				hud.sharedMaterial.mainTexture = (Texture2D)Resources.Load("GridHud", typeof(Texture2D));
+				hud.sharedActiveMaterial.mainTexture = (Texture2D)Resources.Load("GridHud", typeof(Texture2D));
+				hud.EnableControls(false);
+			}
 		}
 
-		Instantiate(Resources.Load("Director"));
 		director = (Director)FindObjectOfType(typeof(Director));
+		if (director == null) {
+			Instantiate(Resources.Load("Director"));
+			director = (Director)FindObjectOfType(typeof(Director));
+		}
 		director.transform.rotation = Quaternion.identity;
 		fx = (FX)FindObjectOfType(typeof(FX));
 		checkpoints = (Checkpoint[])FindObjectsOfType(typeof(Checkpoint));
@@ -225,6 +267,11 @@ public class Game : StateMachine {
 		}
 		Game.door = null;
 		GarbageCollect();
+	   
+		//Game.hud.gameObject.SetActiveRecursively(true);
+        //Game.hud.UpdateWeapons();
+		
+		StartCoroutine(KongregatePublish());
 	}
 	
 	IEnumerator CharacterInLevel () {
@@ -276,8 +323,8 @@ public class Game : StateMachine {
 		}
 		Game.fx.avatarCard.SetActiveRecursively(false);
 		yield return 0;
-		Game.fx.PlaySound(ctrlClip);
-		yield return 0;
 		GarbageCollect();
+		yield return 0;
+		Game.fx.PlaySound(ctrlClip);
 	}
 }

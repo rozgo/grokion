@@ -1071,13 +1071,6 @@ public class Character : StateMachine {
     IEnumerator ShootCoroutine () {
         shooting = true;
         recoil = 0.3f;
-        if (pivot.transform.localPosition.sqrMagnitude > 0.1f) {
-            float angle = Mathf.Atan2(pivot.transform.localPosition.x,pivot.transform.localPosition.y) * Mathf.Rad2Deg;
-            rightArm.rotation = Quaternion.AngleAxis(angle-90, Vector3.forward);
-        }
-        else if (shooting) {
-            rightArm.rotation = transform.rotation * Quaternion.AngleAxis(180,transform.forward);
-        }
         if (pivot.transform.localPosition.y < -0.8f) {
             animation[animNameShootDown].speed = 6;
             animation.Blend(animNameShootDown);
@@ -1397,6 +1390,11 @@ public class Character : StateMachine {
         if (PlayerPrefs.HasKey("Spirit")) {
             Instantiate(Resources.Load("Spirit"));
         }
+
+		if (weapon == Weapon.None && (PlayerPrefs.HasKey("Projectile") || (Game.grid != null && Game.grid.projectileCount > 0))) {
+			SetWeapon(Weapon.Projectile);
+			Game.hud.UpdateWeapons();
+		}
     }
     
     public void SetSuit (Suit suit) {
@@ -1408,7 +1406,9 @@ public class Character : StateMachine {
         if (suit == Suit.None) {
             fallenFX = new ArrayList();
             this.suit = suit;
-            PlayerPrefs.SetInt("Suit", (int)suit);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Suit", (int)suit);
+			}
             if (fallenMaterial == null) {
                 fallenMaterial = (Material)Resources.Load("AvatarBrokenSuit", typeof(Material));
             }
@@ -1438,7 +1438,9 @@ public class Character : StateMachine {
         }
         else if (suit == Suit.Armor) {
             this.suit = suit;
-            PlayerPrefs.SetInt("Suit", (int)suit);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Suit", (int)suit);
+			}
             if (suitMaterial == null) {
                 suitMaterial = (Material)Resources.Load("AvatarSuit", typeof(Material));
             }
@@ -1459,7 +1461,9 @@ public class Character : StateMachine {
         }
         else if (suit == Suit.Swimsuit) {
             this.suit = suit;
-            PlayerPrefs.SetInt("Suit", (int)suit);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Suit", (int)suit);
+			}
             if (swimsuitMaterial == null) {
                 swimsuitMaterial = (Material)Resources.Load("AvatarSwimsuit", typeof(Material));
             }
@@ -1480,7 +1484,9 @@ public class Character : StateMachine {
         }
         else if (suit == Suit.GridSuit) {
             this.suit = suit;
-            PlayerPrefs.SetInt("Suit", (int)suit);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Suit", (int)suit);				
+			}
             if (gridSuitMaterial == null) {
                 gridSuitMaterial = (Material)Resources.Load("AvatarGridSuit", typeof(Material));
             }
@@ -1504,11 +1510,15 @@ public class Character : StateMachine {
     public void SetBoots (Boots boots) {
         if (boots == Boots.Normal) {
             this.boots = boots;
-            PlayerPrefs.SetInt("Boots", (int)boots);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Boots", (int)boots);
+			}
         }
         else if (boots == Boots.Gravity) {
             this.boots = boots;
-            PlayerPrefs.SetInt("Boots", (int)boots);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Boots", (int)boots);
+			}
         }
     }
     
@@ -1516,30 +1526,42 @@ public class Character : StateMachine {
         if (weapon == Weapon.None) {
             flameTip.active = false;
             this.weapon = Weapon.None;
-            PlayerPrefs.SetInt("Weapon", (int)weapon);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Weapon", (int)weapon);	
+			}
         }
         else if (weapon == Weapon.Projectile) {
             flameTip.active = false;
             this.weapon = Weapon.Projectile;
-            PlayerPrefs.SetInt("Weapon", (int)weapon);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Weapon", (int)weapon);
+			}
         }
         else if (weapon == Weapon.Missile) {
             flameTip.active = false;
             this.weapon = Weapon.Missile;
-            PlayerPrefs.SetInt("Weapon", (int)weapon);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Weapon", (int)weapon);
+			}
         }
         else if (weapon == Weapon.FlameThrower) {
             flameTip.active = true;
             this.weapon = Weapon.FlameThrower;
-            PlayerPrefs.SetInt("Weapon", (int)weapon);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Weapon", (int)weapon);
+			}
         }
         else if (weapon == Weapon.Grenade) {
             this.weapon = Weapon.Grenade;
-            PlayerPrefs.SetInt("Weapon", (int)weapon);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Weapon", (int)weapon);
+			}
         }
         else if (weapon == Weapon.Grapple) {
             this.weapon = Weapon.Grapple;
-            PlayerPrefs.SetInt("Weapon", (int)weapon);
+			if (Game.grid == null) {
+				PlayerPrefs.SetInt("Weapon", (int)weapon);
+			}
         }
     }
     
@@ -1595,8 +1617,9 @@ public class Character : StateMachine {
    			skin.enabled = true;
    		}
    	}
-       
+
     void FixedUpdate () {
+		
         state.OnUpdate();
     }
     
@@ -1648,7 +1671,8 @@ public class Character : StateMachine {
             flame.worldVelocity = -rightForearm.right * Random.Range(2.0f, 3.0f) + rigidbody.velocity;
         }
     }
-            
+    
+	LineRenderer lineRenderer;
     void LateUpdate () {
         if (pushing && !grappling && !shooting) {
         }
@@ -1661,22 +1685,17 @@ public class Character : StateMachine {
             rightArm.rotation = Quaternion.AngleAxis(angle-90, Vector3.forward);
             rightForearm.localRotation = Quaternion.identity;
         }
-        else if (!marionette && pivot.transform.localPosition.sqrMagnitude > 0.1f && weapon != Weapon.None) {
-            float angle = 
-                Mathf.Atan2(pivot.transform.localPosition.x, pivot.transform.localPosition.y) * Mathf.Rad2Deg;
-            rightArm.rotation = Quaternion.AngleAxis(angle-90, Vector3.forward);
-            rightForearm.localRotation = Quaternion.identity;
-        }
-        else if (recoil > 0 || shooting || flame.emit == true || grappling || chargeTime > 0) {
-            float angle = 0;
-            if (transform.right.z > 0) {
-                angle = 0;
-            }
-            else {
-                angle = 180;
-            }
-            rightArm.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            rightArm.localRotation *= Quaternion.Euler(0, 20, 0);
+        else if (Game.hud != null) {
+			Vector3 dir = (Game.hud.crosshair.transform.position - new Vector3(0, 0.4f, 0)) - rightForearm.position;
+			dir.z = 0;
+			dir.Normalize();
+			float angle = Vector3.Angle(dir, Vector3.up);
+			if (dir.x < 0) {
+				rightArm.rotation = Quaternion.AngleAxis(angle - 90, Vector3.Cross(Vector3.up, dir));
+			}
+			else {
+				rightArm.rotation = Quaternion.AngleAxis(angle + 90, Vector3.Cross(Vector3.up, dir));
+			}
             rightForearm.localRotation = Quaternion.identity;
         }
         if (recoil > 0) {
@@ -1686,5 +1705,14 @@ public class Character : StateMachine {
             }
             recoil -= Time.deltaTime;
         }
+		// if (lineRenderer == null) {
+		// 	lineRenderer = gameObject.AddComponent<LineRenderer>();
+		// 	lineRenderer.material = new Material(Shader.Find("Particles/Additive"));
+		// 	lineRenderer.SetColors(new Color(1,1,1,0.1f),new Color(1,1,1,0.0f));
+		// 	lineRenderer.SetWidth(0.2f, 0.05f);
+		// 	lineRenderer.SetVertexCount(2);
+		// }
+		// lineRenderer.SetPosition(0, rightForearm.position);
+		// lineRenderer.SetPosition(1, rightForearm.position - rightForearm.right * 5);
     }
 }

@@ -3,112 +3,63 @@ using System.Collections;
 
 public class Pivot : MonoBehaviour {
 	
-	public new Camera camera;
-	public Material sharedMaterialNormal;
-	public Material sharedMaterialActive;
+	public Vector3 mousePosition = Vector3.zero;
 	
-	bool center = false;
 	new Transform transform;
-	new Collider collider;
-	float keySpeed = 10;
-	bool enableKeys = true;
-	FingerManager fingerManager;
 
 	void Awake () {
 		transform = gameObject.transform;
-		collider = gameObject.collider;
 	}
 	
 	void Start () {
-		fingerManager = (FingerManager)FindObjectOfType(typeof(FingerManager));
+		mousePosition.x = Screen.width / 2;
+		mousePosition.y = Screen.height / 2;
 	}
 
 	void Update () {
-		if (center) {
-			Vector3 localPosition = transform.localPosition;
-			Vector3 velocity = localPosition * Time.deltaTime * 20;
-			localPosition -= Vector3.Min(localPosition, velocity);
-			if (localPosition.sqrMagnitude < 0.1f) {
-				localPosition = Vector3.zero;
-				center = false;
-			}
-			transform.localPosition = localPosition;
+
+		if (!Game.hud.gameObject.active || !Game.hud.controlsEnabled || Game.character == null) {
+			Game.hud.crosshair.renderer.enabled = false;
 		}
-		else if (enableKeys && Application.isEditor) {
-			
-			Vector3 localPosition = transform.localPosition;
-			
-			bool reset = true;
-			if (Input.GetKey("w")) {
-				reset = false;
-				localPosition.y += Time.deltaTime * keySpeed;
-			}
-			if (Input.GetKey("s")) {
-				reset = false;
-				localPosition.y -= Time.deltaTime * keySpeed;
-			}
-			
-			if (reset) {
-				localPosition.y = 0;
-			}
-			
-			reset = true;
-			if (Input.GetKey("a")) {
-				reset = false;
-				localPosition.x -= Time.deltaTime * keySpeed;
-			}
-			if (Input.GetKey("d")) {
-				reset = false;
-				localPosition.x += Time.deltaTime * keySpeed;
-			}
-			
-			if (reset) {
-				localPosition.x = 0;
-			}
-			
-			if (localPosition.sqrMagnitude > 1) {
-				localPosition = localPosition.normalized;
-			}
-			transform.localPosition = localPosition;
+		else if (ControlSettings.showCursor && (Screen.lockCursor || Game.hud.crosshair.renderer.enabled)) {
+			Screen.lockCursor = false;
+			Game.hud.crosshair.renderer.enabled = false;
 		}
-	}
-	
-	void OnFingerBegin () {
-		enableKeys = false;
-		center = false;
-		renderer.material = sharedMaterialActive;
-		Vector3 touchPosition = fingerManager.GetTouchPosition(collider);
-		Vector3 worldTouchPos = camera.ScreenToWorldPoint(touchPosition);
-		transform.position = worldTouchPos;
+		else if (!ControlSettings.showCursor && (!Screen.lockCursor || !Game.hud.crosshair.renderer.enabled)) {
+			Screen.lockCursor = true;
+			Game.hud.crosshair.renderer.enabled = true;
+		}
+
+		if (Screen.lockCursor) {
+			mousePosition.z = 0;
+			mousePosition.x += Input.GetAxis("Mouse X") * ControlSettings.mouseSensitivity/100.0f;
+			mousePosition.y += Input.GetAxis("Mouse Y") * ControlSettings.mouseSensitivity/100.0f;
+			mousePosition.x = Mathf.Clamp(mousePosition.x, 0, Screen.width);
+			mousePosition.y = Mathf.Clamp(mousePosition.y, 0, Screen.height);
+		}
+		else {
+			mousePosition = Input.mousePosition;
+		}
+
+		Vector3 crosshairPosition = Camera.main.ScreenToWorldPoint(
+            new Vector3(mousePosition.x, mousePosition.y, Camera.main.transform.position.z));
+		crosshairPosition.z = 0;
+		Game.hud.crosshair.transform.position = crosshairPosition;
+
+		InputProxy input = InputProxy.Get();
 		Vector3 localPosition = transform.localPosition;
-		localPosition.z = 0;
-		transform.localPosition = localPosition;
-		if (transform.localPosition.sqrMagnitude > 1) {
-			transform.localPosition = transform.localPosition.normalized;
+		localPosition.x = input.GetValue("Horizontal");
+		localPosition.y = input.GetValue("Vertical");			
+		if (localPosition.sqrMagnitude > 1) {
+			localPosition = localPosition.normalized;
 		}
-	}
-	
-	void OnFingerMove () {
-		Vector3 touchPosition = fingerManager.GetTouchPosition(collider);
-		Vector3 worldTouchPos = camera.ScreenToWorldPoint(touchPosition);
-		transform.position = worldTouchPos;
-		Vector3 localPosition = transform.localPosition;
-		localPosition.z = 0;
 		transform.localPosition = localPosition;
-		if (transform.localPosition.sqrMagnitude > 1) {
-			transform.localPosition = transform.localPosition.normalized;
-		}
-	}
-	
-	void OnFingerEnd () {
-		renderer.material = sharedMaterialNormal;
-		center = true;
-		enableKeys = true;
 	}
 
-	void OnFingerCancel () {
-		renderer.material = sharedMaterialNormal;
-		center = true;
-		enableKeys = true;
+	void OnDrawGizmos () {
+		if (Game.character != null) {
+			Gizmos.color = Color.green;
+			Gizmos.DrawSphere(Game.hud.crosshair.transform.position, 0.1f);
+		}
 	}
 }

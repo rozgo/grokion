@@ -61,9 +61,10 @@ public class Checkpoint : MonoBehaviour {
 		}
 		yield return new WaitForSeconds(0.1f);
 		GameObject characterObject = (GameObject)Instantiate(Resources.Load("Avatar", typeof(GameObject)));
+		Character character = (Character)characterObject.GetComponent(typeof(Character));
 		characterObject.transform.position = transform.position;
 		characterObject.transform.rotation = transform.parent.rotation;
-		Character character = (Character)characterObject.GetComponent(typeof(Character));
+	
 		character.Rest();
 		character.SetMarionette(false);
 		yield return new WaitForSeconds(fieldDuration);

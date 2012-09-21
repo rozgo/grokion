@@ -5,6 +5,10 @@ public class ForwardHit : MonoBehaviour {
 	
 	public GameObject receiver;
 
+	void Kill () {
+		receiver.SendMessage("Kill", this, SendMessageOptions.DontRequireReceiver);
+	}
+
 	void Hit (int damage) {
 		receiver.SendMessage("Hit", damage, SendMessageOptions.DontRequireReceiver);
 	}

@@ -40,9 +40,10 @@ public class Hud : MonoBehaviour {
     public Mesh tokenOnMesh;
     public Mesh tokenOffMesh;
     public GameObject[] tokenSlots;
+	public GameObject crosshair;
     
 	bool skipMessage = false;
-	bool controlsEnabled = false;
+	public bool controlsEnabled = false;
 	int hudLayer;
 	GameObject[] emptyEnergyTanks;
 	GameObject[] fullEnergyTanks;
@@ -86,10 +87,6 @@ public class Hud : MonoBehaviour {
         onGrenade.active = false;
         onGrapple.active = false;
         tokens = (Token[])FindObjectsOfType(typeof(Token));
-		
-		if (iPhoneSettings.model == "iPad") {
-			controls.transform.localScale *= 0.55f;
-		}
     }
 
     void Start () {
@@ -99,6 +96,13 @@ public class Hud : MonoBehaviour {
         else {
             meter.layer = Game.hiddenLayer;
         }
+        
+		pivot.gameObject.layer = Game.hiddenLayer;
+		pivotBase.gameObject.layer = Game.hiddenLayer;
+		buttonA.gameObject.layer = Game.hiddenLayer;
+		buttonB.gameObject.layer = Game.hiddenLayer;
+
+		crosshair.renderer.enabled = false;
 	}
 
 	IEnumerator WaitForRealSeconds(float time) {
@@ -189,10 +193,10 @@ public class Hud : MonoBehaviour {
 			foreach (GameObject fullEnergyTank in fullEnergyTanks) {
 				fullEnergyTank.layer = hudLayer;
 			}
-			pivot.gameObject.layer = hudLayer;
-			pivotBase.gameObject.layer = hudLayer;
-			buttonA.gameObject.layer = hudLayer;
-			buttonB.gameObject.layer = hudLayer;
+//			pivot.gameObject.layer = hudLayer;
+//			pivotBase.gameObject.layer = hudLayer;
+//			buttonA.gameObject.layer = hudLayer;
+//			buttonB.gameObject.layer = hudLayer;
             if (showMeter) {
                 meter.layer = hudLayer;
             }
@@ -238,7 +242,6 @@ public class Hud : MonoBehaviour {
 	}
 	
 	void OnButtonUp (Button button) {
-		Debug.Log("Hud button pressed:" + button.ToString());
 		if (controlsEnabled) {
 			if (button == menuButton) {
 				Game.game.ShowControlPanel();
@@ -409,105 +412,6 @@ public class Hud : MonoBehaviour {
 			yield return Game.hud.StartCoroutine(Game.hud.ShowMessage(tableLine, -1));
 		}
 		Game.fx.HideAvatarCard();
-	}
-	
-	bool adjusted = false;
-	void FixedUpdate () {
-		
-		if (Input.deviceOrientation == DeviceOrientation.LandscapeLeft) {
-			
-			if (iPhoneSettings.screenOrientation != iPhoneScreenOrientation.LandscapeLeft) {
-				iPhoneSettings.screenOrientation = iPhoneScreenOrientation.LandscapeLeft;
-				if (!adjusted) {
-					adjusted = true;
-					foreach (Transform child in transform) {
-						child.transform.position += new Vector3(0, 2, 0);
-					}
-				}
-			}
-			controls.transform.localPosition = new Vector3(-6, -3, 10);
-			buttonA.transform.localPosition = new Vector3(16.0f+7, 1.5f, 0);
-			buttonA.transform.localScale = new Vector3(1, 1, 1);
-			buttonB.transform.localPosition = new Vector3(14.0f+7, -0.5f, 0);
-			buttonB.transform.localScale = new Vector3(1, 1, 1);
-			camera.clearFlags = CameraClearFlags.Nothing;
-			camera.rect = new Rect(0, 0, 1, 1);
-			if (iPhoneSettings.model == "iPad") {
-				camera.orthographicSize = 6;
-			}
-			else {
-				camera.orthographicSize = 4;
-			}
-		}
-		if (Input.deviceOrientation == DeviceOrientation.LandscapeRight) {
-			
-			if (iPhoneSettings.screenOrientation != iPhoneScreenOrientation.LandscapeRight) { 
-				iPhoneSettings.screenOrientation = iPhoneScreenOrientation.LandscapeRight;
-				if (!adjusted) {
-					adjusted = true;
-					foreach (Transform child in transform) {
-						child.transform.position += new Vector3(0, 2, 0);
-					}
-				}
-			}
-			controls.transform.localPosition = new Vector3(-6, -3, 10);
-			buttonA.transform.localPosition = new Vector3(16.0f+7, 1.5f, 0);
-			buttonA.transform.localScale = new Vector3(1, 1, 1);
-			buttonB.transform.localPosition = new Vector3(14.0f+7, -0.5f, 0);
-			buttonB.transform.localScale = new Vector3(1, 1, 1);
-			camera.clearFlags = CameraClearFlags.Nothing;
-			camera.rect = new Rect(0, 0, 1, 1);
-			if (iPhoneSettings.model == "iPad") {
-				camera.orthographicSize = 6;
-			}
-			else {
-				camera.orthographicSize = 4;
-			}
-		}
-		
-		if (iPhoneSettings.model == "iPad") {
-			
-			if (Input.deviceOrientation == DeviceOrientation.Portrait) {
-				
-				if (iPhoneSettings.screenOrientation != iPhoneScreenOrientation.Portrait) { 
-					iPhoneSettings.screenOrientation = iPhoneScreenOrientation.Portrait;
-					if (adjusted) {
-						adjusted = false;
-						foreach (Transform child in transform) {
-							child.transform.position -= new Vector3(0, 2, 0);
-						}
-					}
-				}
-				controls.transform.localPosition = new Vector3(-4, 0.5f, 10);
-				buttonA.transform.localPosition = new Vector3(16.0f, 1.5f, 0);
-				buttonA.transform.localScale = new Vector3(1, 1, 1);
-				buttonB.transform.localPosition = new Vector3(14.0f, -0.5f, 0);
-				buttonB.transform.localScale = new Vector3(1, 1, 1);
-				camera.clearFlags = CameraClearFlags.SolidColor;
-				camera.rect = new Rect(0, 0, 1, 0.5f);
-				camera.orthographicSize = 4;
-			}
-			if (Input.deviceOrientation == DeviceOrientation.PortraitUpsideDown) {
-				
-				if (iPhoneSettings.screenOrientation != iPhoneScreenOrientation.PortraitUpsideDown) { 
-					iPhoneSettings.screenOrientation = iPhoneScreenOrientation.PortraitUpsideDown;
-					if (adjusted) {
-						adjusted = false;
-						foreach (Transform child in transform) {
-							child.transform.position -= new Vector3(0, 2, 0);
-						}
-					}
-				}
-				controls.transform.localPosition = new Vector3(-4, 0.5f, 10);
-				buttonA.transform.localPosition = new Vector3(16.0f, 1.5f, 0);
-				buttonA.transform.localScale = new Vector3(1, 1, 1);
-				buttonB.transform.localPosition = new Vector3(14.0f, -0.5f, 0);
-				buttonB.transform.localScale = new Vector3(1, 1, 1);
-				camera.clearFlags = CameraClearFlags.SolidColor;
-				camera.rect = new Rect(0, 0, 1, 0.5f);
-				camera.orthographicSize = 4;
-			}
-		}
 	}
 
 }

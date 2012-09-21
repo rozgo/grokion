@@ -25,6 +25,8 @@ public class Turret : MonoBehaviour {
     public AudioClip hitClip;
     public bool damaged = false;
     public bool cull = true;
+	public float shootLife = 1;
+	public float awarenessRadius = 8;
     
     Vector3 originalPosition;
     new Transform transform;
@@ -101,7 +103,7 @@ public class Turret : MonoBehaviour {
             rigidbody.AddForce(velocity, ForceMode.Acceleration);
         }
         if (Game.character != null) {
-            if (Vector3.Distance(Game.character.head.position, transform.position) < 8) {
+            if (Vector3.Distance(Game.character.head.position, transform.position) < awarenessRadius) {
                 Vector3 lookAtPoint = Game.character.head.position;
                 Vector3 forward = (lookAtPoint - transform.position).normalized;
                 forward.y = Mathf.Max(forward.y, -0.5f);
@@ -110,7 +112,7 @@ public class Turret : MonoBehaviour {
                                                       Time.deltaTime * aimingSpeed);
                 if (!shooting) {
                     if (Vector3.Distance(lookAtPoint, Game.character.head.position) < 1) { 
-                        StartCoroutine(Shoot(transform.position, transform.forward * 14, 1));
+                        StartCoroutine(Shoot(transform.position, transform.forward * 14, shootLife));
                     }
                 }
             }

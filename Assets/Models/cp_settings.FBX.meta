@@ -1,0 +1,76 @@
+fileFormatVersion: 1
+guid: e09bae93581b9704bbc8d3574cebed4a
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 0.01
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 1
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    buttonSettingsLit:
+    - 100000
+    - 400000
+    - 3300000
+    - 2300000
+    buttonDefaultSettingsLit:
+    - 100002
+    - 400002
+    - 3300002
+    - 2300002
+    buttonTitleLit:
+    - 100004
+    - 400004
+    - 3300004
+    - 2300004
+    ButtonOn 1:
+    - 100006
+    - 400006
+    - 3300006
+    - 2300006
+    ButtonOff 1:
+    - 100008
+    - 400008
+    - 3300008
+    - 2300008
+    ButtonOff:
+    - 100010
+    - 400010
+    - 3300010
+    - 2300010
+    //RootNode:
+    - 100012
+    - 400012
+    - 3300012
+    - 2300012
+    - 11100000
+    ButtonOn:
+    - 100014
+    - 400014
+    - 3300014
+    - 2300014
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: GameSettingsPlane
+    4300002: buttonDefaultSettingsLit
+    4300004: ButtonOff
+    4300006: ButtonOff
+    4300008: buttonSettingsLit
+    4300010: buttonTitleLit
+    4300012: ButtonOn
+    4300014: ButtonOn

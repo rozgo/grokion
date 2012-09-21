@@ -111,6 +111,7 @@ public class Door : MonoBehaviour {
 		else {
 			characterObject.transform.position =
 				transform.position + transform.right * 0.5f + new Vector3(0, -1.1f, 0);
+
 			if (transform.right.x < 0) {
 				characterObject.transform.rotation = Quaternion.AngleAxis(180, Vector3.up);
 			}
