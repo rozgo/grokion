@@ -1,63 +1,119 @@
-fileFormatVersion: 1
+fileFormatVersion: 2
 guid: 8d244cd12c54646759561c71b1127e74
 ModelImporter:
-  importerVersion: 7
-  meshes:
-    scaleFactor: 1
-    useFileUnits: 1
-    meshCompression: 0
-    generateColliders: 0
-    swapUVs: 0
-  tangentSpace:
-    normalImportMode: 0
-    tangentImportMode: 1
-    smoothingAngle: 60
-    splitTangents: 0
-  materials:
-    generation: 1
-  animations:
-    generation: 3
-    bakeAnimations: 0
-    animationCompression: 1
-    animationWrapMode: 0
-    splitAnimations: 1
-  nodeInfo:
-    WaterGeometry:
-    - 100000
-    - 400000
-    - 13700000
-    Armature:
-    - 100002
-    - 400002
-    //RootNode:
-    - 100004
-    - 400004
-    - 11100000
-    Bone:
-    - 100006
-    - 400006
-    Bone.001:
-    - 100008
-    - 400008
-    Bone.002:
-    - 100010
-    - 400010
-    Bone.003:
-    - 100012
-    - 400012
-    Bone.004:
-    - 100014
-    - 400014
-    Bone.005:
-    - 100016
-    - 400016
-    Bone.006:
-    - 100018
-    - 400018
-AssetImporter:
-  importerVersion: 1
   fileIDToRecycleName:
     4300000: LevelGeometry
     4300002: WaterGeometry
     7400000: Action //// Water
     7400002: IDLE //// Water
+    7400004: Default Take //// Water
+  serializedVersion: 10
+  materials:
+    importMaterials: 1
+    materialName: 3
+    materialSearch: 1
+  animations:
+    generateAnimations: 3
+    bakeSimulation: 0
+    splitAnimations: 1
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMesh: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 0
+    normalImportMode: 0
+    tangentImportMode: 1
+  textMetaNamesToFileIDs:
+    //RootNode:
+      data:
+        first: 1
+        second: a4860100
+      data:
+        first: 4
+        second: 841a0600
+      data:
+        first: 111
+        second: 605fa900
+    Armature:
+      data:
+        first: 1
+        second: a2860100
+      data:
+        first: 4
+        second: 821a0600
+    Bone:
+      data:
+        first: 1
+        second: a6860100
+      data:
+        first: 4
+        second: 861a0600
+    Bone_001:
+      data:
+        first: 1
+        second: ac860100
+      data:
+        first: 4
+        second: 8c1a0600
+    Bone_002:
+      data:
+        first: 1
+        second: b0860100
+      data:
+        first: 4
+        second: 901a0600
+    Bone_003:
+      data:
+        first: 1
+        second: ae860100
+      data:
+        first: 4
+        second: 8e1a0600
+    Bone_004:
+      data:
+        first: 1
+        second: aa860100
+      data:
+        first: 4
+        second: 8a1a0600
+    Bone_005:
+      data:
+        first: 1
+        second: a8860100
+      data:
+        first: 4
+        second: 881a0600
+    Bone_006:
+      data:
+        first: 1
+        second: b2860100
+      data:
+        first: 4
+        second: 921a0600
+    WaterGeometry:
+      data:
+        first: 1
+        second: a0860100
+      data:
+        first: 4
+        second: 801a0600
+      data:
+        first: 137
+        second: a00bd100

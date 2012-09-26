@@ -1,64 +1,6 @@
-fileFormatVersion: 1
+fileFormatVersion: 2
 guid: 8f739c286442844c58976c964028623f
 ModelImporter:
-  importerVersion: 7
-  meshes:
-    scaleFactor: 0.3
-    useFileUnits: 1
-    meshCompression: 0
-    generateColliders: 0
-    swapUVs: 0
-  tangentSpace:
-    normalImportMode: 0
-    tangentImportMode: 1
-    smoothingAngle: 60
-    splitTangents: 0
-  materials:
-    generation: 0
-  animations:
-    generation: 3
-    bakeAnimations: 0
-    animationCompression: 1
-    animationWrapMode: 0
-    splitAnimations: 0
-    clips:
-      IDLE:
-        firstFrame: 1
-        lastFrame: 8
-        loop: 0
-        wrapMode: 0
-  nodeInfo:
-    //RootNode:
-    - 100000
-    - 400000
-    - 11100000
-    Capsule:
-    - 100002
-    - 400002
-    - 3300000
-    - 2300000
-    Bloom:
-    - 100004
-    - 400004
-    - 3300002
-    - 2300002
-    Doc:
-    - 100006
-    - 400006
-    - 3300004
-    - 2300004
-    Base:
-    - 100008
-    - 400008
-    - 3300006
-    - 2300006
-    Hover:
-    - 100010
-    - 400010
-    - 3300008
-    - 2300008
-AssetImporter:
-  importerVersion: 1
   fileIDToRecycleName:
     4300000: Plane.001
     4300002: Plane
@@ -93,3 +35,118 @@ AssetImporter:
     7400036: SHOOT_UP //// Character 1
     7400038: SWIM //// Character 1
     7400040: SWIM_UP //// Character 1
+    7400042: Default Take //// Savain
+  serializedVersion: 10
+  materials:
+    importMaterials: 0
+    materialName: 1
+    materialSearch: 1
+  animations:
+    generateAnimations: 3
+    bakeSimulation: 0
+    splitAnimations: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations:
+    - name: IDLE
+      firstFrame: 1
+      lastFrame: 8
+      wrapMode: 0
+      loop: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .300000012
+    meshCompression: 0
+    addColliders: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMesh: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 0
+    normalImportMode: 0
+    tangentImportMode: 1
+  textMetaNamesToFileIDs:
+    //RootNode:
+      data:
+        first: 1
+        second: a0860100
+      data:
+        first: 4
+        second: 801a0600
+      data:
+        first: 111
+        second: 605fa900
+    Base:
+      data:
+        first: 1
+        second: a8860100
+      data:
+        first: 4
+        second: 881a0600
+      data:
+        first: 23
+        second: 66182300
+      data:
+        first: 33
+        second: a65a3200
+    Bloom:
+      data:
+        first: 1
+        second: a4860100
+      data:
+        first: 4
+        second: 841a0600
+      data:
+        first: 23
+        second: 62182300
+      data:
+        first: 33
+        second: a25a3200
+    Capsule:
+      data:
+        first: 1
+        second: a2860100
+      data:
+        first: 4
+        second: 821a0600
+      data:
+        first: 23
+        second: 60182300
+      data:
+        first: 33
+        second: a05a3200
+    Doc:
+      data:
+        first: 1
+        second: a6860100
+      data:
+        first: 4
+        second: 861a0600
+      data:
+        first: 23
+        second: 64182300
+      data:
+        first: 33
+        second: a45a3200
+    Hover:
+      data:
+        first: 1
+        second: aa860100
+      data:
+        first: 4
+        second: 8a1a0600
+      data:
+        first: 23
+        second: 68182300
+      data:
+        first: 33
+        second: a85a3200

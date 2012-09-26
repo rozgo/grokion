@@ -1,94 +1,6 @@
-fileFormatVersion: 1
+fileFormatVersion: 2
 guid: 2d56a8bf2d23640a9a20f2d8e99a7f95
 ModelImporter:
-  importerVersion: 7
-  meshes:
-    scaleFactor: 0.5
-    useFileUnits: 1
-    meshCompression: 0
-    generateColliders: 0
-    swapUVs: 0
-  tangentSpace:
-    normalImportMode: 0
-    tangentImportMode: 1
-    smoothingAngle: 60
-    splitTangents: 0
-  materials:
-    generation: 0
-  animations:
-    generation: 3
-    bakeAnimations: 0
-    animationCompression: 1
-    animationWrapMode: 0
-    splitAnimations: 0
-    clips:
-      IDLE:
-        firstFrame: 1
-        lastFrame: 8
-        loop: 0
-        wrapMode: 0
-  nodeInfo:
-    //RootNode:
-    - 100000
-    - 400000
-    - 11100000
-    Armature:
-    - 100002
-    - 400002
-    Arm.L:
-    - 100004
-    - 400004
-    Arm.R:
-    - 100006
-    - 400006
-    Foot.L:
-    - 100008
-    - 400008
-    Foot.R:
-    - 100010
-    - 400010
-    Forearm.L:
-    - 100012
-    - 400012
-    Forearm.R:
-    - 100014
-    - 400014
-    Head:
-    - 100016
-    - 400016
-    Hip.L:
-    - 100018
-    - 400018
-    Hip.R:
-    - 100020
-    - 400020
-    Leg.L:
-    - 100022
-    - 400022
-    Leg.R:
-    - 100024
-    - 400024
-    Neck:
-    - 100026
-    - 400026
-    Root:
-    - 100028
-    - 400028
-    Shoulder.L:
-    - 100030
-    - 400030
-    Shoulder.R:
-    - 100032
-    - 400032
-    Spine:
-    - 100034
-    - 400034
-    Model:
-    - 100038
-    - 400038
-    - 13700000
-AssetImporter:
-  importerVersion: 1
   fileIDToRecycleName:
     4300000: Plane.001
     4300002: Plane
@@ -127,3 +39,182 @@ AssetImporter:
     7400062: SWIM_UP //// Fallen
     7400064: FALLEN2 //// Fallen
     7400066: FALLEN3 //// Fallen
+    7400068: Default Take //// Fallen
+  serializedVersion: 10
+  materials:
+    importMaterials: 0
+    materialName: 1
+    materialSearch: 1
+  animations:
+    generateAnimations: 3
+    bakeSimulation: 0
+    splitAnimations: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations:
+    - name: IDLE
+      firstFrame: 1
+      lastFrame: 8
+      wrapMode: 0
+      loop: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .5
+    meshCompression: 0
+    addColliders: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMesh: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 0
+    normalImportMode: 0
+    tangentImportMode: 1
+  textMetaNamesToFileIDs:
+    //RootNode:
+      data:
+        first: 1
+        second: a0860100
+      data:
+        first: 4
+        second: 801a0600
+      data:
+        first: 111
+        second: 605fa900
+    Arm_L:
+      data:
+        first: 1
+        second: ac860100
+      data:
+        first: 4
+        second: 8c1a0600
+    Arm_R:
+      data:
+        first: 1
+        second: b2860100
+      data:
+        first: 4
+        second: 921a0600
+    Armature:
+      data:
+        first: 1
+        second: a2860100
+      data:
+        first: 4
+        second: 821a0600
+    Foot_L:
+      data:
+        first: 1
+        second: a8860100
+      data:
+        first: 4
+        second: 881a0600
+    Foot_R:
+      data:
+        first: 1
+        second: ae860100
+      data:
+        first: 4
+        second: 8e1a0600
+    Forearm_L:
+      data:
+        first: 1
+        second: a4860100
+      data:
+        first: 4
+        second: 841a0600
+    Forearm_R:
+      data:
+        first: 1
+        second: c0860100
+      data:
+        first: 4
+        second: a01a0600
+    Head:
+      data:
+        first: 1
+        second: b0860100
+      data:
+        first: 4
+        second: 901a0600
+    Hip_L:
+      data:
+        first: 1
+        second: b8860100
+      data:
+        first: 4
+        second: 981a0600
+    Hip_R:
+      data:
+        first: 1
+        second: be860100
+      data:
+        first: 4
+        second: 9e1a0600
+    Leg_L:
+      data:
+        first: 1
+        second: aa860100
+      data:
+        first: 4
+        second: 8a1a0600
+    Leg_R:
+      data:
+        first: 1
+        second: b4860100
+      data:
+        first: 4
+        second: 941a0600
+    Model:
+      data:
+        first: 1
+        second: c6860100
+      data:
+        first: 4
+        second: a61a0600
+    Neck:
+      data:
+        first: 1
+        second: ba860100
+      data:
+        first: 4
+        second: 9a1a0600
+    Root:
+      data:
+        first: 1
+        second: bc860100
+      data:
+        first: 4
+        second: 9c1a0600
+      data:
+        first: 137
+        second: a00bd100
+    Shoulder_L:
+      data:
+        first: 1
+        second: b6860100
+      data:
+        first: 4
+        second: 961a0600
+    Shoulder_R:
+      data:
+        first: 1
+        second: a6860100
+      data:
+        first: 4
+        second: 861a0600
+    Spine:
+      data:
+        first: 1
+        second: c2860100
+      data:
+        first: 4
+        second: a21a0600

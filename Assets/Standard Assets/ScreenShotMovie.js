@@ -12,7 +12,7 @@ function Start () {
 
     // Find a folder that doesn't exist yet by appending numbers!
     realFolder = folder;
-    count = 1;
+    var count = 1;
     while (System.IO.Directory.Exists(realFolder)) {
         realFolder = folder + count;
         count++;

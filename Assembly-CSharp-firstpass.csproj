@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{F1160D05-BB89-030D-5159-D8E85D831653}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_3_5_0;UNITY_3_5;UNITY_EDITOR;ENABLE_PROFILER;UNITY_WEBPLAYER;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_WEBCAM;ENABLE_MICROPHONE;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW;ENABLE_SUBSTANCE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Standard Assets\Ammo.cs" />
+     <Compile Include="Assets\Standard Assets\AttachPoint.cs" />
+     <Compile Include="Assets\Standard Assets\Avalanche.cs" />
+     <Compile Include="Assets\Standard Assets\BallTurret.cs" />
+     <Compile Include="Assets\Standard Assets\Barrel.cs" />
+     <Compile Include="Assets\Standard Assets\Boss.cs" />
+     <Compile Include="Assets\Standard Assets\Boulder.cs" />
+     <Compile Include="Assets\Standard Assets\Box.cs" />
+     <Compile Include="Assets\Standard Assets\BrokenPrefab.cs" />
+     <Compile Include="Assets\Standard Assets\Bubbles.cs" />
+     <Compile Include="Assets\Standard Assets\Button.cs" />
+     <Compile Include="Assets\Standard Assets\CameraFade.cs" />
+     <Compile Include="Assets\Standard Assets\Character.cs" />
+     <Compile Include="Assets\Standard Assets\Checkpoint.cs" />
+     <Compile Include="Assets\Standard Assets\Clock.cs" />
+     <Compile Include="Assets\Standard Assets\ComponentCacheTest.cs" />
+     <Compile Include="Assets\Standard Assets\ControlPanel.cs" />
+     <Compile Include="Assets\Standard Assets\ControlSettings.cs" />
+     <Compile Include="Assets\Standard Assets\ConveyorBelt.cs" />
+     <Compile Include="Assets\Standard Assets\Crate.cs" />
+     <Compile Include="Assets\Standard Assets\CrazyPrefab.cs" />
+     <Compile Include="Assets\Standard Assets\Credits.cs" />
+     <Compile Include="Assets\Standard Assets\CtrlAudio.cs" />
+     <Compile Include="Assets\Standard Assets\CtrlCover.cs" />
+     <Compile Include="Assets\Standard Assets\Death.cs" />
+     <Compile Include="Assets\Standard Assets\Director.cs" />
+     <Compile Include="Assets\Standard Assets\Disintegrate.cs" />
+     <Compile Include="Assets\Standard Assets\DoctorHologram.cs" />
+     <Compile Include="Assets\Standard Assets\Door.cs" />
+     <Compile Include="Assets\Standard Assets\ElectricWall.cs" />
+     <Compile Include="Assets\Standard Assets\EndTutorial.cs" />
+     <Compile Include="Assets\Standard Assets\Enemy.cs" />
+     <Compile Include="Assets\Standard Assets\Energy.cs" />
+     <Compile Include="Assets\Standard Assets\EnergyTank.cs" />
+     <Compile Include="Assets\Standard Assets\FPS.cs" />
+     <Compile Include="Assets\Standard Assets\FX.cs" />
+     <Compile Include="Assets\Standard Assets\Fallen.cs" />
+     <Compile Include="Assets\Standard Assets\FingerManager.cs" />
+     <Compile Include="Assets\Standard Assets\ForwardHit.cs" />
+     <Compile Include="Assets\Standard Assets\ForwardVisibility.cs" />
+     <Compile Include="Assets\Standard Assets\Game.cs" />
+     <Compile Include="Assets\Standard Assets\GameOver.cs" />
+     <Compile Include="Assets\Standard Assets\Gate.cs" />
+     <Compile Include="Assets\Standard Assets\Gear.cs" />
+     <Compile Include="Assets\Standard Assets\GoogleServer.cs" />
+     <Compile Include="Assets\Standard Assets\Grapple.cs" />
+     <Compile Include="Assets\Standard Assets\Grenade.cs" />
+     <Compile Include="Assets\Standard Assets\Grid.cs" />
+     <Compile Include="Assets\Standard Assets\GridGoal.cs" />
+     <Compile Include="Assets\Standard Assets\Health.cs" />
+     <Compile Include="Assets\Standard Assets\HiddenRock.cs" />
+     <Compile Include="Assets\Standard Assets\HingedStand.cs" />
+     <Compile Include="Assets\Standard Assets\Hive.cs" />
+     <Compile Include="Assets\Standard Assets\Hotspot.cs" />
+     <Compile Include="Assets\Standard Assets\Hud.cs" />
+     <Compile Include="Assets\Standard Assets\IceBeast.cs" />
+     <Compile Include="Assets\Standard Assets\IceBeastPart.cs" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\BlurEffect.cs" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\ColorCorrectionEffect.cs" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\ContrastStretchEffect.cs" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\EdgeDetectEffect.cs" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\GlowEffect.cs" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\GrayscaleEffect.cs" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\ImageEffectBase.cs" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\ImageEffects.cs" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\MotionBlur.cs" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\NoiseEffect.cs" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\SSAOEffect.cs" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\SepiaToneEffect.cs" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\TwirlEffect.cs" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\VortexEffect.cs" />
+     <Compile Include="Assets\Standard Assets\InputProxy.cs" />
+     <Compile Include="Assets\Standard Assets\InstantKill.cs" />
+     <Compile Include="Assets\Standard Assets\JSON.cs" />
+     <Compile Include="Assets\Standard Assets\Junk.cs" />
+     <Compile Include="Assets\Standard Assets\KinematicMove.cs" />
+     <Compile Include="Assets\Standard Assets\Kongregate.cs" />
+     <Compile Include="Assets\Standard Assets\Loader.cs" />
+     <Compile Include="Assets\Standard Assets\LookAt.cs" />
+     <Compile Include="Assets\Standard Assets\MagmaBeast.cs" />
+     <Compile Include="Assets\Standard Assets\MagmaBeastGun.cs" />
+     <Compile Include="Assets\Standard Assets\MagmaBeastHand.cs" />
+     <Compile Include="Assets\Standard Assets\MagmaBoss.cs" />
+     <Compile Include="Assets\Standard Assets\MapTrace.cs" />
+     <Compile Include="Assets\Standard Assets\Mathfx.cs" />
+     <Compile Include="Assets\Standard Assets\MenuHelp.cs" />
+     <Compile Include="Assets\Standard Assets\MenuMove.cs" />
+     <Compile Include="Assets\Standard Assets\Missile.cs" />
+     <Compile Include="Assets\Standard Assets\ObjectMove.cs" />
+     <Compile Include="Assets\Standard Assets\PercentageLoaded.cs" />
+     <Compile Include="Assets\Standard Assets\Pickup.cs" />
+     <Compile Include="Assets\Standard Assets\Pivot.cs" />
+     <Compile Include="Assets\Standard Assets\Platform.cs" />
+     <Compile Include="Assets\Standard Assets\Projectile.cs" />
+     <Compile Include="Assets\Standard Assets\ReverseNormals.cs" />
+     <Compile Include="Assets\Standard Assets\Ripple.cs" />
+     <Compile Include="Assets\Standard Assets\RoomHUD.cs" />
+     <Compile Include="Assets\Standard Assets\Rotate.cs" />
+     <Compile Include="Assets\Standard Assets\Savain.cs" />
+     <Compile Include="Assets\Standard Assets\Seraph.cs" />
+     <Compile Include="Assets\Standard Assets\Shocker.cs" />
+     <Compile Include="Assets\Standard Assets\SimFixedTime.cs" />
+     <Compile Include="Assets\Standard Assets\SimpleRotate.cs" />
+     <Compile Include="Assets\Standard Assets\Spawner.cs" />
+     <Compile Include="Assets\Standard Assets\Special.cs" />
+     <Compile Include="Assets\Standard Assets\Spikes.cs" />
+     <Compile Include="Assets\Standard Assets\Spirit.cs" />
+     <Compile Include="Assets\Standard Assets\StateMachine.cs" />
+     <Compile Include="Assets\Standard Assets\StepEvent.cs" />
+     <Compile Include="Assets\Standard Assets\Stomp.cs" />
+     <Compile Include="Assets\Standard Assets\Stunt.cs" />
+     <Compile Include="Assets\Standard Assets\Sway.cs" />
+     <Compile Include="Assets\Standard Assets\Switch.cs" />
+     <Compile Include="Assets\Standard Assets\TextTable.cs" />
+     <Compile Include="Assets\Standard Assets\Token.cs" />
+     <Compile Include="Assets\Standard Assets\TouchRock.cs" />
+     <Compile Include="Assets\Standard Assets\Turbo.cs" />
+     <Compile Include="Assets\Standard Assets\TurboTrail.cs" />
+     <Compile Include="Assets\Standard Assets\Turret.cs" />
+     <Compile Include="Assets\Standard Assets\TurretBoss.cs" />
+     <Compile Include="Assets\Standard Assets\UVAnim.cs" />
+     <Compile Include="Assets\Standard Assets\Vignette.cs" />
+     <Compile Include="Assets\Standard Assets\Water.cs" />
+     <Compile Include="Assets\Standard Assets\WaterAnim.cs" />
+     <Compile Include="Assets\Standard Assets\Welcome.cs" />
+     <None Include="Assets\iPhone Standard Assets\Additive-Projector\Guidelines.txt" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\iPhone Shaders\Vertex Colored Shaders\iPhone Vertex Colored.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlur.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\AddStuff.shader" />
+     <None Include="Assets\iPhone Standard Assets\iPhone Shaders\Particle Shaders\iPhone Multiply Culled.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
+     <None Include="Assets\Shaders\TexturedTextShader.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\iPhone Shaders\iPhone Detail.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ExtractSkyboxShader.shader" />
+     <None Include="Assets\iPhone Standard Assets\iPhone Shaders\iPhone Background.shader" />
+     <None Include="Assets\iPhone Standard Assets\iPhone Shaders\Vertex Colored Shaders\iPhone Transparent Vertex Color.shader" />
+     <None Include="Assets\Shaders\EnemyShader.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ShowAlphaChannel.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowConeTap.shader" />
+     <None Include="Assets\Shaders\TransparentSimple.shader" />
+     <None Include="Assets\Resources\English.txt" />
+     <None Include="Assets\Shaders\SkyShader.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeApply.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\iPhone Shaders\Particle Shaders\iPhone Multiply Culled.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SunShafts.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionCurves.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\Additive-Projector\Additive.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\HollywoodFlareBlur.shader" />
+     <None Include="Assets\Shaders\areaLightMapShader.shader" />
+     <None Include="Assets\Documents\Scratch.txt" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\VignetteShader.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\PreDepthOfFieldZRead.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\MotionBlur.shader" />
+     <None Include="Assets\iPhone Standard Assets\iPhone Shaders\iPhone Detail.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\CopyDepthToRGBA.shader" />
+     <None Include="Assets\iPhone Standard Assets\Additive-Projector\Additive.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowCompose.shader" />
+     <None Include="Assets\Shaders\lavaShader.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\MinMaxReduction.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\iPhone Shaders\Lightmap Shaders\iPhone Lightmap Reflective.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\DepthRGBA8RadialBlur.shader" />
+     <None Include="Assets\Shaders\MetalShader.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\iPhone Shaders\iPhone Background.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\Blob-Shadow\Guidelines.txt" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ContrastComposite.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\FisheyeShader.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\iPhone Shaders\Lightmap Shaders\iPhone Lightmap Only.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Apply.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\iPhone Shaders\Vertex Colored Shaders\iPhone Vertex Colored.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\frag_ao.cginc" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\PreDepthOfField.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\Additive-Projector\Additive.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\iPhone Shaders\Lightmap Shaders\iPhone Lightmap Only.shader" />
+     <None Include="Assets\Shaders\CutSimple.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SkyboxToRGBADepth.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\AddAlphaHack.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\RecordCenterDepth.shader" />
+     <None Include="Assets\Shaders\OpaqueSimple.shader" />
+     <None Include="Assets\Documents\GameMechanics.txt" />
+     <None Include="Assets\Shaders\AdditiveSimple.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\Blob-Shadow\Guidelines.txt" />
+     <None Include="Assets\Materials\iPhone Standard Assets\iPhone Shaders\Lightmap Shaders\iPhone Lightmap AlphaTest.shader" />
+     <None Include="Assets\Tests\MapTraceDebug.txt" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\iPhone Shaders\Particle Shaders\iPhone Particles Additive Culled.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\iPhone Shaders\Vertex Colored Shaders\iPhone Transparent Vertex Color.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\Blob-Shadow\ProjectorMultiply.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SSAOShader.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\Additive-Projector\Guidelines.txt" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ConvertDepth.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionCurvesSimple.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderYUV.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowEffectDownsample.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\iPhone Shaders\Lightmap Shaders\iPhone Lightmap AlphaTest.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\CreaseApply.shader" />
+     <None Include="Assets\iPhone Standard Assets\iPhone Shaders\Lightmap Shaders\iPhone Lightmap Reflective.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ChromaticAberrationShader.shader" />
+     <None Include="Assets\iPhone Standard Assets\iPhone Shaders\Particle Shaders\iPhone Particles Additive Culled.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\iPhone Shaders\iPhone Detail.shader" />
+     <None Include="Assets\Shaders\PropShader.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\iPhone Shaders\Vertex Colored Shaders\iPhone Transparent Vertex Color.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\iPhone Shaders\Self Illumination\iPhone Self Illuminated.shader" />
+     <None Include="Assets\Tests\MapTrace.txt" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Luminance.shader" />
+     <None Include="Assets\Shaders\lightmap.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionSelective.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeBlurApply.shader" />
+     <None Include="Assets\Shaders\desinegrateShader.shader" />
+     <None Include="Assets\iPhone Standard Assets\Blob-Shadow\Guidelines.txt" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\Blob-Shadow\ProjectorMultiply.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\iPhone Shaders\Lightmap Shaders\iPhone Lightmap Reflective.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DofForegroundBlur.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
+     <None Include="Assets\iPhone Standard Assets\iPhone Shaders\Vertex Colored Shaders\iPhone Vertex Colored.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionEffect.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GrayscaleEffect.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SepiaToneEffect.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\TwirlEffect.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VortexEffect.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Adaptation.shader" />
+     <None Include="Assets\iPhone Standard Assets\iPhone Shaders\Lightmap Shaders\iPhone Lightmap Only.shader" />
+     <None Include="Assets\iPhone Standard Assets\iPhone Shaders\Lightmap Shaders\iPhone Lightmap AlphaTest.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeDetectNormalsHQ.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableRGBADepthBlur.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\iPhone Shaders\iPhone Background.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\HollywoodFlareStretch.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VignettingShader.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
+     <None Include="Assets\Shaders\LiquidShader.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\iPhone Shaders\Self Illumination\iPhone Self Illuminated.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeDetectNormals.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ClearExceptSkyboxShader.shader" />
+     <None Include="Assets\iPhone Standard Assets\iPhone Shaders\Self Illumination\iPhone Self Illuminated.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\Additive-Projector\Guidelines.txt" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SimpleClear.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfField.shader" />
+     <None Include="Assets\Resources\EnglishGrid.txt" />
+     <None Include="Assets\Materials\iPhone Standard Assets\iPhone Shaders\Particle Shaders\iPhone Particles Additive Culled.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeDetectX.shader" />
+     <None Include="Assets\iPhone Standard Assets\Blob-Shadow\ProjectorMultiply.shader" />
+     <None Include="Assets\Shaders\WaterLightMapped.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\iPhone Shaders\Particle Shaders\iPhone Multiply Culled.shader" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

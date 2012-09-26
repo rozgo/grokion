@@ -59,6 +59,12 @@ public class Door : MonoBehaviour {
 	public void Close () {
 		if (doorType != DoorType.Opened) {
 			if (collider.isTrigger) {
+				/*MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+				Your script should either check if it is null or you should not destroy the object.
+				Door.Close () (at Assets/Standard Assets/Door.cs:62)
+				Door.OnChildBecameInvisible (UnityEngine.GameObject child) (at Assets/Standard Assets/Door.cs:91)
+				UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+				ForwardVisibility:OnBecameInvisible() (at Assets/Standard Assets/ForwardVisibility.cs:13)*/
 				field.renderer.enabled = true;
 				collider.isTrigger = false;
 				collider.gameObject.layer = Game.defaultLayer;

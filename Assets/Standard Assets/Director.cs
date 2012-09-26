@@ -9,8 +9,8 @@ public class Director : MonoBehaviour {
 	
 	float zoomAccel = 0;
 
-	MonoBehaviour bloom;
-	MonoBehaviour color;
+//	MonoBehaviour bloom;
+//	MonoBehaviour color;
 
 	bool bloomEnabled;
 	bool colorEnabled;
@@ -20,10 +20,10 @@ public class Director : MonoBehaviour {
 			Debug.LogError("Multiple singletons of type: "+GetType());
 		}
 
-		bloom = (MonoBehaviour)GetComponent("BloomAndFlares");
-		bloomEnabled = bloom.enabled;
-		color = (MonoBehaviour)GetComponent("ColorCorrectionEffect");
-		colorEnabled = color.enabled;
+//		bloom = (MonoBehaviour)GetComponent("BloomAndFlares");
+//		bloomEnabled = bloom.enabled;
+//		color = (MonoBehaviour)GetComponent("ColorCorrectionEffect");
+//		colorEnabled = color.enabled;
 	}
 	
 	void Update () {
@@ -43,20 +43,20 @@ public class Director : MonoBehaviour {
 	void OnEnable () {
 		ControlSettings.Setup();
 		if (ControlSettings.visualEffects) {
-			if (bloomEnabled) {
-				bloom.enabled = true;
-			}
-			if (colorEnabled) {
-				color.enabled = true;
-			}
+//			if (bloomEnabled) {
+//				bloom.enabled = true;
+//			}
+//			if (colorEnabled) {
+//				color.enabled = true;
+//			}
 		}
 		else {
-			if (bloomEnabled) {
-				bloom.enabled = false;
-			}
-			if (colorEnabled) {
-				color.enabled = false;
-			}
+//			if (bloomEnabled) {
+//				bloom.enabled = false;
+//			}
+//			if (colorEnabled) {
+//				color.enabled = false;
+//			}
 		}
 		//gameObject.SendMessage("EnableFX", ControlSettings.visualEffects, SendMessageOptions.DontRequireReceiver);
 	}

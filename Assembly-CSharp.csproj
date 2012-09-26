@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{64E99E2D-1FA7-F62E-2315-E9AB068792A0}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_3_5_0;UNITY_3_5;UNITY_EDITOR;ENABLE_PROFILER;UNITY_WEBPLAYER;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_WEBCAM;ENABLE_MICROPHONE;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW;ENABLE_SUBSTANCE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\CH2tests\waterTest.cs" />
+     <Compile Include="Assets\GridEnd.cs" />
+     <Compile Include="Assets\Tests\CustomUVAnim.cs" />
+     <Compile Include="Assets\webIntroLevel\BarLevelLoading.cs" />
+     <None Include="Assets\iPhone Standard Assets\Additive-Projector\Guidelines.txt" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\iPhone Shaders\Vertex Colored Shaders\iPhone Vertex Colored.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlur.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\AddStuff.shader" />
+     <None Include="Assets\iPhone Standard Assets\iPhone Shaders\Particle Shaders\iPhone Multiply Culled.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
+     <None Include="Assets\Shaders\TexturedTextShader.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\iPhone Shaders\iPhone Detail.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ExtractSkyboxShader.shader" />
+     <None Include="Assets\iPhone Standard Assets\iPhone Shaders\iPhone Background.shader" />
+     <None Include="Assets\iPhone Standard Assets\iPhone Shaders\Vertex Colored Shaders\iPhone Transparent Vertex Color.shader" />
+     <None Include="Assets\Shaders\EnemyShader.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ShowAlphaChannel.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowConeTap.shader" />
+     <None Include="Assets\Shaders\TransparentSimple.shader" />
+     <None Include="Assets\Resources\English.txt" />
+     <None Include="Assets\Shaders\SkyShader.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeApply.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\iPhone Shaders\Particle Shaders\iPhone Multiply Culled.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SunShafts.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionCurves.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\Additive-Projector\Additive.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\HollywoodFlareBlur.shader" />
+     <None Include="Assets\Shaders\areaLightMapShader.shader" />
+     <None Include="Assets\Documents\Scratch.txt" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\VignetteShader.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\PreDepthOfFieldZRead.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\MotionBlur.shader" />
+     <None Include="Assets\iPhone Standard Assets\iPhone Shaders\iPhone Detail.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\CopyDepthToRGBA.shader" />
+     <None Include="Assets\iPhone Standard Assets\Additive-Projector\Additive.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowCompose.shader" />
+     <None Include="Assets\Shaders\lavaShader.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\MinMaxReduction.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\iPhone Shaders\Lightmap Shaders\iPhone Lightmap Reflective.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\DepthRGBA8RadialBlur.shader" />
+     <None Include="Assets\Shaders\MetalShader.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\iPhone Shaders\iPhone Background.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\Blob-Shadow\Guidelines.txt" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ContrastComposite.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\FisheyeShader.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\iPhone Shaders\Lightmap Shaders\iPhone Lightmap Only.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Apply.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\iPhone Shaders\Vertex Colored Shaders\iPhone Vertex Colored.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\frag_ao.cginc" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\PreDepthOfField.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\Additive-Projector\Additive.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\iPhone Shaders\Lightmap Shaders\iPhone Lightmap Only.shader" />
+     <None Include="Assets\Shaders\CutSimple.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SkyboxToRGBADepth.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\AddAlphaHack.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\RecordCenterDepth.shader" />
+     <None Include="Assets\Shaders\OpaqueSimple.shader" />
+     <None Include="Assets\Documents\GameMechanics.txt" />
+     <None Include="Assets\Shaders\AdditiveSimple.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\Blob-Shadow\Guidelines.txt" />
+     <None Include="Assets\Materials\iPhone Standard Assets\iPhone Shaders\Lightmap Shaders\iPhone Lightmap AlphaTest.shader" />
+     <None Include="Assets\Tests\MapTraceDebug.txt" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\iPhone Shaders\Particle Shaders\iPhone Particles Additive Culled.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\iPhone Shaders\Vertex Colored Shaders\iPhone Transparent Vertex Color.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\Blob-Shadow\ProjectorMultiply.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SSAOShader.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\Additive-Projector\Guidelines.txt" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ConvertDepth.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionCurvesSimple.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderYUV.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowEffectDownsample.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\iPhone Shaders\Lightmap Shaders\iPhone Lightmap AlphaTest.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\CreaseApply.shader" />
+     <None Include="Assets\iPhone Standard Assets\iPhone Shaders\Lightmap Shaders\iPhone Lightmap Reflective.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ChromaticAberrationShader.shader" />
+     <None Include="Assets\iPhone Standard Assets\iPhone Shaders\Particle Shaders\iPhone Particles Additive Culled.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\iPhone Shaders\iPhone Detail.shader" />
+     <None Include="Assets\Shaders\PropShader.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\iPhone Shaders\Vertex Colored Shaders\iPhone Transparent Vertex Color.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\iPhone Shaders\Self Illumination\iPhone Self Illuminated.shader" />
+     <None Include="Assets\Tests\MapTrace.txt" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Luminance.shader" />
+     <None Include="Assets\Shaders\lightmap.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionSelective.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeBlurApply.shader" />
+     <None Include="Assets\Shaders\desinegrateShader.shader" />
+     <None Include="Assets\iPhone Standard Assets\Blob-Shadow\Guidelines.txt" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\Blob-Shadow\ProjectorMultiply.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\iPhone Shaders\Lightmap Shaders\iPhone Lightmap Reflective.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DofForegroundBlur.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
+     <None Include="Assets\iPhone Standard Assets\iPhone Shaders\Vertex Colored Shaders\iPhone Vertex Colored.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionEffect.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GrayscaleEffect.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SepiaToneEffect.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\TwirlEffect.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VortexEffect.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Adaptation.shader" />
+     <None Include="Assets\iPhone Standard Assets\iPhone Shaders\Lightmap Shaders\iPhone Lightmap Only.shader" />
+     <None Include="Assets\iPhone Standard Assets\iPhone Shaders\Lightmap Shaders\iPhone Lightmap AlphaTest.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeDetectNormalsHQ.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableRGBADepthBlur.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\iPhone Shaders\iPhone Background.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\HollywoodFlareStretch.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VignettingShader.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
+     <None Include="Assets\Shaders\LiquidShader.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\iPhone Shaders\Self Illumination\iPhone Self Illuminated.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeDetectNormals.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ClearExceptSkyboxShader.shader" />
+     <None Include="Assets\iPhone Standard Assets\iPhone Shaders\Self Illumination\iPhone Self Illuminated.shader" />
+     <None Include="Assets\Materials\iPhone Standard Assets\Additive-Projector\Guidelines.txt" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SimpleClear.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfField.shader" />
+     <None Include="Assets\Resources\EnglishGrid.txt" />
+     <None Include="Assets\Materials\iPhone Standard Assets\iPhone Shaders\Particle Shaders\iPhone Particles Additive Culled.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeDetectX.shader" />
+     <None Include="Assets\iPhone Standard Assets\Blob-Shadow\ProjectorMultiply.shader" />
+     <None Include="Assets\Shaders\WaterLightMapped.shader" />
+     <None Include="Assets\Standard Assets\iPhone Standard Assets\iPhone Shaders\Particle Shaders\iPhone Multiply Culled.shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{F1160D05-BB89-030D-5159-D8E85D831653}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{50EAA07B-06EE-FFE7-CBFE-DA6BBF8E9237}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

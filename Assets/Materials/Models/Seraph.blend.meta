@@ -1,86 +1,6 @@
-fileFormatVersion: 1
+fileFormatVersion: 2
 guid: 5bb83c2449fd64308aad3981d7d47472
 ModelImporter:
-  importerVersion: 7
-  meshes:
-    scaleFactor: 1
-    useFileUnits: 1
-    meshCompression: 0
-    generateColliders: 0
-    swapUVs: 0
-  tangentSpace:
-    normalImportMode: 0
-    tangentImportMode: 1
-    smoothingAngle: 60
-    splitTangents: 0
-  materials:
-    generation: 0
-  animations:
-    generation: 3
-    bakeAnimations: 0
-    animationCompression: 1
-    animationWrapMode: 0
-    splitAnimations: 1
-  nodeInfo:
-    Body:
-    - 100000
-    - 400000
-    - 13700000
-    //RootNode:
-    - 100002
-    - 400002
-    - 11100000
-    Beak.D:
-    - 100004
-    - 400004
-    Beak.U:
-    - 100006
-    - 400006
-    Wings:
-    - 100008
-    - 400008
-    - 13700002
-    Armature:
-    - 100010
-    - 400010
-    Head:
-    - 100012
-    - 400012
-    Neck:
-    - 100014
-    - 400014
-    Root:
-    - 100016
-    - 400016
-    Spine:
-    - 100018
-    - 400018
-    Tail1:
-    - 100020
-    - 400020
-    Tail2:
-    - 100022
-    - 400022
-    Wing1.L:
-    - 100024
-    - 400024
-    Wing1.R:
-    - 100026
-    - 400026
-    Wing2.L:
-    - 100028
-    - 400028
-    Wing2.R:
-    - 100030
-    - 400030
-    Wing3.L:
-    - 100032
-    - 400032
-    Wing3.R:
-    - 100034
-    - 400034
-AssetImporter:
-  importerVersion: 1
   fileIDToRecycleName:
     4300000: Energy
     4300002: Projectile
@@ -99,3 +19,173 @@ AssetImporter:
     4300028: Head
     7400000: IDLE //// Seraph
     7400002: CHARGE //// Seraph
+    7400004: Default Take //// Seraph
+  serializedVersion: 10
+  materials:
+    importMaterials: 0
+    materialName: 1
+    materialSearch: 1
+  animations:
+    generateAnimations: 3
+    bakeSimulation: 0
+    splitAnimations: 1
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMesh: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 0
+    normalImportMode: 0
+    tangentImportMode: 1
+  textMetaNamesToFileIDs:
+    //RootNode:
+      data:
+        first: 1
+        second: a2860100
+      data:
+        first: 4
+        second: 821a0600
+      data:
+        first: 111
+        second: 605fa900
+    Armature:
+      data:
+        first: 1
+        second: aa860100
+      data:
+        first: 4
+        second: 8a1a0600
+    Beak_D:
+      data:
+        first: 1
+        second: ba860100
+      data:
+        first: 4
+        second: 9a1a0600
+    Beak_U:
+      data:
+        first: 1
+        second: b8860100
+      data:
+        first: 4
+        second: 981a0600
+    Body:
+      data:
+        first: 1
+        second: a0860100
+      data:
+        first: 4
+        second: 801a0600
+      data:
+        first: 137
+        second: a00bd100
+    Head:
+      data:
+        first: 1
+        second: ac860100
+      data:
+        first: 4
+        second: 8c1a0600
+    Neck:
+      data:
+        first: 1
+        second: ae860100
+      data:
+        first: 4
+        second: 8e1a0600
+    Root:
+      data:
+        first: 1
+        second: b0860100
+      data:
+        first: 4
+        second: 901a0600
+    Spine:
+      data:
+        first: 1
+        second: b2860100
+      data:
+        first: 4
+        second: 921a0600
+    Tail1:
+      data:
+        first: 1
+        second: b4860100
+      data:
+        first: 4
+        second: 941a0600
+    Tail2:
+      data:
+        first: 1
+        second: b6860100
+      data:
+        first: 4
+        second: 961a0600
+    Wing1_L:
+      data:
+        first: 1
+        second: c2860100
+      data:
+        first: 4
+        second: a21a0600
+    Wing1_R:
+      data:
+        first: 1
+        second: a6860100
+      data:
+        first: 4
+        second: 861a0600
+    Wing2_L:
+      data:
+        first: 1
+        second: be860100
+      data:
+        first: 4
+        second: 9e1a0600
+    Wing2_R:
+      data:
+        first: 1
+        second: bc860100
+      data:
+        first: 4
+        second: 9c1a0600
+    Wing3_L:
+      data:
+        first: 1
+        second: c0860100
+      data:
+        first: 4
+        second: a01a0600
+    Wing3_R:
+      data:
+        first: 1
+        second: a4860100
+      data:
+        first: 4
+        second: 841a0600
+    Wings:
+      data:
+        first: 1
+        second: a8860100
+      data:
+        first: 4
+        second: 881a0600
+      data:
+        first: 137
+        second: a20bd100

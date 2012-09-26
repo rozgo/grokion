@@ -40,7 +40,8 @@ public class Helpers : ScriptableObject {
     	Debug.Log("Generating tokens");
         Token[] tokens = (Token[])FindObjectsOfType(typeof(Token));
         for (int i=0; i<(3-tokens.Length); ++i) {
-            EditorUtility.InstantiatePrefab(Resources.Load("Token", typeof(GameObject)));
+			PrefabUtility.InstantiatePrefab( Resources.Load( "Token", typeof(GameObject) ) );
+//            EditorUtility.InstantiatePrefab(Resources.Load("Token", typeof(GameObject)));
         }
         tokens = (Token[])FindObjectsOfType(typeof(Token));
         for (int i=0; i<3; ++i) {
