@@ -59,6 +59,7 @@ public class Door : MonoBehaviour {
 	public void Close () {
 		if (doorType != DoorType.Opened) {
 			if (collider.isTrigger) {
+				//TODO: Find why this happens...
 				/*MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
 				Your script should either check if it is null or you should not destroy the object.
 				Door.Close () (at Assets/Standard Assets/Door.cs:62)
