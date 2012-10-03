@@ -755,7 +755,8 @@ public class Character : StateMachine {
         Character character;
 
         public LimboState (Character character) {
-			character.Pause();
+			//NOTE: This lines has been commented to avoid "Actor::setLinearVelocity: Actor must be (non-kinematic) dynamic!" error
+			//character.Pause();
 		}
 	}
     
@@ -854,13 +855,6 @@ public class Character : StateMachine {
             else {
                 inertia = velocity.x;
             }
-			//TODO: Find Whats going on here!!!
-			/*
-			Actor::setLinearVelocity: Actor must be (non-kinematic) dynamic!
-			UnityEngine.Rigidbody:set_velocity(Vector3)
-			SwimState:OnUpdate() (at Assets/Standard Assets/Character.cs:857)
-			Character:FixedUpdate() (at Assets/Standard Assets/Character.cs:1623)
-			 */
             character.rigidbody.velocity = velocity;
             buoyancy += Physics.gravity * Time.deltaTime;
             if (buoyancy.magnitude > 2) {
