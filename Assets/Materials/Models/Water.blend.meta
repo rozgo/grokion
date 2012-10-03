@@ -20,7 +20,7 @@ ModelImporter:
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
-    animationWrapMode: 0
+    animationWrapMode: 2
     clipAnimations: []
   meshes:
     lODScreenPercentages: []
