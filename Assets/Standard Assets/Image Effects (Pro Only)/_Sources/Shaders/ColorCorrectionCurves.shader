@@ -30,6 +30,7 @@ Shader "Hidden/ColorCorrectionCurves" {
 	sampler2D _CameraDepthTexture;
 	
 	float4 _CameraDepthTexture_ST;
+	uniform float4 _MainTex_TexelSize;
 	
 	sampler2D _RgbTex;
 	
@@ -43,6 +44,12 @@ Shader "Hidden/ColorCorrectionCurves" {
 		o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
 		o.uv =  v.texcoord.xy;
 		o.uv2 = TRANSFORM_TEX(v.texcoord, _CameraDepthTexture);
+		
+		#if SHADER_API_D3D9
+		if (_MainTex_TexelSize.y < 0)
+			o.uv2.y = 1-o.uv2.y;
+		#endif		
+		
 		return o;
 	} 
 	
@@ -56,7 +63,7 @@ Shader "Hidden/ColorCorrectionCurves" {
 		half3 green = tex2D(_RgbTex, half2(color.g, ycoords.y)).rgb * half3(0,1,0);
 		half3 blue = tex2D(_RgbTex, half2(color.b, ycoords.z)).rgb * half3(0,0,1);
 		
-		half theDepth = tex2D (_CameraDepthTexture, i.uv2);
+		half theDepth = UNITY_SAMPLE_DEPTH( tex2D (_CameraDepthTexture, i.uv2) );
 		half zval = tex2D(_ZCurve, half2( Linear01Depth (theDepth), 0.5));
 		
 		half3 depthRed = tex2D(_RgbDepthTex, half2(color.r, ycoords.x)).rgb * half3(1,0,0);

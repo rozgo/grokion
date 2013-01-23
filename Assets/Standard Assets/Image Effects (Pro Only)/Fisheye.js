@@ -1,39 +1,42 @@
 
-
-public var strengthX : float = 0.05;
-public var strengthY : float = 0.05;
-
+#pragma strict
 
 @script ExecuteInEditMode
+@script RequireComponent (Camera)
 @script AddComponentMenu ("Image Effects/Fisheye")
 
 class Fisheye extends PostEffectsBase {
-	
+	public var strengthX : float = 0.05f;
+	public var strengthY : float = 0.05f;
+
 	public var fishEyeShader : Shader = null;
-	private var _fisheyeMaterial : Material = null;	
+	private var fisheyeMaterial : Material = null;	
 	
-	function CreateMaterials () {
-		if (!_fisheyeMaterial) {
-			if(!CheckShader(fishEyeShader)) {
-				enabled = false;
-				return;	
-			}
-			_fisheyeMaterial = new Material (fishEyeShader);	
-			_fisheyeMaterial.hideFlags = HideFlags.HideAndDontSave;
+	function OnDisable()
+	{
+	    if (fisheyeMaterial)
+	        DestroyImmediate(fisheyeMaterial);
+	}
+	function CheckResources () : boolean {	
+		CheckSupport (false);
+		fisheyeMaterial = CheckShaderAndCreateMaterial(fishEyeShader,fisheyeMaterial);
+		
+		if(!isSupported)
+			ReportAutoDisable ();
+		return isSupported;			
+	}
+	
+	function OnRenderImage (source : RenderTexture, destination : RenderTexture) {		
+		if(CheckResources()==false) {
+			Graphics.Blit (source, destination);
+			return;
 		}
-	}
-	
-	function Start () {
-		CreateMaterials ();
-	}
-	
-	function OnRenderImage (source : RenderTexture, destination : RenderTexture)
-	{		
-		CreateMaterials ();
+				
+		var oneOverBaseSize : float = 80.0f / 512.0f; // to keep values more like in the old version of fisheye
 		
-		var ar : float = (source.width * 1.0) / (source.height * 1.0);
+		var ar : float = (source.width * 1.0f) / (source.height * 1.0f);
 		
-		_fisheyeMaterial.SetVector ("intensity", Vector4 (strengthX * ar, strengthY * ar, strengthX * ar, strengthY * ar));
-		Graphics.Blit (source, destination, _fisheyeMaterial); 	
+		fisheyeMaterial.SetVector ("intensity", Vector4 (strengthX * ar * oneOverBaseSize, strengthY * oneOverBaseSize, strengthX * ar * oneOverBaseSize, strengthY * oneOverBaseSize));
+		Graphics.Blit (source, destination, fisheyeMaterial); 	
 	}
 }

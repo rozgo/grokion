@@ -19,29 +19,17 @@ public class BlurEffect : MonoBehaviour
 	// Basically it just takes 4 texture samples and averages them.
 	// By applying it repeatedly and spreading out sample locations
 	// we get a Gaussian blur approximation.
-	
-	private static string blurMatString =
-@"Shader ""BlurConeTap"" {
-	Properties { _MainTex ("""", any) = """" {} }
-	SubShader {
-		Pass {
-			ZTest Always Cull Off ZWrite Off Fog { Mode Off }
-			SetTexture [_MainTex] {constantColor (0,0,0,0.25) combine texture * constant alpha}
-			SetTexture [_MainTex] {constantColor (0,0,0,0.25) combine texture * constant + previous}
-			SetTexture [_MainTex] {constantColor (0,0,0,0.25) combine texture * constant + previous}
-			SetTexture [_MainTex] {constantColor (0,0,0,0.25) combine texture * constant + previous}
-		}
-	}
-	Fallback off
-}";
+	 
+	public Shader blurShader = null;	
+
+	//private static string blurMatString =
 
 	static Material m_Material = null;
-	protected static Material material {
+	protected Material material {
 		get {
 			if (m_Material == null) {
-				m_Material = new Material( blurMatString );
-				m_Material.hideFlags = HideFlags.HideAndDontSave;
-				m_Material.shader.hideFlags = HideFlags.HideAndDontSave;
+				m_Material = new Material(blurShader);
+				m_Material.hideFlags = HideFlags.DontSave;
 			}
 			return m_Material;
 		} 
@@ -49,7 +37,6 @@ public class BlurEffect : MonoBehaviour
 	
 	protected void OnDisable() {
 		if( m_Material ) {
-			DestroyImmediate( m_Material.shader );
 			DestroyImmediate( m_Material );
 		}
 	}	
@@ -64,7 +51,7 @@ public class BlurEffect : MonoBehaviour
 			return;
 		}
 		// Disable if the shader can't run on the users graphics card
-		if (!material.shader.isSupported) {
+		if (!blurShader || !material.shader.isSupported) {
 			enabled = false;
 			return;
 		}

@@ -170,7 +170,7 @@ yield;
 	yield WaitForSeconds(4);
 
 	
-Application.LoadLevel("Credits"); 
+Application.LoadLevel("StoryLoader"); 
 	
 	}
 }

@@ -1,198 +1,153 @@
 
+
+@script ExecuteInEditMode
+@script RequireComponent (Camera)
+@script AddComponentMenu ("Image Effects/Sun Shafts")
+
 enum SunShaftsResolution {
     Low = 0,
     Normal = 1,
 	High = 2,
 }
-
-public var resolution : SunShaftsResolution;
-
-public var sunTransform : Transform;
-public var radialBlurIterations : int = 2;
-public var sunColor : Color = Color.white;
-public var sunShaftBlurRadius : float = 0.0164;
-public var sunShaftIntensity : float = 1.25;
-public var useSkyBoxAlpha : float = 0.75;
-
-public var maxRadius : float = 1.25;
-
-public var useDepthTexture : boolean = true;
-
-@script ExecuteInEditMode
-@script RequireComponent (Camera)
-@script AddComponentMenu ("Image Effects/Sun Shafts")
+	
+enum ShaftsScreenBlendMode {
+	Screen = 0,
+	Add = 1,	
+}	
 		
 class SunShafts extends PostEffectsBase 
-{	
-    // needed shaders & materials
+{		
+	public var resolution : SunShaftsResolution = SunShaftsResolution.Normal;
+	public var screenBlendMode : ShaftsScreenBlendMode = ShaftsScreenBlendMode.Screen;
 	
-	public var clearShader : Shader;
-	private var _clearMaterial : Material;
+	public var sunTransform : Transform;
+	public var radialBlurIterations : int = 2;
+	public var sunColor : Color = Color.white;
+	public var sunShaftBlurRadius : float = 2.5f;
+	public var sunShaftIntensity : float = 1.15;
+	public var useSkyBoxAlpha : float = 0.75f;
 	
-	public var depthDecodeShader : Shader;
-	private var _encodeDepthRGBA8Material : Material;
+	public var maxRadius : float = 0.75f;
 	
-	public var depthBlurShader : Shader;
-	private var _radialDepthBlurMaterial : Material;
+	public var useDepthTexture : boolean = true;
 	
 	public var sunShaftsShader : Shader;
-	private var _sunShaftsMaterial : Material;	
+	private var sunShaftsMaterial : Material;	
 	
 	public var simpleClearShader : Shader;
-	private var _simpleClearMaterial : Material;
-	
-	public var compShader : Shader;
-	private var _compMaterial : Material;
-
-	function Start () {
-		CreateMaterials ();	
+	private var simpleClearMaterial : Material;
+		
+    function OnDisable()
+    {
+		if (sunShaftsMaterial)
+		    DestroyImmediate(sunShaftsMaterial);
+		if (simpleClearMaterial)
+		    DestroyImmediate(simpleClearMaterial);
+    }
+    
+	function CheckResources () : boolean {	
+		CheckSupport (useDepthTexture);
+		
+		sunShaftsMaterial = CheckShaderAndCreateMaterial (sunShaftsShader, sunShaftsMaterial);
+		simpleClearMaterial = CheckShaderAndCreateMaterial (simpleClearShader, simpleClearMaterial);
+		
+		if(!isSupported)
+			ReportAutoDisable ();
+		return isSupported;				
 	}
 	
-	function CreateMaterials () {			
-
-		if (!_clearMaterial) {
-			if(!CheckShader(clearShader)) {
-				enabled = false;
-				return;
-			}
-			_clearMaterial = new Material (clearShader);
-			_clearMaterial.hideFlags = HideFlags.HideAndDontSave; 
+	function OnRenderImage (source : RenderTexture, destination : RenderTexture) {	
+		if(CheckResources()==false) {
+			Graphics.Blit (source, destination);
+			return;
 		}
-		
-		if (!_sunShaftsMaterial) {
-			if(!CheckShader(sunShaftsShader)) {
-				enabled = false;
-				return;
-			}
-			_sunShaftsMaterial = new Material (sunShaftsShader);
-			_sunShaftsMaterial.hideFlags = HideFlags.HideAndDontSave; 
-		}
-
-		if (!_encodeDepthRGBA8Material) {
-			if(!CheckShader(depthDecodeShader)) {
-				enabled = false;
-				return;
-			}
-			_encodeDepthRGBA8Material = new Material (depthDecodeShader);
-			_encodeDepthRGBA8Material.hideFlags = HideFlags.HideAndDontSave; 
-		}
-		
-		if (!_radialDepthBlurMaterial) {
-			if(!CheckShader(depthBlurShader)) {
-				enabled = false;
-				return;
-			}
-			_radialDepthBlurMaterial = new Material (depthBlurShader);	
-			_radialDepthBlurMaterial.hideFlags = HideFlags.HideAndDontSave; 
-		}
-
-		if (!_simpleClearMaterial) {
-			if(!CheckShader(simpleClearShader)) {
-				enabled = false;
-				return;
-			}
-			_simpleClearMaterial = new Material (simpleClearShader);
-			_simpleClearMaterial.hideFlags = HideFlags.HideAndDontSave; 
-		} 
-		
-		//_compMaterial
- 		if (!_compMaterial) {
-			if(!CheckShader(compShader)) {
-				enabled = false;
-				return;
-			}
-			_compMaterial = new Material (compShader);
-			_compMaterial.hideFlags = HideFlags.HideAndDontSave; 
-		}        
-	}
-	
-	function OnEnable () {		
-		// only enable depth texture if we support it
-		if(useDepthTexture && SystemInfo.SupportsRenderTextureFormat (RenderTextureFormat.Depth)) { 
+				
+		// we actually need to check this every frame
+		if(useDepthTexture)
 			camera.depthTextureMode |= DepthTextureMode.Depth;	
-		}
-	}
-	
-	function OnRenderImage (source : RenderTexture, destination : RenderTexture)
-	{	
-		// only enable depth texture if we support it
-		if(useDepthTexture && !SystemInfo.SupportsRenderTextureFormat (RenderTextureFormat.Depth)) {
-			useDepthTexture = false;
-		}
-		
-		// needed for most of the new and improved image FX
-		CreateMaterials ();	
 		
         var divider : float = 4.0;
-        if(resolution == SunShaftsResolution.Normal)
+        if (resolution == SunShaftsResolution.Normal)
             divider = 2.0;
-        if(resolution == SunShaftsResolution.High)
+        else if (resolution == SunShaftsResolution.High)
             divider = 1.0;
-			
-		// get render targets		
-		var secondQuarterRezColor : RenderTexture = RenderTexture.GetTemporary(source.width / divider, source.height / divider, 0);	
-        var lrDepthBuffer : RenderTexture = RenderTexture.GetTemporary(source.width / divider, source.height / divider, 0);
-		
-		// save the color buffer
-		Graphics.Blit (source, destination); 
-		
-		// mask skybox (some pixels are clip()'ped, others are kept ...)
-		if(!useDepthTexture) {
-			var tmpBuffer : RenderTexture = RenderTexture.GetTemporary(source.width, source.height, 0);	
-			
-			RenderTexture.active = tmpBuffer;
-			GL.ClearWithSkybox(false, camera);
-			
-			_compMaterial.SetTexture("_Skybox", tmpBuffer);
-			Graphics.Blit (source, tmpBuffer, _compMaterial);
-			
-			RenderTexture.ReleaseTemporary(tmpBuffer);
-		}
-		else
-			Graphics.Blit (source, source, _clearMaterial); // don't care about source :-)
-
-		// get depth values
-		
-        _encodeDepthRGBA8Material.SetFloat("noSkyBoxMask", 1.0-useSkyBoxAlpha);
-		_encodeDepthRGBA8Material.SetFloat("dontUseSkyboxBrightness", 0.0);		
-		Graphics.Blit (source, lrDepthBuffer, _encodeDepthRGBA8Material);
-		
-        // black small pixel border to get rid of clamping annoyances
-        
-		DrawBorder(lrDepthBuffer,_simpleClearMaterial);
-		
+            
 		var v : Vector3 = Vector3.one * 0.5;
 		if (sunTransform)
 			v = camera.WorldToViewportPoint (sunTransform.position);
-		else {
-			v = Vector3(0.5, 0.5, 0.0);
+		else 
+			v = Vector3(0.5, 0.5, 0.0);        
+			
+		var secondQuarterRezColor : RenderTexture = RenderTexture.GetTemporary (source.width / divider, source.height / divider, 0);	
+        var lrDepthBuffer : RenderTexture = RenderTexture.GetTemporary (source.width / divider, source.height / divider, 0);
+		
+		// mask out everything except the skybox
+		// we have 2 methods, one of which requires depth buffer support, the other one is just comparing images
+		
+		sunShaftsMaterial.SetVector ("_BlurRadius4", Vector4 (1.0, 1.0, 0.0, 0.0) * sunShaftBlurRadius );
+		sunShaftsMaterial.SetVector ("_SunPosition", Vector4 (v.x, v.y, v.z, maxRadius));		
+		sunShaftsMaterial.SetFloat ("_NoSkyBoxMask", 1.0f - useSkyBoxAlpha);	
+		
+		if (!useDepthTexture) {		
+			var tmpBuffer : RenderTexture = RenderTexture.GetTemporary (source.width, source.height, 0);					
+			RenderTexture.active = tmpBuffer;
+			GL.ClearWithSkybox (false, camera);
+			
+			sunShaftsMaterial.SetTexture ("_Skybox", tmpBuffer);
+			Graphics.Blit (source, lrDepthBuffer, sunShaftsMaterial, 3);		
+			RenderTexture.ReleaseTemporary (tmpBuffer);				
 		}
-        			
-		// radial depth blur now
-		_radialDepthBlurMaterial.SetVector ("blurRadius4", Vector4 (1.0, 1.0, 0.0, 0.0) * sunShaftBlurRadius );
-		_radialDepthBlurMaterial.SetVector ("sunPosition", Vector4 (v.x, v.y, v.z, maxRadius));
+		else {		
+			Graphics.Blit (source, lrDepthBuffer, sunShaftsMaterial, 2);
+		}
 				
-		if (radialBlurIterations<1)
-			radialBlurIterations = 1;
+        // paint a small black small border to get rid of clamping problems
+		DrawBorder (lrDepthBuffer, simpleClearMaterial);
+		        			
+		// radial blur:
+						
+		radialBlurIterations = ClampBlurIterationsToSomethingThatMakesSense (radialBlurIterations);	
+				
+		var ofs : float = sunShaftBlurRadius * (1.0f / 768.0f);
+		
+		sunShaftsMaterial.SetVector ("_BlurRadius4", Vector4 (ofs, ofs, 0.0f, 0.0f));			
+		sunShaftsMaterial.SetVector ("_SunPosition", Vector4 (v.x, v.y, v.z, maxRadius));				
 				
 		for (var it2 : int = 0; it2 < radialBlurIterations; it2++ ) {
-			Graphics.Blit (lrDepthBuffer, secondQuarterRezColor, _radialDepthBlurMaterial);
-			Graphics.Blit (secondQuarterRezColor, lrDepthBuffer, _radialDepthBlurMaterial);		
-		}
+			// each iteration takes 2 * 6 samples
+			// we update _BlurRadius each time to cheaply get a very smooth look
+						
+			Graphics.Blit (lrDepthBuffer, secondQuarterRezColor, sunShaftsMaterial, 1);
+			ofs = sunShaftBlurRadius * (((it2 * 2.0f + 1.0f) * 6.0f)) / 768.0f;
+			sunShaftsMaterial.SetVector ("_BlurRadius4", Vector4 (ofs, ofs, 0.0f, 0.0f) );			
+			
+			Graphics.Blit (secondQuarterRezColor, lrDepthBuffer, sunShaftsMaterial, 1);		
+			ofs = sunShaftBlurRadius * (((it2 * 2.0f + 2.0f) * 6.0f)) / 768.0f;			
+			sunShaftsMaterial.SetVector ("_BlurRadius4", Vector4 (ofs, ofs, 0.0f, 0.0f) );
+		}		
 		
-		// composite now			
-		_sunShaftsMaterial.SetFloat ("sunShaftIntensity", sunShaftIntensity);
+		// put together:
+		
 		if (v.z >= 0.0)
-			_sunShaftsMaterial.SetVector ("sunColor", Vector4 (sunColor.r,sunColor.g,sunColor.b,sunColor.a));
+			sunShaftsMaterial.SetVector ("_SunColor", Vector4 (sunColor.r, sunColor.g, sunColor.b, sunColor.a) * sunShaftIntensity);
 		else
-			_sunShaftsMaterial.SetVector ("sunColor", Vector4 (0.0,0.0,0.0,0.0)); // no backprojection !
-				
-		_sunShaftsMaterial.SetTexture("_ColorBuffer", source);
-		Graphics.Blit(lrDepthBuffer, destination, _sunShaftsMaterial); 	
-
+			sunShaftsMaterial.SetVector ("_SunColor", Vector4.zero); // no backprojection !
+		sunShaftsMaterial.SetTexture ("_ColorBuffer", lrDepthBuffer);
+		Graphics.Blit (source, destination, sunShaftsMaterial, (screenBlendMode == ShaftsScreenBlendMode.Screen) ? 0 : 4); 	
 		
 		RenderTexture.ReleaseTemporary (lrDepthBuffer);	
-		RenderTexture.ReleaseTemporary (secondQuarterRezColor);		
+		RenderTexture.ReleaseTemporary (secondQuarterRezColor);	
+	}
+		
+	// helper functions
+
+	private function ClampBlurIterationsToSomethingThatMakesSense (its : int) : int {
+		if (its < 1)
+			return 1;
+		else if (its > 4)
+			return 4;		
+		else
+			return its;	
 	}
 
 }

@@ -6,7 +6,9 @@ using UnityEngine;
 // The effect works by accumulating the previous frames in an accumulation
 // texture.
 [ExecuteInEditMode]
-[AddComponentMenu("Image Effects/Motion Blur")]
+[AddComponentMenu("Image Effects/Motion Blur (Color Accumulation)")]
+[RequireComponent(typeof(Camera))]
+
 public class MotionBlur : ImageEffectBase
 {
 	public float blurAmount = 0.8f;
@@ -14,7 +16,7 @@ public class MotionBlur : ImageEffectBase
 	
 	private RenderTexture accumTexture;
 	
-	protected new void Start()
+	override protected void Start()
 	{
 		if(!SystemInfo.supportsRenderTextures)
 		{
@@ -24,7 +26,7 @@ public class MotionBlur : ImageEffectBase
 		base.Start();
 	}
 	
-	protected new void OnDisable()
+	override protected void OnDisable()
 	{
 		base.OnDisable();
 		DestroyImmediate(accumTexture);

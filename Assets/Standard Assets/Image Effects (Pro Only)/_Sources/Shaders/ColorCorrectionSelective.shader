@@ -3,7 +3,6 @@ Shader "Hidden/ColorCorrectionSelective" {
 		_MainTex ("Base (RGB)", 2D) = "" {}
 	}
 	
-	// Shader code pasted into all further CGPROGRAM blocks	
 	CGINCLUDE
 	
 	#include "UnityCG.cginc"
@@ -15,28 +14,25 @@ Shader "Hidden/ColorCorrectionSelective" {
 	
 	sampler2D _MainTex;
 	
-	half4 selColor;
-	half4 targetColor;
+	float4 selColor;
+	float4 targetColor;
 	
-	v2f vert( appdata_img v ) 
-	{
+	v2f vert( appdata_img v ) {
 		v2f o;
-		o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+		o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
 		o.uv = v.texcoord.xy;
 		return o;
 	} 
 	
-	half4 frag(v2f i) : COLOR 
-	{
-		half4 color = tex2D(_MainTex, i.uv); 
+	float4 frag(v2f i) : COLOR {
+		float4 color = tex2D (_MainTex, i.uv); 
 	
-		half range = saturate (1.0-length(color.rgb-selColor.rgb));
-		color = lerp (color,targetColor, range);
-		
+		float differenz = 1.0 - saturate (length (color.rgb - selColor.rgb));
+		color = lerp (color, targetColor, differenz);
 		return color;
 	}
 
-	ENDCG 
+	ENDCG  
 	
 Subshader {
  Pass {
@@ -44,13 +40,15 @@ Subshader {
 	  Fog { Mode off }      
 
       CGPROGRAM
+      
       #pragma fragmentoption ARB_precision_hint_fastest
       #pragma vertex vert
       #pragma fragment frag
+      
       ENDCG
   }
 }
 
 Fallback off
 	
-} // shader
+} 

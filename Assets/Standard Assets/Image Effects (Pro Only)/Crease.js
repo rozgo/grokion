@@ -1,92 +1,75 @@
 
-public var intensity : float = 0.5;
-public var softness : int = 1;
-public var spread : float = 1.0;
+#pragma strict
 
 @script ExecuteInEditMode
-
 @script RequireComponent (Camera)
 @script AddComponentMenu ("Image Effects/Crease")
 
 class Crease extends PostEffectsBase {
+	public var intensity : float = 0.5;
+	public var softness : int = 1;
+	public var spread : float = 1.0;
 	
 	public var blurShader : Shader;
-	private var _blurMaterial : Material = null;	
+	private var blurMaterial : Material = null;	
 	
 	public var depthFetchShader : Shader;
-	private var _depthFetchMaterial : Material = null;
+	private var depthFetchMaterial : Material = null;
 	
 	public var creaseApplyShader : Shader;
-	private var _creaseApplyMaterial : Material = null;	
+	private var creaseApplyMaterial : Material = null;	
 	
-	function CreateMaterials () {
-		if (!_blurMaterial) {
-			if(!CheckShader(blurShader)) {
-				enabled = false;
-				 return;
-			}
-			_blurMaterial = new Material(blurShader);	
-			_blurMaterial.hideFlags = HideFlags.HideAndDontSave;
-		}
+	function OnDisable()
+	{
+		if (blurMaterial)
+		    DestroyImmediate(blurMaterial);
+		if (depthFetchMaterial)
+		    DestroyImmediate(depthFetchMaterial);
+		if (creaseApplyMaterial)
+		    DestroyImmediate(creaseApplyMaterial);
+	}
+	function CheckResources () : boolean {	
+		CheckSupport (true);
 		
-		if (!_depthFetchMaterial) {
-			if(!CheckShader(depthFetchShader)) {
-				enabled = false;
-				 return;
-			}
-			_depthFetchMaterial = new Material(depthFetchShader);	
-			_depthFetchMaterial.hideFlags = HideFlags.HideAndDontSave;
-		}
+		blurMaterial = CheckShaderAndCreateMaterial (blurShader, blurMaterial);
+		depthFetchMaterial = CheckShaderAndCreateMaterial (depthFetchShader, depthFetchMaterial);
+		creaseApplyMaterial = CheckShaderAndCreateMaterial (creaseApplyShader, creaseApplyMaterial);
 		
-		if (!_creaseApplyMaterial) {
-			if(!CheckShader(creaseApplyShader)) {
-				enabled = false;
-				return;
-			}
-			_creaseApplyMaterial = new Material(creaseApplyShader);	
-			_creaseApplyMaterial.hideFlags = HideFlags.HideAndDontSave;
-		}
-		
-		if(!SystemInfo.SupportsRenderTextureFormat (RenderTextureFormat.Depth)) {
-			enabled = false;
-			return;	
-		}
+		if(!isSupported)
+			ReportAutoDisable ();
+		return isSupported;			
 	}
 	
-	function Start () {
-		CreateMaterials ();
-	}
-	
-	function OnEnable() {
-		camera.depthTextureMode |= DepthTextureMode.Depth;	
-	}
-
-	function OnRenderImage (source : RenderTexture, destination : RenderTexture)
-	{	
-		CreateMaterials ();
+	function OnRenderImage (source : RenderTexture, destination : RenderTexture) {	
+		if(CheckResources()==false) {
+			Graphics.Blit (source, destination);
+			return;
+		}
+		
+		var widthOverHeight : float = (1.0f * source.width) / (1.0f * source.height);
+		var oneOverBaseSize : float = 1.0f / 512.0f;		
 
 		var hrTex : RenderTexture = RenderTexture.GetTemporary (source.width, source.height, 0); 
 		var lrTex1 : RenderTexture = RenderTexture.GetTemporary (source.width / 2, source.height / 2, 0); 
 		var lrTex2 : RenderTexture = RenderTexture.GetTemporary (source.width / 2, source.height / 2, 0); 
 		
-		Graphics.Blit(source,hrTex,_depthFetchMaterial);
-		
-		Graphics.Blit(hrTex,lrTex1);
+		Graphics.Blit (source,hrTex, depthFetchMaterial);
+		Graphics.Blit (hrTex, lrTex1);
 		
 		for(var i : int = 0; i < softness; i++) {
-			_blurMaterial.SetVector ("offsets", Vector4 (0.0, (spread) / lrTex1.height, 0.0, 0.0));
-			Graphics.Blit (lrTex1, lrTex2, _blurMaterial);
-			_blurMaterial.SetVector ("offsets", Vector4 ((spread) / lrTex1.width,  0.0, 0.0, 0.0));		
-			Graphics.Blit (lrTex2, lrTex1, _blurMaterial);
+			blurMaterial.SetVector ("offsets", Vector4 (0.0, spread * oneOverBaseSize, 0.0, 0.0));
+			Graphics.Blit (lrTex1, lrTex2, blurMaterial);
+			blurMaterial.SetVector ("offsets", Vector4 (spread * oneOverBaseSize / widthOverHeight,  0.0, 0.0, 0.0));		
+			Graphics.Blit (lrTex2, lrTex1, blurMaterial);
 		}
 		
-		_creaseApplyMaterial.SetTexture("_HrDepthTex",hrTex);
-		_creaseApplyMaterial.SetTexture("_LrDepthTex",lrTex1);
-		_creaseApplyMaterial.SetFloat("intensity",intensity);
-		Graphics.Blit(source,destination,_creaseApplyMaterial);	
+		creaseApplyMaterial.SetTexture ("_HrDepthTex", hrTex);
+		creaseApplyMaterial.SetTexture ("_LrDepthTex", lrTex1);
+		creaseApplyMaterial.SetFloat ("intensity", intensity);
+		Graphics.Blit (source,destination, creaseApplyMaterial);	
 
-		RenderTexture.ReleaseTemporary(hrTex);
-		RenderTexture.ReleaseTemporary(lrTex1);
-		RenderTexture.ReleaseTemporary(lrTex2);
+		RenderTexture.ReleaseTemporary (hrTex);
+		RenderTexture.ReleaseTemporary (lrTex1);
+		RenderTexture.ReleaseTemporary (lrTex2);
 	}	
 }

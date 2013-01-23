@@ -11,6 +11,8 @@ Project("{AEE3E619-B116-95F8-2035-64BE13B689DE}") = "grokion", "Assembly-UnitySc
 EndProject
 Project("{AEE3E619-B116-95F8-2035-64BE13B689DE}") = "grokion", "Assembly-UnityScript.unityproj", "{772C6E16-99FA-5EFF-EBE3-39D2B1439F97}"
 EndProject
+Project("{AEE3E619-B116-95F8-2035-64BE13B689DE}") = "grokion", "Assembly-UnityScript-Editor-firstpass.unityproj", "{D424C5A0-F6B0-ABEC-F7A1-9CCDA16FEB36}"
+EndProject
 Project("{AEE3E619-B116-95F8-2035-64BE13B689DE}") = "grokion", "Assembly-UnityScript-Editor.unityproj", "{CE905EAD-D167-0576-109E-D47C28383B6B}"
 EndProject
 Global
@@ -39,6 +41,10 @@ Global
 		{772C6E16-99FA-5EFF-EBE3-39D2B1439F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{772C6E16-99FA-5EFF-EBE3-39D2B1439F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{772C6E16-99FA-5EFF-EBE3-39D2B1439F97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D424C5A0-F6B0-ABEC-F7A1-9CCDA16FEB36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D424C5A0-F6B0-ABEC-F7A1-9CCDA16FEB36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D424C5A0-F6B0-ABEC-F7A1-9CCDA16FEB36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D424C5A0-F6B0-ABEC-F7A1-9CCDA16FEB36}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CE905EAD-D167-0576-109E-D47C28383B6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CE905EAD-D167-0576-109E-D47C28383B6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE905EAD-D167-0576-109E-D47C28383B6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -47,7 +53,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																															GlobalSection(MonoDevelopProperties) = preSolution
+																																															GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

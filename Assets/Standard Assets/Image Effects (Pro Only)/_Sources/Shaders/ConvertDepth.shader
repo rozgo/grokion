@@ -26,7 +26,7 @@ Shader "Hidden/ConvertDepth" {
 	
 	half4 frag(v2f i) : COLOR 
 	{
-		float d = tex2D(_CameraDepthTexture, i.uv.xy);
+		float d = UNITY_SAMPLE_DEPTH( tex2D(_CameraDepthTexture, i.uv.xy) );
 		d = Linear01Depth(d);
 			 
 		if(d>0.99999)

@@ -22,11 +22,11 @@ public class Pivot : MonoBehaviour {
 			Game.hud.crosshair.renderer.enabled = false;
 		}
 		else if (ControlSettings.showCursor && (Screen.lockCursor || Game.hud.crosshair.renderer.enabled)) {
-			Screen.lockCursor = false;
+			//Screen.lockCursor = false;
 			Game.hud.crosshair.renderer.enabled = false;
 		}
 		else if (!ControlSettings.showCursor && (!Screen.lockCursor || !Game.hud.crosshair.renderer.enabled)) {
-			Screen.lockCursor = true;
+			//Screen.lockCursor = true;
 			Game.hud.crosshair.renderer.enabled = true;
 		}
 

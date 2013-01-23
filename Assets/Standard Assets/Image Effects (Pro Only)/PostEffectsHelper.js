@@ -4,8 +4,6 @@
 
 class PostEffectsHelper extends MonoBehaviour 
 {	
-	static var s_PostEffects : Array = new Array();
-
 	function Start () {
 		
 	}

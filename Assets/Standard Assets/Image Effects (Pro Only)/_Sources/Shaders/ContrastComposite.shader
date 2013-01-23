@@ -11,11 +11,13 @@ Shader "Hidden/ContrastComposite" {
 	
 	struct v2f {
 		float4 pos : POSITION;
-		float2 uv : TEXCOORD0;
+		float2 uv[2] : TEXCOORD0;
 	};
 	
 	sampler2D _MainTex;
 	sampler2D _MainTexBlurred;
+	
+	float4 _MainTex_TexelSize;
 	
 	float intensity;
 	float threshhold;
@@ -23,14 +25,20 @@ Shader "Hidden/ContrastComposite" {
 	v2f vert( appdata_img v ) {
 		v2f o;
 		o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
-		o.uv = v.texcoord.xy;
+		
+		o.uv[0] = v.texcoord.xy;
+		o.uv[1] = v.texcoord.xy;
+		#if SHADER_API_D3D9
+		if (_MainTex_TexelSize.y < 0)
+			o.uv[0].y = 1-o.uv[0].y;
+		#endif			
 		return o;
 	}
 	
 	half4 frag(v2f i) : COLOR 
 	{
-		half4 color = tex2D (_MainTex, i.uv);
-		half4 blurred = tex2D (_MainTexBlurred, (i.uv));
+		half4 color = tex2D (_MainTex, i.uv[1]);
+		half4 blurred = tex2D (_MainTexBlurred, (i.uv[0]));
 		
 		half4 difff = color - blurred;
 		half4 signs = sign (difff);

@@ -1,10 +1,9 @@
 Shader "Hidden/VignettingShader" {
 	Properties {
-		_MainTex ("Base (RGB)", 2D) = "" {}
-		_VignetteTex ("Vignette (RGB)", 2D) = "" {}
+		_MainTex ("Base", 2D) = "" {}
+		_VignetteTex ("Vignette", 2D) = "" {}
 	}
 	
-	// Shader code pasted into all further CGPROGRAM blocks
 	CGINCLUDE
 	
 	#include "UnityCG.cginc"
@@ -14,15 +13,12 @@ Shader "Hidden/VignettingShader" {
 		float2 uv : TEXCOORD0;
 	};
 	
-	// the color should come from a half rezolution buffer
-	// and target a quarter resolution buffer
-	
 	sampler2D _MainTex;
 	sampler2D _VignetteTex;
 	
 	float4 _MainTex_TexelSize;
-	float vignetteIntensity;
-	float blurVignette;
+	float _Intensity;
+	float _Blur;
 		
 	v2f vert( appdata_img v ) {
 		v2f o;
@@ -39,10 +35,10 @@ Shader "Hidden/VignettingShader" {
 		half coordDot = dot (coords,coords);
 		half4 color = tex2D (_MainTex, uv);	 
 		 		 
-		float mask = 1.0 - coordDot * vignetteIntensity *    0.1; 
+		float mask = 1.0 - coordDot * _Intensity * 0.1; 
 		
 		half4 colorBlur = tex2D (_VignetteTex, uv);
-		color = lerp (color, colorBlur, saturate (blurVignette * coordDot));
+		color = lerp (color, colorBlur, saturate (_Blur * coordDot));
 		
 		return color * mask;
 	}
@@ -62,6 +58,5 @@ Subshader {
   }
 }
 
-Fallback off
-	
-} // shader
+Fallback off	
+} 

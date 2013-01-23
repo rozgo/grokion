@@ -180,7 +180,7 @@ public class Loader : MonoBehaviour {
 		music.volume = PlayerPrefs.GetFloat("MusicVolume", 1.0f);
 		music.Play();
 
-		Application.LoadLevelAdditive("Kongregate");
+		//Application.LoadLevelAdditive("Kongregate");
 
 		if (Application.GetStreamProgressForLevel("Credits") < 1) {
 			//credits.gameObject.SetActiveRecursively(false);
